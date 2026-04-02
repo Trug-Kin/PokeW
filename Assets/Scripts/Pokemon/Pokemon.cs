@@ -52,51 +52,28 @@ public class Pokemon
     {
         get { return Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 10 + Level; }
     }
-    public DamageDetails TakeDamage(Move move, Pokemon attacker)
+    public bool TakeDamage(Move move, Pokemon attacker)
     {
-        var details = new DamageDetails();
+        // Calculate type effectiveness
+        float type = TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type1) *
+                     TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type2);
 
-        // --------- Critical Hit ----------
-        float critical = 1f;
-        details.Critical = false;
+        // Random modifier
+        float modifiers = Random.Range(0.85f, 1f) * type;
 
-        if (Random.value <= 0.0625f)   // 6.25% chance
-        {
-            critical = 2f;
-            details.Critical = true;
-        }
-
-        // --------- Type Effectiveness ----------
-        float type1 = TypeChart.GetEffectiveness(move.Base.Type, Base.Type1);
-        float type2 = TypeChart.GetEffectiveness(move.Base.Type, Base.Type2);
-
-        float typeEffect = type1 * type2;
-        details.Type = typeEffect;
-
-        // --------- Random Modifier ----------
-        float random = Random.Range(0.85f, 1f);
-
-        // --------- Damage Formula ----------
-        float a = (2 * attacker.Level / 5f + 2);
-        float d = ((a * move.Base.Power * ((float)attacker.Attack / Defense)) / 50) + 2;
-
-        float modifiers = random * typeEffect * critical;
-
+        // Damage formula
+        float a = (2 * attacker.Level + 10) / 250f;
+        float d = a * move.Base.Power * ((float)attacker.Attack / this.Defense) + 2;
         int damage = Mathf.FloorToInt(d * modifiers);
 
-        // --------- Apply Damage ----------
         HP -= damage;
         if (HP <= 0)
         {
             HP = 0;
-            details.Fainted = true;
-        }
-        else
-        {
-            details.Fainted = false;
+            return true;
         }
 
-        return details;
+        return false;
     }
     
     public Move GetRanDomMove ()
@@ -109,9 +86,4 @@ public class Pokemon
     }
 
 }
-public class DamageDetails
-{
-    public bool Fainted { get; set; }
-    public bool Critical { get; set; }
-    public float Type { get; set; }
-}
+// Note: DamageDetails removed; TakeDamage now returns bool (fainted)

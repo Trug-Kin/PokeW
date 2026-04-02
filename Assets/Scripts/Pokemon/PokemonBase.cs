@@ -1,34 +1,5 @@
 using System.Collections.Generic;
-using Unity.Collections;
 using UnityEngine;
-public class TypeChart
-{
-   static float[][] chart =
-    {
-        //                  NOR  FIR WAT ELE GRA ICE FIG  POI
-        /*NOR*/ new float[] {1f, 1f, 1f, 1f, 1f, 1f, 1f, 1f},
-        /*FIR*/ new float[] {1f,0.5f,0.5f,1f,2f, 2f, 1f, 1f},
-        /*WAT*/ new float[] {1f, 2f, 0.5f, 2f, 0.5f, 1f, 1f, 1f},
-        /*ELE*/ new float[] {1f, 1f, 2f, 0.5f, 0.5f, 2f, 1f, 1f},
-        /*GRA*/ new float[] {1f, 0.5f, 2f, 2f, 0.5f, 1f, 1f, 0.5f},
-        /*POI*/ new float[] {1f, 1f, 1f, 1f, 2f, 1f, 1f, 1f},
-    }; 
-
-    public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)
-    {
-        if (attackType == PokemonType.None || defenseType == PokemonType.None)
-            return 1f;
-
-        int row = (int)attackType - 1;
-        int col = (int)defenseType - 1;
-
-        // Safety checks to avoid IndexOutOfRangeException
-        if (row < 0 || row >= chart.Length || col < 0 || col >= chart[row].Length)
-            return 1f;
-
-        return chart[row][col];
-    }
-}
 
 [CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Create new Pokemon")] 
 public class PokemonBase : ScriptableObject
@@ -120,8 +91,6 @@ public class PokemonBase : ScriptableObject
         {
             get { return level; }
         }
-
-    public MoveBase Base { get;  set; }
 }
 
 
@@ -144,4 +113,42 @@ public enum PokemonType
     Dragon,
     Dark,
 
+}
+public class TypeChart
+{
+    // The enum (excluding None) currently has 16 types. Provide a 16x16 matrix
+    // initialized to 1f so indexing is safe. Fill with correct values later.
+    static float[][] chart = new float[16][]
+    {
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+    };
+
+    public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)
+    {
+        if (attackType == PokemonType.None || defenseType == PokemonType.None)
+            return 1f;
+
+        int row = (int)attackType - 1;
+        int col = (int)defenseType - 1;
+
+        if (row < 0 || row >= chart.Length || col < 0 || col >= chart[row].Length)
+            return 1f;
+
+        return chart[row][col];
+    }
 }

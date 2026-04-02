@@ -57,13 +57,18 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} đã sử dụng {move.Base.Name}");
         yield return new WaitForSeconds(1f);
 
-       // Call TakeDamage using the Move and the attacker (player)
-       var damageDetails = enemyUnit.Pokemon.TakeDamage(move, playerUnit.Pokemon);
+        playerUnit.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+
+        enemyUnit.PlayHitAnimation();
+
+        // Call TakeDamage using the Move and the attacker (player)
+        bool isFainted = enemyUnit.Pokemon.TakeDamage(move, playerUnit.Pokemon);
         yield return enemyHud.UpdateHP();
-        if (damageDetails.Fainted)
+        if (isFainted)
         {
             yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} đã bị hạ gục");
-           
+            enemyUnit.PlayFaintAnimation();
         }
         else
         {
@@ -79,11 +84,17 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} đã sử dụng {move.Base.Name}");
         yield return new WaitForSeconds(1f);
 
-        var damageDetails = playerUnit.Pokemon.TakeDamage(move, enemyUnit.Pokemon);
+        enemyUnit.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+
+        playerUnit.PlayHitAnimation();
+
+        bool isFainted = playerUnit.Pokemon.TakeDamage(move, enemyUnit.Pokemon);
         yield return playerHud.UpdateHP();
-        if (damageDetails.Fainted)
+        if (isFainted)
         {
             yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} đã bị hạ gục");
+            playerUnit.PlayFaintAnimation();
         }
         else
         {
