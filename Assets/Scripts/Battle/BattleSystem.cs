@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 
 public class BattleSystem : MonoBehaviour 
@@ -12,10 +13,12 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleHud enemyHud;
     [SerializeField] BattleDialogBox dialogBox;
 
+    public event Action<bool> OnBattleOver;
+
     BattleState state;
     int currentAction;
     int currentMove;
-    void Start() 
+    public void BattleStart()
     {
         StartCoroutine(SetupBattle());
     }
@@ -69,6 +72,8 @@ public class BattleSystem : MonoBehaviour
         {
             yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} đã bị hạ gục");
             enemyUnit.PlayFaintAnimation();
+                yield return new WaitForSeconds(2f);
+            OnBattleOver(true);
         }
         else
         {
@@ -95,6 +100,8 @@ public class BattleSystem : MonoBehaviour
         {
             yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} đã bị hạ gục");
             playerUnit.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+            OnBattleOver(false);
         }
         else
         {
@@ -104,7 +111,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
    
-    private void Update()
+    public void HandleUpdate()
     {
         if (state == BattleState.PlayerAction)
         { 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     public LayerMask solidObjectLayer;
     public LayerMask GrassLayer;
 
+    public event Action OnEncountered;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -25,7 +27,7 @@ public class PlayerControl : MonoBehaviour
             Debug.Log("Animator parameters: " + names);
         }
     }
-    private void Update()
+     public void HandleUpdate()
     {
         if (!isMoving)
         {
@@ -84,9 +86,11 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.Log("On grass: " + hit.name);
             // 10% chance to encounter
-            if (Random.Range(1, 101) <= 10)
+            if (UnityEngine.Random.Range(1, 101) <= 10)
             {
-                Debug.Log("Encounter a wild Pokemon!");
+                animator.SetBool("isMoving", false);
+                OnEncountered();
+              
             }
         }
     }
