@@ -18,15 +18,26 @@ public class BattleSystem : MonoBehaviour
     BattleState state;
     int currentAction;
     int currentMove;
-    public void BattleStart()
+
+    PokemonParrty playerParty;
+    Pokemon wildPokemon;
+    public void BattleStart(PokemonParrty playerParty, Pokemon wildPokemon)
     {
+        this.playerParty = playerParty;
+        this.wildPokemon = wildPokemon;
         StartCoroutine(SetupBattle());
+    }
+
+    // Compatibility wrapper: some callers use StartBattle
+    public void StartBattle(PokemonParrty playerParty, Pokemon wildPokemon)
+    {
+        BattleStart(playerParty, wildPokemon);
     }
    public IEnumerator SetupBattle()
     {
-        playerUnit.Setup();
+         playerUnit.Setup(playerParty.GetHealthyPokemon());
         playerHud.SetData(playerUnit.Pokemon);
-        enemyUnit.Setup();
+        enemyUnit.Setup(wildPokemon);
         enemyHud.SetData(enemyUnit.Pokemon);
 
         dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
@@ -57,6 +68,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.Bussy;
 
         var move = playerUnit.Pokemon.Moves[currentMove];
+        move.PP--;
         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} đã sử dụng {move.Base.Name}");
         yield return new WaitForSeconds(1f);
 
@@ -66,9 +78,9 @@ public class BattleSystem : MonoBehaviour
         enemyUnit.PlayHitAnimation();
 
         // Call TakeDamage using the Move and the attacker (player)
-        bool isFainted = enemyUnit.Pokemon.TakeDamage(move, playerUnit.Pokemon);
+        var damageDetails = enemyUnit.Pokemon.TakeDamage(move, playerUnit.Pokemon);
         yield return enemyHud.UpdateHP();
-        if (isFainted)
+        if (damageDetails.Fainted)
         {
             yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} đã bị hạ gục");
             enemyUnit.PlayFaintAnimation();
@@ -85,7 +97,8 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.EnemyMove;
 
-        var move = enemyUnit.Pokemon.Moves[0];
+        var move = enemyUnit.Pokemon.GetRanDomMove();
+        move.PP--;
         yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} đã sử dụng {move.Base.Name}");
         yield return new WaitForSeconds(1f);
 
@@ -94,14 +107,30 @@ public class BattleSystem : MonoBehaviour
 
         playerUnit.PlayHitAnimation();
 
-        bool isFainted = playerUnit.Pokemon.TakeDamage(move, enemyUnit.Pokemon);
+        var damageDetails = playerUnit.Pokemon.TakeDamage(move, enemyUnit.Pokemon);
         yield return playerHud.UpdateHP();
-        if (isFainted)
+        if (damageDetails.Fainted)
         {
             yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} đã bị hạ gục");
             playerUnit.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);
-            OnBattleOver(false);
+
+            var nextPokemon = playerParty.GetHealthyPokemon();
+            if (nextPokemon != null)
+            {
+                playerUnit.Setup(nextPokemon);
+                playerHud.SetData(nextPokemon);
+                dialogBox.SetMoveNames(nextPokemon.Moves);
+                yield return dialogBox.TypeDialog($"Tiếp theo là {playerUnit.Pokemon.Base.Name}");
+                yield return new WaitForSeconds(1f);
+
+                PlayerAction();
+            }
+            else
+            {
+                OnBattleOver(false);
+            }
+               
         }
         else
         {
