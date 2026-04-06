@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public enum BattleState {Start, PlayerAction,PlayerMove, EnemyMove, Bussy }
 public class BattleDialogBox : MonoBehaviour
 {
     [SerializeField] Text dialogText;
@@ -113,12 +112,28 @@ public class BattleDialogBox : MonoBehaviour
 
     public void SetMoveNames(List<Move>move)
     { 
+        // Ensure UI list is assigned
+        if (moveText == null || moveText.Count == 0)
+        {
+            Debug.LogWarning("BattleDialogBox: moveText is not assigned or empty in inspector.");
+            return;
+        }
+
+        // defend against null input (move list may not be initialized yet)
         for (int i = 0; i < moveText.Count; i++)
         {
-            if (i < move.Count)
-                moveText[i].text = move[i].Base.Name;
+            var textSlot = moveText[i];
+            if (textSlot == null)
+                continue;
+
+            if (move == null || i >= move.Count || move[i] == null || move[i].Base == null)
+            {
+                textSlot.text = "-";
+            }
             else
-                moveText[i].text = "-";
+            {
+                textSlot.text = move[i].Base.Name;
+            }
         }
 
 
