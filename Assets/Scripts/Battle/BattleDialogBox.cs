@@ -8,6 +8,7 @@ public class BattleDialogBox : MonoBehaviour
 {
     [SerializeField] Text dialogText;
     [SerializeField] int lettersPerSecond;
+    [SerializeField] float postDialogDelay = 1.0f;
     [SerializeField] Color highlightedColor;
     [SerializeField] GameObject actionSelector;
     [SerializeField] GameObject moveSelector;
@@ -52,6 +53,9 @@ public class BattleDialogBox : MonoBehaviour
         if (lettersPerSecond <= 0)
         {
             dialogText.text = dialog;
+            // still wait a bit so callers have time to read
+            if (postDialogDelay > 0f)
+                yield return new WaitForSeconds(postDialogDelay);
             yield break;
         }
 
@@ -61,6 +65,10 @@ public class BattleDialogBox : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / (float)lettersPerSecond);
         }
+
+        // small pause after the full dialog is displayed so messages don't overlap
+        if (postDialogDelay > 0f)
+            yield return new WaitForSeconds(postDialogDelay);
 
     }
     public void EnableDialogText(bool enabled)

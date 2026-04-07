@@ -120,21 +120,37 @@ public class TypeChart
     // initialized to 1f so indexing is safe. Fill with correct values later.
     static float[][] chart = new float[16][]
     {
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
-        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        // Fire
+        new float[16] {0.5f,0.5f,2f,1f,2f,1f,1f,1f,1f,1f,2f,0.5f,1f,0.5f,1f,1f},
+        // Water
+        new float[16] {2f,0.5f,0.5f,1f,1f,1f,1f,2f,1f,1f,1f,2f,1f,0.5f,1f,1f},
+        // Grass
+        new float[16] {0.5f,2f,0.5f,1f,1f,1f,0.5f,2f,0.5f,1f,0.5f,2f,1f,0.5f,1f,1f},
+        // Electric
+        new float[16] {1f,2f,0.5f,0.5f,1f,1f,1f,0f,2f,1f,1f,1f,1f,0.5f,1f,1f},
+        // Ice
+        new float[16] {0.5f,0.5f,2f,1f,0.5f,1f,1f,2f,2f,1f,1f,1f,1f,2f,1f,1f},
+        // Fighting
+        new float[16] {1f,1f,1f,1f,2f,1f,0.5f,1f,0.5f,0.5f,0.5f,2f,0f,1f,2f,1f},
+        // Poison
+        new float[16] {1f,1f,2f,1f,1f,1f,0.5f,0.5f,1f,1f,1f,0.5f,0.5f,1f,1f,1f},
+        // Ground
+        new float[16] {2f,1f,0.5f,2f,1f,1f,2f,1f,0f,1f,0.5f,2f,1f,1f,1f,1f},
+        // Flying
+        new float[16] {1f,1f,2f,0.5f,1f,2f,1f,1f,1f,1f,2f,0.5f,1f,1f,1f,1f},
+        // Psychic
+        new float[16] {1f,1f,1f,1f,1f,2f,2f,1f,1f,0.5f,1f,1f,1f,1f,0f,1f},
+        // Bug
+        new float[16] {0.5f,1f,2f,1f,1f,0.5f,0.5f,1f,0.5f,2f,1f,1f,0.5f,1f,2f,1f},
+        // Rock
+        new float[16] {2f,1f,1f,1f,2f,0.5f,1f,0.5f,2f,1f,2f,1f,1f,1f,1f,1f},
+        // Ghost
+        new float[16] {1f,1f,1f,1f,1f,0f,1f,1f,1f,2f,1f,1f,2f,1f,0.5f,1f},
+        // Dragon
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,2f,1f,1f},
+        // Dark
+        new float[16] {1f,1f,1f,1f,1f,0.5f,1f,1f,1f,2f,1f,1f,2f,1f,0.5f,1f},
+        // Extra neutral row (fallback)
         new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
     };
 
