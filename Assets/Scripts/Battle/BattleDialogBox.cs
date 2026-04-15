@@ -4,11 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public enum BattleState {Start, PlayerAction,PlayerMove, EnemyMove, Bussy }
 public class BattleDialogBox : MonoBehaviour
 {
     [SerializeField] Text dialogText;
     [SerializeField] int lettersPerSecond;
+    [SerializeField] float postDialogDelay = 1.0f;
     [SerializeField] Color highlightedColor;
     [SerializeField] GameObject actionSelector;
     [SerializeField] GameObject moveSelector;
@@ -53,6 +53,9 @@ public class BattleDialogBox : MonoBehaviour
         if (lettersPerSecond <= 0)
         {
             dialogText.text = dialog;
+            // still wait a bit so callers have time to read
+            if (postDialogDelay > 0f)
+                yield return new WaitForSeconds(postDialogDelay);
             yield break;
         }
 
@@ -62,6 +65,10 @@ public class BattleDialogBox : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / (float)lettersPerSecond);
         }
+
+        // small pause after the full dialog is displayed so messages don't overlap
+        if (postDialogDelay > 0f)
+            yield return new WaitForSeconds(postDialogDelay);
 
     }
     public void EnableDialogText(bool enabled)
@@ -113,12 +120,28 @@ public class BattleDialogBox : MonoBehaviour
 
     public void SetMoveNames(List<Move>move)
     { 
+        // Ensure UI list is assigned
+        if (moveText == null || moveText.Count == 0)
+        {
+            Debug.LogWarning("BattleDialogBox: moveText is not assigned or empty in inspector.");
+            return;
+        }
+
+        // defend against null input (move list may not be initialized yet)
         for (int i = 0; i < moveText.Count; i++)
         {
-            if (i < move.Count)
-                moveText[i].text = move[i].Base.Name;
+            var textSlot = moveText[i];
+            if (textSlot == null)
+                continue;
+
+            if (move == null || i >= move.Count || move[i] == null || move[i].Base == null)
+            {
+                textSlot.text = "-";
+            }
             else
-                moveText[i].text = "-";
+            {
+                textSlot.text = move[i].Base.Name;
+            }
         }
 
 

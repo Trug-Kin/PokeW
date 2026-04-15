@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: BackGround
     uniqueID: 2551415227
+    locked: 0
+  - name: Water
+    uniqueID: 3973173433
     locked: 0
   - name: ForeGround
     uniqueID: 3865070463

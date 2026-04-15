@@ -2,29 +2,30 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class Pokemon
 {
-   public  PokemonBase Base;
-   public  int Level;
-   public int HP { get; set; }
+    [SerializeField] PokemonBase _base;
+    [SerializeField] int level;
+    
+    public int HP { get; set; }
+    public PokemonBase Base { get { return _base; } }
+    public int Level { get { return level; } }
     public List<Move> Moves { get; set; }
-
-    public Pokemon(PokemonBase pBase, int pLevel)
+    public ConditionID Status;
+    public void Init()
     {
-        Base = pBase;
-        Level = pLevel;
+
         HP = MaxHp;
 
         Moves = new List<Move>();
-        foreach (var move in Base.LearnableMoves)
+        foreach (var move in _base.LearnableMoves)
         {
             if (move.Level <= Level)
                 Moves.Add(new Move(move.MoveBase));
 
             if (Moves.Count >= 4)
-            {
                 break;
-            }
         }
     }
 
@@ -54,34 +55,31 @@ public class Pokemon
     }
     public DamageDetails TakeDamage(Move move, Pokemon attacker)
     {
-        var details = new DamageDetails();
+        var damageDetails = new DamageDetails();
 
         // --------- Critical Hit ----------
         float critical = 1f;
-        details.Critical = false;
-
-        if (Random.value <= 0.0625f)   // 6.25% chance
-        {
+        if (Random.value <= 0.0625f)
             critical = 2f;
-            details.Critical = true;
-        }
 
         // --------- Type Effectiveness ----------
-        float type1 = TypeChart.GetEffectiveness(move.Base.Type, Base.Type1);
-        float type2 = TypeChart.GetEffectiveness(move.Base.Type, Base.Type2);
+        float type = TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type1) *
+                      TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type2);
 
-        float typeEffect = type1 * type2;
-        details.Type = typeEffect;
+        damageDetails.TypeEffectiveness = type;
+        damageDetails.Critical = critical;
+        damageDetails.Fainted = false;
+
+        // --------- Choose attack/defense stat based on move category ----------
+        float attack = (move.Base.IsSpecial) ? attacker.SpAttack : attacker.Attack;
+        float defense = (move.Base.IsSpecial) ? this.SpDefense : this.Defense;
 
         // --------- Random Modifier ----------
-        float random = Random.Range(0.85f, 1f);
+        float modifiers = Random.Range(0.85f, 1f) * type * critical;
 
         // --------- Damage Formula ----------
-        float a = (2 * attacker.Level / 5f + 2);
-        float d = ((a * move.Base.Power * ((float)attacker.Attack / Defense)) / 50) + 2;
-
-        float modifiers = random * typeEffect * critical;
-
+        float a = (2 * attacker.Level + 10) / 250f;
+        float d = a * move.Base.Power * (attack / defense) + 2;
         int damage = Mathf.FloorToInt(d * modifiers);
 
         // --------- Apply Damage ----------
@@ -89,14 +87,10 @@ public class Pokemon
         if (HP <= 0)
         {
             HP = 0;
-            details.Fainted = true;
-        }
-        else
-        {
-            details.Fainted = false;
+            damageDetails.Fainted = true;
         }
 
-        return details;
+        return damageDetails;
     }
     
     public Move GetRanDomMove ()
@@ -108,10 +102,33 @@ public class Pokemon
         return Moves[r];
     }
 
+    public void Heal(int amount)
+    {
+        HP += amount;
+        if (HP > MaxHp) HP = MaxHp;
+        Debug.Log($"{Base.Name} ???c h?i máu! HP hi?n t?i: {HP}/{MaxHp}");
+    }
+
+    // Hàm gi?i hi?u ?ng
+    public void CureStatus()
+    {
+        Status = ConditionID.None;
+        Debug.Log($"{Base.Name} ?ã ???c gi?i tr? m?i tr?ng thái x?u!");
+    }
+
+    // Hàm t?ng c?p
+    public void LevelUp()
+    {
+        level++;
+        Debug.Log($"{Base.Name} ?ã t?ng lên c?p {level}!");
+    }
+
 }
 public class DamageDetails
 {
     public bool Fainted { get; set; }
-    public bool Critical { get; set; }
-    public float Type { get; set; }
+    public float Critical { get; set; }
+    public float TypeEffectiveness { get; set; }
 }
+
+
