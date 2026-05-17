@@ -79,27 +79,36 @@ public class BattleSystem : MonoBehaviour
     }
 
     // ĐÃ NÂNG CẤP ĐỒNG BỘ: Reset sạch sẽ giao diện cũ để chuột không bao giờ bị nghẽn
-    public void ActionSelection()
+   public void ActionSelection()
     {
         state = BattleState.ActionSelection; 
         dialogBox.SetDialog("Bạn muốn làm gì tiếp theo?");
+        
         dialogBox.EnableActionSelector(true); // Bật menu chính (FIGHT, POKEMON, BAG, RUN)
-        dialogBox.EnableMoveSelector(false); // Đảm bảo tắt bảng chọn chiêu thức cũ
-        dialogBox.EnableDialogText(true);    // Đảm bảo hiện lại khung thoại chữ
-    }
+        dialogBox.EnableMoveSelector(true);   // SỬA THÀNH TRUE: Hiện song song bảng chiêu thức với hành động
+        dialogBox.EnableDialogText(true);     // Đảm bảo giữ khung thoại chữ rực rỡ
 
+        // NẠP SẴN DỮ LIỆU: Đổ chiêu thức của Pokemon vào ô UI ngay lập tức để không bị trống chữ
+        dialogBox.SetMoveSlotsData(
+            playerUnit.Pokemon.Moves,
+            OnMoveHoveredByMouse, 
+            OnMoveClickedByMouse  
+        );
+    }
     public void OnFightButtonClicked()
     {
         if (state != BattleState.ActionSelection) return;
         MoveSelection(); // Bấm FIGHT mới chuyển sang bảng chọn kỹ năng đòn đánh
     }
 
-    void MoveSelection()
+   void MoveSelection()
     {
         state = BattleState.MoveSelection;
-        dialogBox.EnableActionSelector(true); 
-        dialogBox.EnableDialogText(false);
-        dialogBox.EnableMoveSelector(true);
+        
+        dialogBox.EnableActionSelector(true); // Giữ nguyên menu chính
+        dialogBox.EnableDialogText(true);     // SỬA THÀNH TRUE: Không ẩn thoại chữ để hiện song song
+        dialogBox.EnableMoveSelector(true);   // Giữ bảng chọn chiêu thức sáng đèn
+        
         dialogBox.SetDialog("Chọn chiêu thức...");
 
         dialogBox.SetMoveSlotsData(
@@ -108,7 +117,6 @@ public class BattleSystem : MonoBehaviour
             OnMoveClickedByMouse  
         );
     }
-
     void OnMoveHoveredByMouse(Move move)
     {
         if (state != BattleState.MoveSelection) return;
