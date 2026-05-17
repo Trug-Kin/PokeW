@@ -5,20 +5,17 @@ public class MoveBase : ScriptableObject
 {
     [SerializeField] string name;
     [TextArea]
-    [SerializeField] string description;
     [SerializeField] PokemonType type;
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] int pp;
+    [SerializeField] Sprite typeIcon; // Hình ảnh Logo hệ chiêu thức
 
     public string Name
     {
         get { return name; }
     }
-    public string Description
-    {
-        get { return description; }
-    }
+   
     public PokemonType Type
     {
         get { return type; }
@@ -48,5 +45,8 @@ public class MoveBase : ScriptableObject
                 return false;
         }
     }
-
+    public Sprite TypeIcon
+    {
+        get { return typeIcon; }
     }
+}

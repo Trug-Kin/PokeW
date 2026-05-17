@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff80fe236a78efd4b8a0327ac0c049b9, type: 3}
   m_Name: Gourdball
   m_EditorClassIdentifier: Assembly-CSharp::GourdballItem
-  itemName: 
+  itemName: "D\u01B0\u1EE1ng Th\xFA H\u1ED3"
   description: 
   icon: {fileID: -6748507044223096490, guid: b911eec9e5e1abb42924a8ff0b60e40a, type: 3}
   price: 0

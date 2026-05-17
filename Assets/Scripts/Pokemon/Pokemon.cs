@@ -19,14 +19,22 @@ public class Pokemon
         HP = MaxHp;
 
         Moves = new List<Move>();
-        foreach (var move in _base.LearnableMoves)
+       foreach (var move in _base.LearnableMoves)
         {
+            // ÁO GIÁP 1: Nếu chiêu thức bị lỗi hoặc trống, lập tức bỏ qua và xét chiêu tiếp theo!
+            if (move.MoveBase == null) 
+            {
+                Debug.LogWarning($"[Cảnh báo] Cấp {move.Level} của {Base.Name} có chiêu bị rỗng, đang bỏ qua!");
+                continue; 
+            }
+
             if (move.Level <= Level)
                 Moves.Add(new Move(move.MoveBase));
 
             if (Moves.Count >= 4)
                 break;
         }
+        Debug.Log($"[KIỂM TRA] Ếch Kì Cục cấp {Level} đã nạp thành công {Moves.Count} chiêu!");
     }
 
     public int Attack
@@ -106,21 +114,21 @@ public class Pokemon
     {
         HP += amount;
         if (HP > MaxHp) HP = MaxHp;
-        Debug.Log($"{Base.Name} ???c h?i m�u! HP hi?n t?i: {HP}/{MaxHp}");
+        Debug.Log($"{Base.Name} ???c h?i m�u! HP hi?n t?i: {HP}/{MaxHp}");
     }
 
-    // H�m gi?i hi?u ?ng
+    // H�m gi?i hi?u ?ng
     public void CureStatus()
     {
         Status = ConditionID.None;
-        Debug.Log($"{Base.Name} ?� ???c gi?i tr? m?i tr?ng th�i x?u!");
+        Debug.Log($"{Base.Name} ?� ???c gi?i tr? m?i tr?ng th�i x?u!");
     }
 
-    // H�m t?ng c?p
+    // H�m t?ng c?p
     public void LevelUp()
     {
         level++;
-        Debug.Log($"{Base.Name} ?� t?ng l�n c?p {level}!");
+        Debug.Log($"{Base.Name} ?� t?ng l�n c?p {level}!");
     }
 
 }

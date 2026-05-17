@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Tackle
   m_EditorClassIdentifier: 
   name: Tackle
-  description: 
   type: 0
   power: 40
   accuracy: 100
   pp: 20
+  typeIcon: {fileID: 21300000, guid: cd918fd4eeccb214e871b17cade54fbc, type: 3}

@@ -2,150 +2,116 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-
+using System;
+using TMPro; // Sử dụng thư viện TextMeshPro cho khung chỉ số đỏ bên phải
 
 public class BattleDialogBox : MonoBehaviour
 {
-    [SerializeField] Text dialogText;
-    [SerializeField] int lettersPerSecond;
+    [Header("Cấu hình Dialogue")]
+    [SerializeField] Text dialogText; // ĐÃ GIỮ NGUYÊN: Kiểu Text thường của UnityEngine.UI đúng cấu trúc Canvas của bạn
+    [SerializeField] int lettersPerSecond = 30;
     [SerializeField] float postDialogDelay = 1.0f;
-    [SerializeField] Color highlightedColor;
+
+    [Header("Cấu hình Lựa chọn Action")]
+    [SerializeField] Color highlightedColor = Color.blue;
     [SerializeField] GameObject actionSelector;
+    [SerializeField] List<Image> actionImages; // Danh sách hình ảnh nút hành động Fight, Bag, Run...
+
+    [Header("Cấu hình Ô Chọn Chiêu thức (Chuột)")]
     [SerializeField] GameObject moveSelector;
+    [SerializeField] List<Image> moveSlots; // List<Image> giúp bạn dễ dàng kéo thả ô hình ảnh vào Element
+
+    [Header("Thành phần hiển thị trong Khung đỏ bên phải (moveDetails)")]
     [SerializeField] GameObject moveDetails;
+    [SerializeField] TextMeshProUGUI detailNameText;       
+    [SerializeField] TextMeshProUGUI detailPowerText;      
+    [SerializeField] TextMeshProUGUI detailAccuracyText;   
+    [SerializeField] TextMeshProUGUI detailCategoryText;   
 
-
-    [SerializeField] List<Text> actionText;
-    [SerializeField] List<Text> moveText;
-
-
-    [SerializeField] Text ppText;
-    [SerializeField] Text typeText;
-
-
-
-   
     public void SetDialog(string dialog)
     {
-        if (dialogText == null)
-        {
-            Debug.LogError($"BattleDialogBox '{name}': dialogText is not assigned in inspector.");
-            return;
-        }
-
-        dialogText.text = dialog;
+        if (dialogText != null) dialogText.text = dialog;
     }
+
     public IEnumerator TypeDialog(string dialog)
     {
-        if (dialogText == null)
-        {
-            Debug.LogError($"BattleDialogBox '{name}': dialogText is not assigned in inspector.");
-            yield break;
-        }
-
-        if (string.IsNullOrEmpty(dialog))
-        {
-            dialogText.text = "";
-            yield break;
-        }
-
-        // if lettersPerSecond is invalid, show whole dialog immediately
-        if (lettersPerSecond <= 0)
-        {
-            dialogText.text = dialog;
-            // still wait a bit so callers have time to read
-            if (postDialogDelay > 0f)
-                yield return new WaitForSeconds(postDialogDelay);
-            yield break;
-        }
+        // 1. TỰ ĐỘNG ẨN KHUNG 3 NÚT KHI CHỮ BẮT ĐẦU CHẠY
+        EnableActionSelector(false);
+        if (moveSelector != null) moveSelector.SetActive(false);
+        if (moveDetails != null) moveDetails.SetActive(false);
 
         dialogText.text = "";
         foreach (var letter in dialog.ToCharArray())
         {
             dialogText.text += letter;
-            yield return new WaitForSeconds(1f / (float)lettersPerSecond);
+            yield return new WaitForSeconds(1f / lettersPerSecond);
         }
 
-        // small pause after the full dialog is displayed so messages don't overlap
-        if (postDialogDelay > 0f)
-            yield return new WaitForSeconds(postDialogDelay);
-
+        yield return new WaitForSeconds(postDialogDelay);
     }
-    public void EnableDialogText(bool enabled)
-    { 
+
+    public void EnableDialogText(bool enabled) => dialogText.enabled = enabled;
+    public void EnableActionSelector(bool enabled) => actionSelector.SetActive(enabled);
     
-        dialogText.enabled = enabled;
-
-    }
-    public void EnableActionSelector(bool enabled)
-    {
-    actionSelector.SetActive(enabled);
-          
-    }
     public void EnableMoveSelector(bool enabled)
     {
         moveSelector.SetActive(enabled);
-        moveDetails.SetActive(enabled);
+        moveDetails.SetActive(enabled); 
     }
+
     public void UpdateActionSelection(int selectedAction)
     {
-        for (int i = 0; i < actionText.Count; i++)
+        for (int i = 0; i < actionImages.Count; i++)
         {
-            if (i == selectedAction) 
-                actionText[i].color = highlightedColor;
-            else
-                actionText[i].color = Color.black;
+            if (actionImages[i] != null)
+                actionImages[i].color = (i == selectedAction) ? highlightedColor : Color.white;
         }
     }
-    public void UpdateMoveSelection(int selectedMove, Move move)
+
+    // ĐÃ SỬA LỖI: Lấy script xử lý MoveSlotUI nằm trên linh kiện Image để nạp dữ liệu và tự ẩn ô chiêu thức thừa
+    // Phân phối dữ liệu Pokémon xuống các ô hình ảnh thông qua script gắn kèm
+    public void SetMoveSlotsData(List<Move> moves, Action<Move> onHover, Action<int> onClick)
     {
-        for (int i = 0; i < moveText.Count; i++)
-        {
-            if (i == selectedMove)
-                moveText[i].color = highlightedColor;
-            else
-                moveText[i].color = Color.black;
-        }
-        if (move == null)
-        {
-            ppText.text = "";
-            typeText.text = "";
-        }
-        else
-        {
-            ppText.text = $"PP {move.PP}/{move.Base.PP}";
-            typeText.text = move.Base.Type.ToString();
-        }
-    }
+        if (moveSlots == null || moveSlots.Count == 0) return;
 
-    public void SetMoveNames(List<Move>move)
-    { 
-        // Ensure UI list is assigned
-        if (moveText == null || moveText.Count == 0)
+        for (int i = 0; i < moveSlots.Count; i++)
         {
-            Debug.LogWarning("BattleDialogBox: moveText is not assigned or empty in inspector.");
-            return;
-        }
+            if (moveSlots[i] == null) continue;
 
-        // defend against null input (move list may not be initialized yet)
-        for (int i = 0; i < moveText.Count; i++)
-        {
-            var textSlot = moveText[i];
-            if (textSlot == null)
-                continue;
-
-            if (move == null || i >= move.Count || move[i] == null || move[i].Base == null)
+            // BẮT BỆNH: Tìm mọi cách truy vết script MoveSlotUI (tự tìm chính nó, tìm lên cha, tìm xuống con)
+            MoveSlotUI slotScript = moveSlots[i].GetComponent<MoveSlotUI>();
+            if (slotScript == null) slotScript = moveSlots[i].GetComponentInParent<MoveSlotUI>();
+            if (slotScript == null) slotScript = moveSlots[i].GetComponentInChildren<MoveSlotUI>();
+            
+            if (slotScript != null)
             {
-                textSlot.text = "-";
+                if (moves != null && i < moves.Count)
+                {
+                    // Nạp dữ liệu tên chiêu, hệ và PP thực tế vào ô UI
+                    slotScript.SetupSlot(i, moves[i], onHover, onClick);
+                }
+                else
+                {
+                    // Ô thừa tự động ẩn sạch (Nền Image, Icon, PP) nếu Pokémon chỉ có 3 chiêu
+                    slotScript.SetupSlot(i, null, null, null); 
+                }
             }
             else
             {
-                textSlot.text = move[i].Base.Name;
+                // Nếu đã quét hết các tầng mà vẫn trống, hệ thống mới phát cảnh báo lên Console cho bạn biết
+                Debug.LogWarning($"GamePokew ơi! Linh kiện ở Element {i} bạn kéo vào hoàn toàn không chứa script 'MoveSlotUI' ở bất kỳ tầng nào đâu nè!");
+                moveSlots[i].gameObject.SetActive(false);
             }
         }
-
-
     }
 
+    public void UpdateMoveDetailsPanel(Move move)
+    {
+        if (move == null || move.Base == null) return;
+
+        if (detailNameText != null) detailNameText.text = move.Base.Name.ToUpper();
+        if (detailPowerText != null) detailPowerText.text = move.Base.Power > 0 ? $"POW: {move.Base.Power}" : "POW: --";
+        if (detailAccuracyText != null) detailAccuracyText.text = move.Base.Accuracy > 0 ? $"ACC: {move.Base.Accuracy}%" : "ACC: --";
+        if (detailCategoryText != null) detailCategoryText.text = move.Base.IsSpecial ? "LOẠI: ĐẶC BIỆT" : "LOẠI: VẬT LÝ";
+    }
 }
-

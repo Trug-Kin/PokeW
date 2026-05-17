@@ -36,6 +36,7 @@ public class PokeWTeamCredits : MonoBehaviour
 
     void Update()
     {
+        // Vẫn giữ phím điều khiển làm dự phòng nếu cần test bằng bàn phím
         // Bấm phím mũi tên Trái hoặc phím A để lùi về trang trước
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
@@ -46,6 +47,24 @@ public class PokeWTeamCredits : MonoBehaviour
         {
             ChangePage(1);
         }
+    }
+
+    // =========================================================================
+    // 🔥 CÁC PHƯƠNG THỨC PUBLIC MỚI: Dành cho chuột click nút tiến/lùi trang ngoài Inspector
+    // =========================================================================
+
+    // Gọi hàm này khi click chuột vào nút mũi tên PHẢI (Tiến tới trang sau)
+    public void OnNextPageButtonClicked()
+    {
+        ChangePage(1);
+        Debug.Log("[CREDITS CHUỘT] Đã click xem thành viên tiếp theo.");
+    }
+
+    // Gọi hàm này khi click chuột vào nút mũi tên TRÁI (Lùi về trang trước)
+    public void OnPreviousPageButtonClicked()
+    {
+        ChangePage(-1);
+        Debug.Log("[CREDITS CHUỘT] Đã click lùi lại thành viên phía trước.");
     }
 
     void ChangePage(int direction)
