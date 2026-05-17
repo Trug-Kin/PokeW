@@ -1,84 +1,77 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems; // BẮT BUỘC: Thư viện quản lý tương tác tia chuột của Canvas
-using System;
+using UnityEngine.EventSystems;
 
 public class PokeWCircularMenu : MonoBehaviour
 {
     [Header("Thành Phần Menu Chính")]
-    public Image[] menuOptions; 
+    public Image[] menuOptions;
     public Vector3 selectedScale = new Vector3(1.2f, 1.2f, 1.2f);
     public Vector3 normalScale = Vector3.one;
     public Color selectedColor = Color.white;
     public Color unselectedColor = new Color(0.5f, 0.5f, 0.5f, 0.7f);
 
     [Header("Màn Hình Con (Sub-Menus)")]
-    public GameObject creditsPanel;  
-    public GameObject settingsPanel; 
+    public GameObject creditsPanel;
+    public GameObject settingsPanel;
 
-    private int currentIndex = 0; 
-    private bool isSubMenuOpen = false; // Kiểm tra xem có đang mở menu con không
+    private int currentIndex = 0;
+    private bool isSubMenuOpen = false;
 
     void Start()
     {
-        // 🔥 THẦN CHÚ TỰ ĐỘNG: Duyệt qua danh sách Image lựa chọn để cắm dây cảm biến chuột
+        UpdateMenuVisuals();
+
+        // Gắn sự kiện chuột cho từng button
         for (int i = 0; i < menuOptions.Length; i++)
         {
-            if (menuOptions[i] == null) continue;
             int index = i;
 
-            // Tự động gắn script nhận diện tia chuột vào từng Object lựa chọn
-            PokewMenuMouseOption handler = menuOptions[i].gameObject.GetComponent<PokewMenuMouseOption>();
-            if (handler == null) handler = menuOptions[i].gameObject.AddComponent<PokewMenuMouseOption>();
+            EventTrigger trigger = menuOptions[i].gameObject.GetComponent<EventTrigger>();
+            if (trigger == null)
+                trigger = menuOptions[i].gameObject.AddComponent<EventTrigger>();
 
-            // Khởi tạo cổng kết nối sự kiện Rê chuột (Hover) và Click chuột
-            handler.Init(index, OnOptionHovered, OnOptionClicked);
+            trigger.triggers = new System.Collections.Generic.List<EventTrigger.Entry>();
+
+            // Hover
+            EventTrigger.Entry hoverEntry = new EventTrigger.Entry();
+            hoverEntry.eventID = EventTriggerType.PointerEnter;
+            hoverEntry.callback.AddListener((data) => { OnHover(index); });
+            trigger.triggers.Add(hoverEntry);
+
+            // Click
+            EventTrigger.Entry clickEntry = new EventTrigger.Entry();
+            clickEntry.eventID = EventTriggerType.PointerClick;
+            clickEntry.callback.AddListener((data) => { OnClick(index); });
+            trigger.triggers.Add(clickEntry);
         }
-
-        UpdateMenuVisuals();
     }
 
-    void Update()
+    // Khi rê chuột vào
+    void OnHover(int index)
     {
-        // NẾU MENU CON ĐANG MỞ: Phím ESC hoặc Backspace vẫn được giữ làm dự phòng để đóng bảng con
-        if (isSubMenuOpen)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
-            {
-                CloseAllSubMenus();
-            }
-            return; 
-        }
-
-        // ĐÃ XÓA TOÀN BỘ: Logic kiểm tra phím bấm mũi tên di chuyển và nút Enter cũ đã được dọn dẹp sạch sẽ!
-    }
-
-    // ✔️ XỬ LÝ CHUỘT HOVER: Rê chuột đến ô nào, lập tức highlight ô đó sáng lên và phóng to!
-    void OnOptionHovered(int index)
-    {
-        if (isSubMenuOpen) return; // Khóa tương tác menu chính nếu bảng tác giả/cài đặt đang mở
+        if (isSubMenuOpen) return;
 
         currentIndex = index;
         UpdateMenuVisuals();
+
+        SoundManager.Instance.PlayClickSound(); // âm hover
     }
 
-    // ✔️ XỬ LÝ CHUỘT CLICK: Nhấn click chuột trái vào ô nào, thực thi tính năng của ô đó ngay
-    void OnOptionClicked(int index)
+    // Khi click
+    void OnClick(int index)
     {
-        if (isSubMenuOpen) return; // Khóa tương tác nếu bảng con đang mở
+        if (isSubMenuOpen) return;
 
         currentIndex = index;
-        UpdateMenuVisuals();
-        ConfirmSelection(); // Kích hoạt chuyển cảnh hoặc mở bảng panel con tương ứng
+        ConfirmSelection();
     }
 
     void UpdateMenuVisuals()
     {
         for (int i = 0; i < menuOptions.Length; i++)
         {
-            if (menuOptions[i] == null) continue;
-
             if (i == currentIndex)
             {
                 menuOptions[i].transform.localScale = selectedScale;
@@ -96,19 +89,17 @@ public class PokeWCircularMenu : MonoBehaviour
     {
         switch (currentIndex)
         {
-            case 0: // Chơi Mới
-                SceneManager.LoadScene("SampleScene"); 
+            case 0:
+                SceneManager.LoadScene("SampleScene");
                 break;
-            case 1: // Tiếp Tục
+            case 1:
                 Debug.Log("Tính năng tải file lưu đang phát triển!");
                 break;
-            case 2: // Cài Đặt
-                OpenSettingsMenu(); 
+            case 2:
+                OpenSettingsMenu();
                 break;
-            case 3: // Các Tác Giả
-                OpenCreditsMenu(); 
-                break;
-            default:
+            case 3:
+                OpenCreditsMenu();
                 break;
         }
     }
@@ -117,8 +108,8 @@ public class PokeWCircularMenu : MonoBehaviour
     {
         if (creditsPanel != null)
         {
-            creditsPanel.SetActive(true); 
-            isSubMenuOpen = true; 
+            creditsPanel.SetActive(true);
+            isSubMenuOpen = true;
         }
     }
 
@@ -136,49 +127,5 @@ public class PokeWCircularMenu : MonoBehaviour
         if (creditsPanel != null) creditsPanel.SetActive(false);
         if (settingsPanel != null) settingsPanel.SetActive(false);
         isSubMenuOpen = false;
-    }
-
-    // 🔥 HÀM PUBLIC MỚI: Bạn có thể gán hàm này vào linh kiện Image Back (nút quay lại) của bảng tác giả/cài đặt
-    // Để người chơi có thể click chuột trực tiếp tắt bảng con đi thay vì bấm phím ESC!
-    public void OnSubMenuCloseButtonClicked()
-    {
-        CloseAllSubMenus();
-        Debug.Log("[CHUỘT] Đã click nút quay về menu chính!");
-    }
-}
-
-// =========================================================================
-// LỚP TRỢ LÝ PHỤ TRỢ: Biến các Image tĩnh thành vùng đón tia chuột cực nhạy
-// =========================================================================
-public class PokewMenuMouseOption : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
-{
-    private int optionIndex;
-    private Action<int> onHoverCallback;
-    private Action<int> onClickCallback;
-
-    public void Init(int index, Action<int> onHover, Action<int> onClick)
-    {
-        optionIndex = index;
-        onHoverCallback = onHover;
-        onClickCallback = onClick;
-
-        // Đảm bảo tấm hình nền này được mở cổng đón tia quét chuột
-        Image img = GetComponent<Image>();
-        if (img != null)
-        {
-            img.raycastTarget = true;
-        }
-    }
-
-    // Tự động kích hoạt khi chuột đi vào vùng ảnh
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        onHoverCallback?.Invoke(optionIndex);
-    }
-
-    // Tự động kích hoạt khi chuột click vào vùng ảnh
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        onClickCallback?.Invoke(optionIndex);
     }
 }
