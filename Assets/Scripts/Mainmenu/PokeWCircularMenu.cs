@@ -128,24 +128,4 @@ public class PokeWCircularMenu : MonoBehaviour
         if (settingsPanel != null) settingsPanel.SetActive(false);
         isSubMenuOpen = false;
     }
-
-    void Update()
-    {
-        // Kiểm tra xem người chơi có bấm nút ESC không
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // Nếu có một menu con (Settings hoặc Credits) đang mở thì mới đóng nó lại
-            if (isSubMenuOpen)
-            {
-                CloseAllSubMenus();
-
-                // (Tùy chọn) Phát một tiếng click nhẹ khi tắt menu cho game sinh động
-                if (SoundManager.Instance != null)
-                {
-                    SoundManager.Instance.PlayClickSound();
-                }
-            }
-        }
-    }
-
 }
