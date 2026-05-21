@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &2642860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7573566780095731855, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+  m_PrefabInstance: {fileID: 383935235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cdf3a5b83a26346a5889ff88808ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &147741689
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +659,63 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1001 &383935235
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2360772451642999892, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_Name
+      value: BattleSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.85505
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.53259
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959855968693789105, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
 --- !u!1 &386933566
 GameObject:
   m_ObjectHideFlags: 0
@@ -15643,9 +15711,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameControl
   playerControl: {fileID: 1215276108}
-  battleSystem: {fileID: 0}
+  battleSystem: {fileID: 2642860}
   worldCamera: {fileID: 519420031}
-  partyScreen: {fileID: 0}
+  partyScreen: {fileID: 1331043118}
 --- !u!1 &1040016997
 GameObject:
   m_ObjectHideFlags: 0
@@ -16139,6 +16207,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1331043118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 945490285078642437, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+  m_PrefabInstance: {fileID: 383935235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a150a4108ee23134d8a16d57fcfd170d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PartyScreen
 --- !u!1 &1448178591
 GameObject:
   m_ObjectHideFlags: 0
@@ -18014,6 +18093,7 @@ SceneRoots:
   - {fileID: 1671361281}
   - {fileID: 481134434}
   - {fileID: 1012571296}
+  - {fileID: 383935235}
   - {fileID: 626659941}
   - {fileID: 926930955}
   - {fileID: 1236353245}
