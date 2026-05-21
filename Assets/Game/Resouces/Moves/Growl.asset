@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Growl
   m_EditorClassIdentifier: 
   name: Grow
-  type: 0
+  description: 
+  type: 5
   power: 0
   accuracy: 100
   pp: 40
-  typeIcon: {fileID: 21300000, guid: 74270e0fa1b909449820aaad35e9660a, type: 3}
+  isSpecial: 0

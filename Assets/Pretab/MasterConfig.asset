@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698433594ec4b7e459ed049827ca6f3a, type: 3}
+  m_Name: MasterConfig
+  m_EditorClassIdentifier: Assembly-CSharp::TypeColorConfig
+  typeUIList:
+  - type: 4
+    typeIcon: {fileID: 21300000, guid: ed0dfccc53b1a4141abee39d7c3ce9c5, type: 3}
+    typeColor: {r: 1, g: 1, b: 1, a: 0}
+  - type: 1
+    typeIcon: {fileID: 21300000, guid: cd918fd4eeccb214e871b17cade54fbc, type: 3}
+    typeColor: {r: 0.9622642, g: 0.9205056, b: 0.9205056, a: 0}
+  - type: 2
+    typeIcon: {fileID: 21300000, guid: d1b36469399f8de489a2d866ad1949e0, type: 3}
+    typeColor: {r: 0.94716984, g: 0.90606624, b: 0.90606624, a: 0}
+  - type: 3
+    typeIcon: {fileID: 21300000, guid: 6f25a7b13e46ce44faff8b9a176f3a41, type: 3}
+    typeColor: {r: 0.9547169, g: 0.9132858, b: 0.9132858, a: 0}
+  - type: 5
+    typeIcon: {fileID: 21300000, guid: 74270e0fa1b909449820aaad35e9660a, type: 3}
+    typeColor: {r: 0.96981126, g: 0.9130865, b: 0.9130865, a: 0}

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Ember
   m_EditorClassIdentifier: 
   name: Ember
-  type: 1
+  description: 
+  type: 4
   power: 40
   accuracy: 100
   pp: 25
-  typeIcon: {fileID: 21300000, guid: ed0dfccc53b1a4141abee39d7c3ce9c5, type: 3}
+  isSpecial: 0
