@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -10,13 +11,14 @@ public class SoundManager : MonoBehaviour
     public AudioSource sfxSource;
     public AudioSource bgmSource;
     public AudioSource ambientSource; // Loa phụ phát tiếng bụi cỏ
-
+    
     [Header("--- CÀI ĐẶT ÂM LƯỢNG ---")]
     [Range(0f, 1f)] public float normalVolume = 1f;
     [Range(0f, 1f)] public float duckedVolume = 0.2f; // Volume nhạc nền khi vào cỏ cao
 
     [Header("--- ÂM THANH MENU ---")]
     public AudioClip clickSound; // Âm thanh khi click UI
+    public AudioClip healSound; // Âm thanh khi hồi máu
 
     // Biến quản lý Playlist nhạc nền
     private List<AudioClip> playlist = new List<AudioClip>();
@@ -150,6 +152,13 @@ public class SoundManager : MonoBehaviour
         {
             bgmSource.volume += Time.deltaTime / fadeTime;
             yield return null;
+        }
+    }
+    public void PlayHealSound()
+    {
+        if (healSound != null && sfxSource != null)
+        {
+            sfxSource.PlayOneShot(healSound);
         }
     }
 }

@@ -61,7 +61,7 @@ public class BattleSystem : MonoBehaviour
         var firstPokemon = playerParty.GetHealthyPokemon();
         if (firstPokemon == null) yield break;
 
-        firstPokemon.Init();
+        //firstPokemon.Init();
 
         playerUnit.Setup(firstPokemon);
         playerHud.SetData(playerUnit.Pokemon);

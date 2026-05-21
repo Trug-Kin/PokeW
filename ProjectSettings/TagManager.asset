@@ -45,10 +45,13 @@ TagManager:
   - name: BackGround
     uniqueID: 2551415227
     locked: 0
-  - name: Water
+  - name: ReceptionDesk
     uniqueID: 3973173433
     locked: 0
-  - name: ForeGround
+  - name: Wall
+    uniqueID: 3121816577
+    locked: 0
+  - name: Furniture
     uniqueID: 3865070463
     locked: 0
   - name: Player
