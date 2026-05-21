@@ -1,0 +1,1495 @@
+fileFormatVersion: 2
+guid: 478b76136c872154993a61a618a1b5da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8358676564523126383
+    second: Kanto_Inside_1_0
+  - first:
+      213: -2258188876387518074
+    second: Kanto_Inside_1_1
+  - first:
+      213: -434057273037879812
+    second: Kanto_Inside_1_2
+  - first:
+      213: 7974887298680410591
+    second: Kanto_Inside_1_3
+  - first:
+      213: 5321733808437297146
+    second: Kanto_Inside_1_4
+  - first:
+      213: 8710926555621330066
+    second: Kanto_Inside_1_5
+  - first:
+      213: -155039039293027695
+    second: Kanto_Inside_1_6
+  - first:
+      213: -9136770935062191863
+    second: Kanto_Inside_1_7
+  - first:
+      213: -1975550678405097983
+    second: Kanto_Inside_1_8
+  - first:
+      213: 6141777369723362175
+    second: Kanto_Inside_1_9
+  - first:
+      213: 3103717287658302739
+    second: Kanto_Inside_1_10
+  - first:
+      213: -7876753790020066093
+    second: Kanto_Inside_1_11
+  - first:
+      213: -6955684332476471169
+    second: Kanto_Inside_1_12
+  - first:
+      213: 5811489349877698392
+    second: Kanto_Inside_1_13
+  - first:
+      213: -415356369623629492
+    second: Kanto_Inside_1_14
+  - first:
+      213: -2401021607625449786
+    second: Kanto_Inside_1_15
+  - first:
+      213: 2780130214547079699
+    second: Kanto_Inside_1_16
+  - first:
+      213: 2123253139037542459
+    second: Kanto_Inside_1_17
+  - first:
+      213: -326684860444667093
+    second: Kanto_Inside_1_18
+  - first:
+      213: -6068797487469198304
+    second: Kanto_Inside_1_19
+  - first:
+      213: -7646837191010622996
+    second: Kanto_Inside_1_20
+  - first:
+      213: 872976663598426848
+    second: Kanto_Inside_1_21
+  - first:
+      213: 7170649576918357753
+    second: Kanto_Inside_1_22
+  - first:
+      213: -4385290984474874255
+    second: Kanto_Inside_1_23
+  - first:
+      213: 6790809086104095883
+    second: Kanto_Inside_1_24
+  - first:
+      213: 6429183470924322490
+    second: Kanto_Inside_1_25
+  - first:
+      213: -5911835402742229898
+    second: Kanto_Inside_1_26
+  - first:
+      213: -3055680412918593910
+    second: Kanto_Inside_1_27
+  - first:
+      213: -4006410082071691554
+    second: Kanto_Inside_1_28
+  - first:
+      213: -1816518364952777619
+    second: Kanto_Inside_1_29
+  - first:
+      213: -1176490479541565712
+    second: Kanto_Inside_1_30
+  - first:
+      213: -3547349447880195961
+    second: Kanto_Inside_1_31
+  - first:
+      213: -3281077831416851699
+    second: Kanto_Inside_1_32
+  - first:
+      213: -5002278048708278788
+    second: Kanto_Inside_1_33
+  - first:
+      213: 8255527078895472875
+    second: Kanto_Inside_1_34
+  - first:
+      213: 7648100772465515461
+    second: Kanto_Inside_1_35
+  - first:
+      213: 1696613643623620278
+    second: Kanto_Inside_1_36
+  - first:
+      213: 8457821862035595765
+    second: Kanto_Inside_1_37
+  - first:
+      213: 5869645241739379643
+    second: Kanto_Inside_1_38
+  - first:
+      213: 1412490381717793277
+    second: Kanto_Inside_1_39
+  - first:
+      213: 6705280689449799745
+    second: Kanto_Inside_1_40
+  - first:
+      213: 227530824371898526
+    second: Kanto_Inside_1_41
+  - first:
+      213: 6602708358091925498
+    second: Kanto_Inside_1_42
+  - first:
+      213: -8787007478088181327
+    second: Kanto_Inside_1_43
+  - first:
+      213: 4017855366698982788
+    second: Kanto_Inside_1_44
+  - first:
+      213: 3621335695195027621
+    second: Kanto_Inside_1_45
+  - first:
+      213: -7095089006498915923
+    second: Kanto_Inside_1_46
+  - first:
+      213: 4825065127728722956
+    second: Kanto_Inside_1_47
+  - first:
+      213: 1867515908939124546
+    second: Kanto_Inside_1_48
+  - first:
+      213: -2886951130271547920
+    second: Kanto_Inside_1_49
+  - first:
+      213: 7168769554997224893
+    second: Kanto_Inside_1_50
+  - first:
+      213: 8281560207092050394
+    second: Kanto_Inside_1_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kanto_Inside_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3087
+        width: 256
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 191773363f3000c80800000000000000
+      internalID: -8358676564523126383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2975
+        width: 97
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689fe2b6e2d49a0e0800000000000000
+      internalID: -2258188876387518074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2687
+        width: 256
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5076cb53be9f9f0800000000000000
+      internalID: -434057273037879812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2623
+        width: 34
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd1de91debd7cae60800000000000000
+      internalID: 7974887298680410591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2495
+        width: 256
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff7719f3b89ad940800000000000000
+      internalID: 5321733808437297146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2255
+        width: 256
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c8354cc8d63e870800000000000000
+      internalID: 8710926555621330066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2247
+        width: 95
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a0f90b0d039ddf0800000000000000
+      internalID: -155039039293027695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2015
+        width: 256
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90121854e3ba33180800000000000000
+      internalID: -9136770935062191863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1727
+        width: 256
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106d1e9ff1f6594e0800000000000000
+      internalID: -1975550678405097983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1599
+        width: 189
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7bd4eb2af9fb3550800000000000000
+      internalID: 6141777369723362175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_10
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1663
+        width: 96
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31dac1ecd6e921b20800000000000000
+      internalID: 3103717287658302739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_11
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1699
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d464aa292620b290800000000000000
+      internalID: -7876753790020066093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_12
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1699
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f786df0d3f1787f90800000000000000
+      internalID: -6955684332476471169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_13
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1631
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f0d6be5ce86a050800000000000000
+      internalID: 5811489349877698392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_14
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1567
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41436d159b5c3af0800000000000000
+      internalID: -415356369623629492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1503
+        width: 97
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce927ba19bddaed0800000000000000
+      internalID: -2401021607625449786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1151
+        width: 256
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312c86b43b1059620800000000000000
+      internalID: 2780130214547079699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 863
+        width: 256
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38d0900b7f477d10800000000000000
+      internalID: 2123253139037542459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 695
+        width: 256
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2392bba9d1677bf0800000000000000
+      internalID: -326684860444667093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 559
+        width: 97
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0248d99c6dc47cba0800000000000000
+      internalID: -6068797487469198304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_20
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 559
+        width: 96
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce1e096e61af0e590800000000000000
+      internalID: -7646837191010622996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_21
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 559
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea6dfa76af6d1c00800000000000000
+      internalID: 872976663598426848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 463
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f616096cc3438360800000000000000
+      internalID: 7170649576918357753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_23
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 463
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ee6a975115423c0800000000000000
+      internalID: -4385290984474874255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_24
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 463
+        width: 96
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ccab272eccd3e50800000000000000
+      internalID: 6790809086104095883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_25
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 447
+        width: 95
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6d144bd4c093950800000000000000
+      internalID: 6429183470924322490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 391
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67498f00601f4fda0800000000000000
+      internalID: -5911835402742229898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_27
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 401
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a864ed8aada0895d0800000000000000
+      internalID: -3055680412918593910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_28
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 399
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edeb299d14f5668c0800000000000000
+      internalID: -4006410082071691554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_29
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 399
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c2401eb2e6ac6e0800000000000000
+      internalID: -1816518364952777619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_30
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 401
+        width: 46
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f6cb4564244cafe0800000000000000
+      internalID: -1176490479541565712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_31
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 399
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7804ce8c87845cec0800000000000000
+      internalID: -3547349447880195961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 335
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d035df1a8154772d0800000000000000
+      internalID: -3281077831416851699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_33
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 333
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5420f2e96549ab0800000000000000
+      internalID: -5002278048708278788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_34
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 355
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0de2b7326819270800000000000000
+      internalID: 8255527078895472875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_35
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 351
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb92359123832a60800000000000000
+      internalID: 7648100772465515461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_36
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 319
+        width: 82
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be544dae159b8710800000000000000
+      internalID: 1696613643623620278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_37
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 355
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f12a2c0c28306570800000000000000
+      internalID: 8457821862035595765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_38
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 351
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb30077af3b257150800000000000000
+      internalID: 5869645241739379643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_39
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 323
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9e1fab48c2a9310800000000000000
+      internalID: 1412490381717793277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_40
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 319
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14011fdc241fd0d50800000000000000
+      internalID: 6705280689449799745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_41
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 319
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98832a441a582300800000000000000
+      internalID: 227530824371898526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 257
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7629fd44881ab50800000000000000
+      internalID: 6602708358091925498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_43
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 255
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b95ad511474e0680800000000000000
+      internalID: -8787007478088181327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_44
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 255
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d5df22b2a42c730800000000000000
+      internalID: 4017855366698982788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_45
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 255
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8ba8cc0a1914230800000000000000
+      internalID: 3621335695195027621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_46
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 191
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da95ad5d32e298d90800000000000000
+      internalID: -7095089006498915923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_47
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 79
+        width: 160
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04356c5b2316f240800000000000000
+      internalID: 4825065127728722956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_48
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 209
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f05bc13dfbae910800000000000000
+      internalID: 1867515908939124546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_49
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 107
+        width: 60
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd70442e3d7fe7d0800000000000000
+      internalID: -2886951130271547920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_50
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 95
+        width: 29
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5ae32bde59c7360800000000000000
+      internalID: 7168769554997224893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Inside_1_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad96bb971230ee270800000000000000
+      internalID: 8281560207092050394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Kanto_Inside_1_0: -8358676564523126383
+      Kanto_Inside_1_1: -2258188876387518074
+      Kanto_Inside_1_10: 3103717287658302739
+      Kanto_Inside_1_11: -7876753790020066093
+      Kanto_Inside_1_12: -6955684332476471169
+      Kanto_Inside_1_13: 5811489349877698392
+      Kanto_Inside_1_14: -415356369623629492
+      Kanto_Inside_1_15: -2401021607625449786
+      Kanto_Inside_1_16: 2780130214547079699
+      Kanto_Inside_1_17: 2123253139037542459
+      Kanto_Inside_1_18: -326684860444667093
+      Kanto_Inside_1_19: -6068797487469198304
+      Kanto_Inside_1_2: -434057273037879812
+      Kanto_Inside_1_20: -7646837191010622996
+      Kanto_Inside_1_21: 872976663598426848
+      Kanto_Inside_1_22: 7170649576918357753
+      Kanto_Inside_1_23: -4385290984474874255
+      Kanto_Inside_1_24: 6790809086104095883
+      Kanto_Inside_1_25: 6429183470924322490
+      Kanto_Inside_1_26: -5911835402742229898
+      Kanto_Inside_1_27: -3055680412918593910
+      Kanto_Inside_1_28: -4006410082071691554
+      Kanto_Inside_1_29: -1816518364952777619
+      Kanto_Inside_1_3: 7974887298680410591
+      Kanto_Inside_1_30: -1176490479541565712
+      Kanto_Inside_1_31: -3547349447880195961
+      Kanto_Inside_1_32: -3281077831416851699
+      Kanto_Inside_1_33: -5002278048708278788
+      Kanto_Inside_1_34: 8255527078895472875
+      Kanto_Inside_1_35: 7648100772465515461
+      Kanto_Inside_1_36: 1696613643623620278
+      Kanto_Inside_1_37: 8457821862035595765
+      Kanto_Inside_1_38: 5869645241739379643
+      Kanto_Inside_1_39: 1412490381717793277
+      Kanto_Inside_1_4: 5321733808437297146
+      Kanto_Inside_1_40: 6705280689449799745
+      Kanto_Inside_1_41: 227530824371898526
+      Kanto_Inside_1_42: 6602708358091925498
+      Kanto_Inside_1_43: -8787007478088181327
+      Kanto_Inside_1_44: 4017855366698982788
+      Kanto_Inside_1_45: 3621335695195027621
+      Kanto_Inside_1_46: -7095089006498915923
+      Kanto_Inside_1_47: 4825065127728722956
+      Kanto_Inside_1_48: 1867515908939124546
+      Kanto_Inside_1_49: -2886951130271547920
+      Kanto_Inside_1_5: 8710926555621330066
+      Kanto_Inside_1_50: 7168769554997224893
+      Kanto_Inside_1_51: 8281560207092050394
+      Kanto_Inside_1_6: -155039039293027695
+      Kanto_Inside_1_7: -9136770935062191863
+      Kanto_Inside_1_8: -1975550678405097983
+      Kanto_Inside_1_9: 6141777369723362175
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

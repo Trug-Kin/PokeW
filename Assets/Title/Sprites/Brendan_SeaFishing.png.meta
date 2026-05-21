@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 5d5569ce2e0c2b64d8e6bd27d1e7fad6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6330010740187074329
+    second: Brendan_SeaFishing_0
+  - first:
+      213: -979378270717968009
+    second: Brendan_SeaFishing_1
+  - first:
+      213: 1244610691348928272
+    second: Brendan_SeaFishing_2
+  - first:
+      213: 6045003332305398078
+    second: Brendan_SeaFishing_3
+  - first:
+      213: 7616146976650978109
+    second: Brendan_SeaFishing_4
+  - first:
+      213: 4747275404318826462
+    second: Brendan_SeaFishing_5
+  - first:
+      213: 2435719814108404598
+    second: Brendan_SeaFishing_6
+  - first:
+      213: -5900116818460484770
+    second: Brendan_SeaFishing_7
+  - first:
+      213: -8369874769099782549
+    second: Brendan_SeaFishing_8
+  - first:
+      213: -8586918296824429837
+    second: Brendan_SeaFishing_9
+  - first:
+      213: -6963811681153229861
+    second: Brendan_SeaFishing_10
+  - first:
+      213: 5937553693261750156
+    second: Brendan_SeaFishing_11
+  - first:
+      213: 7998929010132986320
+    second: Brendan_SeaFishing_12
+  - first:
+      213: 2492246512938106499
+    second: Brendan_SeaFishing_13
+  - first:
+      213: 6144121393842574613
+    second: Brendan_SeaFishing_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 195
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f0249fa37b8d750800000000000000
+      internalID: 6330010740187074329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 195
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7718e19d6ac8862f0800000000000000
+      internalID: -979378270717968009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 195
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017918d54deb54110800000000000000
+      internalID: 1244610691348928272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 193
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39ad10c08a24e350800000000000000
+      internalID: 6045003332305398078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 63
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33627cb25df1b960800000000000000
+      internalID: 7616146976650978109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 127
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf5f5df3d5b1e140800000000000000
+      internalID: 4747275404318826462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 127
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bdf44144a6dc120800000000000000
+      internalID: 2435719814108404598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_7
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 63
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5bda5683039e1ea0800000000000000
+      internalID: -5900116818460484770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_8
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 127
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b668d453e3b38db80800000000000000
+      internalID: -8369874769099782549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_9
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 127
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f24a72fd4325d880800000000000000
+      internalID: -8586918296824429837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_10
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb552efb229b5f90800000000000000
+      internalID: -6963811681153229861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 63
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8fdca120ad666250800000000000000
+      internalID: 5937553693261750156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1
+        width: 65
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d92b88fd87e10f60800000000000000
+      internalID: 7998929010132986320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38eb160cffc369220800000000000000
+      internalID: 2492246512938106499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brendan_SeaFishing_14
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5155dd0dadd444550800000000000000
+      internalID: 6144121393842574613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brendan_SeaFishing_0: 6330010740187074329
+      Brendan_SeaFishing_1: -979378270717968009
+      Brendan_SeaFishing_10: -6963811681153229861
+      Brendan_SeaFishing_11: 5937553693261750156
+      Brendan_SeaFishing_12: 7998929010132986320
+      Brendan_SeaFishing_13: 2492246512938106499
+      Brendan_SeaFishing_14: 6144121393842574613
+      Brendan_SeaFishing_2: 1244610691348928272
+      Brendan_SeaFishing_3: 6045003332305398078
+      Brendan_SeaFishing_4: 7616146976650978109
+      Brendan_SeaFishing_5: 4747275404318826462
+      Brendan_SeaFishing_6: 2435719814108404598
+      Brendan_SeaFishing_7: -5900116818460484770
+      Brendan_SeaFishing_8: -8369874769099782549
+      Brendan_SeaFishing_9: -8586918296824429837
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

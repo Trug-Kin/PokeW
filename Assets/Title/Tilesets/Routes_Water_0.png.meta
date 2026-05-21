@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: ee5300fc4ad418f448dc6541b1cb196a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 106208467709090567
+    second: Routes_Water_0_0
+  - first:
+      213: 845155971935310575
+    second: Routes_Water_0_1
+  - first:
+      213: 1622379706309470553
+    second: Routes_Water_0_2
+  - first:
+      213: 716708365926506351
+    second: Routes_Water_0_3
+  - first:
+      213: -2584708431894182858
+    second: Routes_Water_0_4
+  - first:
+      213: 3993499107701050424
+    second: Routes_Water_0_5
+  - first:
+      213: -7486821872107067308
+    second: Routes_Water_0_6
+  - first:
+      213: -4221973260862825621
+    second: Routes_Water_0_7
+  - first:
+      213: -3209037399615557493
+    second: Routes_Water_0_8
+  - first:
+      213: 3890920118921028260
+    second: Routes_Water_0_9
+  - first:
+      213: -1793537998120094981
+    second: Routes_Water_0_10
+  - first:
+      213: 6822082384599263691
+    second: Routes_Water_0_11
+  - first:
+      213: 3046899495266738624
+    second: Routes_Water_0_12
+  - first:
+      213: 8573976748594597225
+    second: Routes_Water_0_13
+  - first:
+      213: 7101768097819757398
+    second: Routes_Water_0_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Routes_Water_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2815
+        width: 256
+        height: 1281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b50f5e904597100800000000000000
+      internalID: 106208467709090567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2161
+        width: 256
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2110fe0e89abb00800000000000000
+      internalID: 845155971935310575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2111
+        width: 113
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959e0654fb9d38610800000000000000
+      internalID: 1622379706309470553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1535
+        width: 256
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f9996267242f900800000000000000
+      internalID: 716708365926506351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1407
+        width: 33
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6348df42065412cd0800000000000000
+      internalID: -2584708431894182858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_5
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1407
+        width: 66
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c4c5da742cb6730800000000000000
+      internalID: 3993499107701050424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1391
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458ee689c27791890800000000000000
+      internalID: -7486821872107067308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_7
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1487
+        width: 129
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6bd21f20b98865c0800000000000000
+      internalID: -4221973260862825621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1023
+        width: 256
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80b8fcbc753773d0800000000000000
+      internalID: -3209037399615557493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1375
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a265b1bb335ff530800000000000000
+      internalID: 3890920118921028260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 543
+        width: 256
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf2f2ea71b21c17e0800000000000000
+      internalID: -1793537998120094981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511
+        width: 129
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc92d7aa8c7ecae50800000000000000
+      internalID: 6822082384599263691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 351
+        width: 256
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1e0b1a2f2c84a20800000000000000
+      internalID: 3046899495266738624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 151
+        width: 225
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d807c0d62ecf670800000000000000
+      internalID: 8573976748594597225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_Water_0_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 225
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b8fbb457c8e8260800000000000000
+      internalID: 7101768097819757398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Routes_Water_0_0: 106208467709090567
+      Routes_Water_0_1: 845155971935310575
+      Routes_Water_0_10: -1793537998120094981
+      Routes_Water_0_11: 6822082384599263691
+      Routes_Water_0_12: 3046899495266738624
+      Routes_Water_0_13: 8573976748594597225
+      Routes_Water_0_14: 7101768097819757398
+      Routes_Water_0_2: 1622379706309470553
+      Routes_Water_0_3: 716708365926506351
+      Routes_Water_0_4: -2584708431894182858
+      Routes_Water_0_5: 3993499107701050424
+      Routes_Water_0_6: -7486821872107067308
+      Routes_Water_0_7: -4221973260862825621
+      Routes_Water_0_8: -3209037399615557493
+      Routes_Water_0_9: 3890920118921028260
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

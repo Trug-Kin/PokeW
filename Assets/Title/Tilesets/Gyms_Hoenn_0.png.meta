@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 70fd6f26dafc31340aa6e56a1689cb90
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2997058769241971099
+    second: Gyms_Hoenn_0_0
+  - first:
+      213: 1389234506671577168
+    second: Gyms_Hoenn_0_1
+  - first:
+      213: 1287334024371101935
+    second: Gyms_Hoenn_0_2
+  - first:
+      213: 7388271606843377920
+    second: Gyms_Hoenn_0_3
+  - first:
+      213: -2297997501756573937
+    second: Gyms_Hoenn_0_4
+  - first:
+      213: 3170809531853619164
+    second: Gyms_Hoenn_0_5
+  - first:
+      213: -4867339464204114217
+    second: Gyms_Hoenn_0_6
+  - first:
+      213: -7078035085514110426
+    second: Gyms_Hoenn_0_7
+  - first:
+      213: -9069267921982840718
+    second: Gyms_Hoenn_0_8
+  - first:
+      213: 5675749246548855941
+    second: Gyms_Hoenn_0_9
+  - first:
+      213: -8371479113881534297
+    second: Gyms_Hoenn_0_10
+  - first:
+      213: 6953179969274628598
+    second: Gyms_Hoenn_0_11
+  - first:
+      213: -7381038757916484151
+    second: Gyms_Hoenn_0_12
+  - first:
+      213: -5274953125633890539
+    second: Gyms_Hoenn_0_13
+  - first:
+      213: -496312473949222674
+    second: Gyms_Hoenn_0_14
+  - first:
+      213: 2420438110792320238
+    second: Gyms_Hoenn_0_15
+  - first:
+      213: 828443518429696870
+    second: Gyms_Hoenn_0_16
+  - first:
+      213: 2313567860522122976
+    second: Gyms_Hoenn_0_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3871
+        width: 256
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566ec50bdee4866d0800000000000000
+      internalID: -2997058769241971099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3679
+        width: 256
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058dfdf5c6d874310800000000000000
+      internalID: 1389234506671577168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3487
+        width: 256
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0e9ed79778dd110800000000000000
+      internalID: 1287334024371101935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3311
+        width: 256
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0090106b1e9688660800000000000000
+      internalID: 7388271606843377920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2943
+        width: 256
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07701d827fdb10e0800000000000000
+      internalID: -2297997501756573937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2921
+        width: 65
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfbe84387af00c20800000000000000
+      internalID: 3170809531853619164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_6
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2923
+        width: 64
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6afdaab8cb37cb0800000000000000
+      internalID: -4867339464204114217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2655
+        width: 256
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a0e2c3794c5cd90800000000000000
+      internalID: -7078035085514110426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2399
+        width: 256
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2702e5140ec732280800000000000000
+      internalID: -9069267921982840718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2175
+        width: 256
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c4cba4edf44ce40800000000000000
+      internalID: 5675749246548855941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2111
+        width: 161
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a04d74991882db80800000000000000
+      internalID: -8371479113881534297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1951
+        width: 256
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9c9ffa758ae7060800000000000000
+      internalID: 6953179969274628598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1855
+        width: 161
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd5ff82b58419990800000000000000
+      internalID: -7381038757916484151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1535
+        width: 256
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51761c3841a9bc6b0800000000000000
+      internalID: -5274953125633890539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1247
+        width: 256
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee849ac3f6ebc19f0800000000000000
+      internalID: -496312473949222674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 799
+        width: 256
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4089243af179120800000000000000
+      internalID: 2420438110792320238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 415
+        width: 256
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6631a70adf83f7b00800000000000000
+      internalID: 828443518429696870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gyms_Hoenn_0_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee7e2a16b17b1020800000000000000
+      internalID: 2313567860522122976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Gyms_Hoenn_0_0: -2997058769241971099
+      Gyms_Hoenn_0_1: 1389234506671577168
+      Gyms_Hoenn_0_10: -8371479113881534297
+      Gyms_Hoenn_0_11: 6953179969274628598
+      Gyms_Hoenn_0_12: -7381038757916484151
+      Gyms_Hoenn_0_13: -5274953125633890539
+      Gyms_Hoenn_0_14: -496312473949222674
+      Gyms_Hoenn_0_15: 2420438110792320238
+      Gyms_Hoenn_0_16: 828443518429696870
+      Gyms_Hoenn_0_17: 2313567860522122976
+      Gyms_Hoenn_0_2: 1287334024371101935
+      Gyms_Hoenn_0_3: 7388271606843377920
+      Gyms_Hoenn_0_4: -2297997501756573937
+      Gyms_Hoenn_0_5: 3170809531853619164
+      Gyms_Hoenn_0_6: -4867339464204114217
+      Gyms_Hoenn_0_7: -7078035085514110426
+      Gyms_Hoenn_0_8: -9069267921982840718
+      Gyms_Hoenn_0_9: 5675749246548855941
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
