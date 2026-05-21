@@ -1,0 +1,1755 @@
+fileFormatVersion: 2
+guid: 66ef16dad70933244b794c966ed5c616
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2732765242950481045
+    second: Hoenn_Interior_1_0
+  - first:
+      213: 3002479678771656632
+    second: Hoenn_Interior_1_1
+  - first:
+      213: 1090550832743230415
+    second: Hoenn_Interior_1_2
+  - first:
+      213: 6958791345623811864
+    second: Hoenn_Interior_1_3
+  - first:
+      213: -5774271340558262673
+    second: Hoenn_Interior_1_4
+  - first:
+      213: 3903812626507760396
+    second: Hoenn_Interior_1_5
+  - first:
+      213: -6920735507435234380
+    second: Hoenn_Interior_1_6
+  - first:
+      213: 4653131893422630796
+    second: Hoenn_Interior_1_7
+  - first:
+      213: 3867281291775911299
+    second: Hoenn_Interior_1_8
+  - first:
+      213: -5881626724958919396
+    second: Hoenn_Interior_1_9
+  - first:
+      213: 1282832631956562146
+    second: Hoenn_Interior_1_10
+  - first:
+      213: 1863838716940274291
+    second: Hoenn_Interior_1_11
+  - first:
+      213: 5716362579923841009
+    second: Hoenn_Interior_1_12
+  - first:
+      213: 8871182344552488328
+    second: Hoenn_Interior_1_13
+  - first:
+      213: -881592072798631531
+    second: Hoenn_Interior_1_14
+  - first:
+      213: -2857615825892312444
+    second: Hoenn_Interior_1_15
+  - first:
+      213: 7030733085605048006
+    second: Hoenn_Interior_1_16
+  - first:
+      213: 505190466123960432
+    second: Hoenn_Interior_1_17
+  - first:
+      213: -5064622849976128411
+    second: Hoenn_Interior_1_18
+  - first:
+      213: -2555008406320125365
+    second: Hoenn_Interior_1_19
+  - first:
+      213: -7705937523396619777
+    second: Hoenn_Interior_1_20
+  - first:
+      213: -3446382322534174257
+    second: Hoenn_Interior_1_21
+  - first:
+      213: -6514085933540802871
+    second: Hoenn_Interior_1_22
+  - first:
+      213: -198154944303869563
+    second: Hoenn_Interior_1_23
+  - first:
+      213: -7003065279475661873
+    second: Hoenn_Interior_1_24
+  - first:
+      213: -8461740411236250759
+    second: Hoenn_Interior_1_25
+  - first:
+      213: -7445073526652949355
+    second: Hoenn_Interior_1_26
+  - first:
+      213: 2405327760455535311
+    second: Hoenn_Interior_1_27
+  - first:
+      213: 3355159152412813715
+    second: Hoenn_Interior_1_28
+  - first:
+      213: -3271252013990315164
+    second: Hoenn_Interior_1_29
+  - first:
+      213: 2929926596578802554
+    second: Hoenn_Interior_1_30
+  - first:
+      213: -8323293644609447766
+    second: Hoenn_Interior_1_31
+  - first:
+      213: 5909133028690284231
+    second: Hoenn_Interior_1_32
+  - first:
+      213: 6188469721304096068
+    second: Hoenn_Interior_1_33
+  - first:
+      213: 2803657433702633033
+    second: Hoenn_Interior_1_34
+  - first:
+      213: -354293155139924192
+    second: Hoenn_Interior_1_35
+  - first:
+      213: 8071398627959274174
+    second: Hoenn_Interior_1_36
+  - first:
+      213: 2353904688642602004
+    second: Hoenn_Interior_1_37
+  - first:
+      213: 2291241585647646321
+    second: Hoenn_Interior_1_38
+  - first:
+      213: 6102222074837671422
+    second: Hoenn_Interior_1_39
+  - first:
+      213: 292820993995213824
+    second: Hoenn_Interior_1_40
+  - first:
+      213: -2202740923757449299
+    second: Hoenn_Interior_1_41
+  - first:
+      213: 7636043491129422062
+    second: Hoenn_Interior_1_42
+  - first:
+      213: -2582528753104565733
+    second: Hoenn_Interior_1_43
+  - first:
+      213: 6345083406462699594
+    second: Hoenn_Interior_1_44
+  - first:
+      213: -4426123278934401389
+    second: Hoenn_Interior_1_45
+  - first:
+      213: -417694496399015853
+    second: Hoenn_Interior_1_46
+  - first:
+      213: 5588457875850311224
+    second: Hoenn_Interior_1_47
+  - first:
+      213: 2663828720506254922
+    second: Hoenn_Interior_1_48
+  - first:
+      213: -9143158096929786822
+    second: Hoenn_Interior_1_49
+  - first:
+      213: 5899709424220612349
+    second: Hoenn_Interior_1_50
+  - first:
+      213: -1310657009127899400
+    second: Hoenn_Interior_1_51
+  - first:
+      213: 7800993214138771782
+    second: Hoenn_Interior_1_52
+  - first:
+      213: -1265248366986824269
+    second: Hoenn_Interior_1_53
+  - first:
+      213: -7750915071309065296
+    second: Hoenn_Interior_1_54
+  - first:
+      213: 3341330548851590508
+    second: Hoenn_Interior_1_55
+  - first:
+      213: -1098513265041192649
+    second: Hoenn_Interior_1_56
+  - first:
+      213: -3438398697961109733
+    second: Hoenn_Interior_1_57
+  - first:
+      213: 3459654264481500276
+    second: Hoenn_Interior_1_58
+  - first:
+      213: 2080244877632160244
+    second: Hoenn_Interior_1_59
+  - first:
+      213: 4098775314391362349
+    second: Hoenn_Interior_1_60
+  - first:
+      213: -3790011074462246592
+    second: Hoenn_Interior_1_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3871
+        width: 223
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594f898728bbce520800000000000000
+      internalID: 2732765242950481045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3503
+        width: 256
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7738a2c53faa920800000000000000
+      internalID: 3002479678771656632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3231
+        width: 256
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcbaa23543a622f00800000000000000
+      internalID: 1090550832743230415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 3215
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81748fd0cd7929060800000000000000
+      internalID: 6958791345623811864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3039
+        width: 256
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e5e452fcaaddfa0800000000000000
+      internalID: -5774271340558262673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 3009
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c030ea886e02d2630800000000000000
+      internalID: 3903812626507760396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2945
+        width: 111
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbd3ee39bb94ff90800000000000000
+      internalID: -6920735507435234380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2945
+        width: 112
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c872f70cdce339040800000000000000
+      internalID: 4653131893422630796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2911
+        width: 65
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38521da58d75ba530800000000000000
+      internalID: 3867281291775911299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_9
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 2881
+        width: 6
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c152165e7a3406ea0800000000000000
+      internalID: -5881626724958919396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_10
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 2881
+        width: 6
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0ec066b798dc110800000000000000
+      internalID: 1282832631956562146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2815
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a48d1207fadd910800000000000000
+      internalID: 1863838716940274291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2849
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff22b7da79945f40800000000000000
+      internalID: 5716362579923841009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_13
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2817
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d94c04755cc1b70800000000000000
+      internalID: 8871182344552488328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2671
+        width: 256
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59989004ea4f3c3f0800000000000000
+      internalID: -881592072798631531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2527
+        width: 256
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a7721fb85b758d0800000000000000
+      internalID: -2857615825892312444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2335
+        width: 256
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce231ead7e229160800000000000000
+      internalID: 7030733085605048006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2239
+        width: 161
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0709b356d0cc20700800000000000000
+      internalID: 505190466123960432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_18
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 2303
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ca8d9f958d6b9b0800000000000000
+      internalID: -5064622849976128411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2015
+        width: 256
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ae6273469ca8cd0800000000000000
+      internalID: -2555008406320125365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1247
+        width: 256
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff1579876a20f0590800000000000000
+      internalID: -7705937523396619777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1055
+        width: 256
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc13a21998dfb20d0800000000000000
+      internalID: -3446382322534174257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 897
+        width: 256
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce7ee64b515995a0800000000000000
+      internalID: -6514085933540802871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_23
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 895
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581d746c023004df0800000000000000
+      internalID: -198154944303869563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 831
+        width: 129
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc34bfd6b3d10de90800000000000000
+      internalID: -7003065279475661873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 671
+        width: 58
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b02be9debd19a80800000000000000
+      internalID: -8461740411236250759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_26
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 671
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59caf2db219cda890800000000000000
+      internalID: -7445073526652949355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_27
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 737
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca865aaad0716120800000000000000
+      internalID: 2405327760455535311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_28
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 735
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3996774097bef8e20800000000000000
+      internalID: 3355159152412813715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_29
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 673
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b735700ad2a92d0800000000000000
+      internalID: -3271252013990315164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_30
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 703
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b7c0757b039a820800000000000000
+      internalID: 2929926596578802554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 639
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa899c76788bd7c80800000000000000
+      internalID: -8323293644609447766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_32
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 639
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cecc918e25710250800000000000000
+      internalID: 5909133028690284231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_33
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 639
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d57917c6cd1e550800000000000000
+      internalID: 6188469721304096068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_34
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 639
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e8abfd49798e620800000000000000
+      internalID: 2803657433702633033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_35
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 639
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f4885a04c451bf0800000000000000
+      internalID: -354293155139924192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_36
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 639
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba761cb94e530070800000000000000
+      internalID: 8071398627959274174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_37
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 671
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4143ba1c7dfbaa020800000000000000
+      internalID: 2353904688642602004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_38
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 639
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176712725102ccf10800000000000000
+      internalID: 2291241585647646321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511
+        width: 256
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd1f3765a27fa450800000000000000
+      internalID: 6102222074837671422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 495
+        width: 65
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c8cd1842f401400800000000000000
+      internalID: 292820993995213824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_41
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 495
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafa83becca4e61e0800000000000000
+      internalID: -2202740923757449299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_42
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 479
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0f332091da8f960800000000000000
+      internalID: 7636043491129422062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_43
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 463
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a48f828c3092cd0800000000000000
+      internalID: -2582528753104565733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_44
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 463
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a484f609db34e0850800000000000000
+      internalID: 6345083406462699594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 415
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e170314504392c0800000000000000
+      internalID: -4426123278934401389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_46
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 399
+        width: 142
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350408d811d043af0800000000000000
+      internalID: -417694496399015853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_47
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 407
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836ba4444d03e8d40800000000000000
+      internalID: 5588457875850311224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 335
+        width: 193
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4632449b12d7f420800000000000000
+      internalID: 2663828720506254922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_49
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 335
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a347343472afc1180800000000000000
+      internalID: -9143158096929786822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_50
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 339
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6a1bc967affd150800000000000000
+      internalID: 5899709424220612349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_51
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 229
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe3e84f46c9fcde0800000000000000
+      internalID: -1310657009127899400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_52
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 229
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64969ff2ff1b24c60800000000000000
+      internalID: 7800993214138771782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_53
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 271
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b57b15505fe07ee0800000000000000
+      internalID: -1265248366986824269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_54
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 275
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3d66a0fc73f6490800000000000000
+      internalID: -7750915071309065296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_55
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 159
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65c5795e6ace5e20800000000000000
+      internalID: 3341330548851590508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_56
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 133
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7394a20710c41c0f0800000000000000
+      internalID: -1098513265041192649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_57
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 175
+        width: 65
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17ccd30a9a5840d0800000000000000
+      internalID: -3438398697961109733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 161
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cc5183939230030800000000000000
+      internalID: 3459654264481500276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_59
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 95
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f14711d1b38edc10800000000000000
+      internalID: 2080244877632160244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_60
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 79
+        width: 65
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2bef64ae66c1e830800000000000000
+      internalID: 4098775314391362349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Interior_1_61
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04991e3120d276bc0800000000000000
+      internalID: -3790011074462246592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hoenn_Interior_1_0: 2732765242950481045
+      Hoenn_Interior_1_1: 3002479678771656632
+      Hoenn_Interior_1_10: 1282832631956562146
+      Hoenn_Interior_1_11: 1863838716940274291
+      Hoenn_Interior_1_12: 5716362579923841009
+      Hoenn_Interior_1_13: 8871182344552488328
+      Hoenn_Interior_1_14: -881592072798631531
+      Hoenn_Interior_1_15: -2857615825892312444
+      Hoenn_Interior_1_16: 7030733085605048006
+      Hoenn_Interior_1_17: 505190466123960432
+      Hoenn_Interior_1_18: -5064622849976128411
+      Hoenn_Interior_1_19: -2555008406320125365
+      Hoenn_Interior_1_2: 1090550832743230415
+      Hoenn_Interior_1_20: -7705937523396619777
+      Hoenn_Interior_1_21: -3446382322534174257
+      Hoenn_Interior_1_22: -6514085933540802871
+      Hoenn_Interior_1_23: -198154944303869563
+      Hoenn_Interior_1_24: -7003065279475661873
+      Hoenn_Interior_1_25: -8461740411236250759
+      Hoenn_Interior_1_26: -7445073526652949355
+      Hoenn_Interior_1_27: 2405327760455535311
+      Hoenn_Interior_1_28: 3355159152412813715
+      Hoenn_Interior_1_29: -3271252013990315164
+      Hoenn_Interior_1_3: 6958791345623811864
+      Hoenn_Interior_1_30: 2929926596578802554
+      Hoenn_Interior_1_31: -8323293644609447766
+      Hoenn_Interior_1_32: 5909133028690284231
+      Hoenn_Interior_1_33: 6188469721304096068
+      Hoenn_Interior_1_34: 2803657433702633033
+      Hoenn_Interior_1_35: -354293155139924192
+      Hoenn_Interior_1_36: 8071398627959274174
+      Hoenn_Interior_1_37: 2353904688642602004
+      Hoenn_Interior_1_38: 2291241585647646321
+      Hoenn_Interior_1_39: 6102222074837671422
+      Hoenn_Interior_1_4: -5774271340558262673
+      Hoenn_Interior_1_40: 292820993995213824
+      Hoenn_Interior_1_41: -2202740923757449299
+      Hoenn_Interior_1_42: 7636043491129422062
+      Hoenn_Interior_1_43: -2582528753104565733
+      Hoenn_Interior_1_44: 6345083406462699594
+      Hoenn_Interior_1_45: -4426123278934401389
+      Hoenn_Interior_1_46: -417694496399015853
+      Hoenn_Interior_1_47: 5588457875850311224
+      Hoenn_Interior_1_48: 2663828720506254922
+      Hoenn_Interior_1_49: -9143158096929786822
+      Hoenn_Interior_1_5: 3903812626507760396
+      Hoenn_Interior_1_50: 5899709424220612349
+      Hoenn_Interior_1_51: -1310657009127899400
+      Hoenn_Interior_1_52: 7800993214138771782
+      Hoenn_Interior_1_53: -1265248366986824269
+      Hoenn_Interior_1_54: -7750915071309065296
+      Hoenn_Interior_1_55: 3341330548851590508
+      Hoenn_Interior_1_56: -1098513265041192649
+      Hoenn_Interior_1_57: -3438398697961109733
+      Hoenn_Interior_1_58: 3459654264481500276
+      Hoenn_Interior_1_59: 2080244877632160244
+      Hoenn_Interior_1_6: -6920735507435234380
+      Hoenn_Interior_1_60: 4098775314391362349
+      Hoenn_Interior_1_61: -3790011074462246592
+      Hoenn_Interior_1_7: 4653131893422630796
+      Hoenn_Interior_1_8: 3867281291775911299
+      Hoenn_Interior_1_9: -5881626724958919396
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

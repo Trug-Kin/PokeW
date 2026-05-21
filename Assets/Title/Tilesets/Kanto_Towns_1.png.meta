@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: 10f55c1dd417cb3459743e8cc9b8bc23
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5698210808283300578
+    second: Kanto_Towns_1_0
+  - first:
+      213: 22415593078885649
+    second: Kanto_Towns_1_1
+  - first:
+      213: -5084918153321976011
+    second: Kanto_Towns_1_2
+  - first:
+      213: -9033794713697515323
+    second: Kanto_Towns_1_3
+  - first:
+      213: 4695846841565424455
+    second: Kanto_Towns_1_4
+  - first:
+      213: 8704893767441959050
+    second: Kanto_Towns_1_5
+  - first:
+      213: 3351764677110646724
+    second: Kanto_Towns_1_6
+  - first:
+      213: -457135860669705645
+    second: Kanto_Towns_1_7
+  - first:
+      213: -4644067622437685861
+    second: Kanto_Towns_1_8
+  - first:
+      213: -2474617244419351448
+    second: Kanto_Towns_1_9
+  - first:
+      213: 3490953273177305572
+    second: Kanto_Towns_1_10
+  - first:
+      213: 6552175388561194300
+    second: Kanto_Towns_1_11
+  - first:
+      213: -4273219722242920630
+    second: Kanto_Towns_1_12
+  - first:
+      213: -958693276711394525
+    second: Kanto_Towns_1_13
+  - first:
+      213: -6069096130878512891
+    second: Kanto_Towns_1_14
+  - first:
+      213: 6999519291743733668
+    second: Kanto_Towns_1_15
+  - first:
+      213: -1070479505987310044
+    second: Kanto_Towns_1_16
+  - first:
+      213: -3461436907532601220
+    second: Kanto_Towns_1_17
+  - first:
+      213: -6429665888795203033
+    second: Kanto_Towns_1_18
+  - first:
+      213: 7923154622054649653
+    second: Kanto_Towns_1_19
+  - first:
+      213: -9188383559957478066
+    second: Kanto_Towns_1_20
+  - first:
+      213: -4859169246562332101
+    second: Kanto_Towns_1_21
+  - first:
+      213: 1440975299475785271
+    second: Kanto_Towns_1_22
+  - first:
+      213: -3669469339011493228
+    second: Kanto_Towns_1_23
+  - first:
+      213: -4095133020285278929
+    second: Kanto_Towns_1_24
+  - first:
+      213: 6064050368897175712
+    second: Kanto_Towns_1_25
+  - first:
+      213: -5569195217055458749
+    second: Kanto_Towns_1_26
+  - first:
+      213: 2563788727397044675
+    second: Kanto_Towns_1_27
+  - first:
+      213: -6784235792886029335
+    second: Kanto_Towns_1_28
+  - first:
+      213: -2004974793342116393
+    second: Kanto_Towns_1_29
+  - first:
+      213: 5140017413465743560
+    second: Kanto_Towns_1_30
+  - first:
+      213: -4377290459296526479
+    second: Kanto_Towns_1_31
+  - first:
+      213: 4600439513325402023
+    second: Kanto_Towns_1_32
+  - first:
+      213: 2489381388050375382
+    second: Kanto_Towns_1_33
+  - first:
+      213: 1446812272834068600
+    second: Kanto_Towns_1_34
+  - first:
+      213: 2741488403012337108
+    second: Kanto_Towns_1_35
+  - first:
+      213: -3405964291920731015
+    second: Kanto_Towns_1_36
+  - first:
+      213: 802136364723466606
+    second: Kanto_Towns_1_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kanto_Towns_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3967
+        width: 256
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2840b2a8c141f40800000000000000
+      internalID: 5698210808283300578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3839
+        width: 128
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d85e6fcd2af4000800000000000000
+      internalID: 22415593078885649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3935
+        width: 94
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53fee4f61edbe69b0800000000000000
+      internalID: -5084918153321976011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 3935
+        width: 65
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8024c229381a280800000000000000
+      internalID: -9033794713697515323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3103
+        width: 256
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ba52f92dffa2140800000000000000
+      internalID: 4695846841565424455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 3087
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88c3efc2cefdc870800000000000000
+      internalID: 8704893767441959050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2943
+        width: 186
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7c1e5273cd38e20800000000000000
+      internalID: 3351764677110646724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 3053
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35290b25b5de7a9f0800000000000000
+      internalID: -457135860669705645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2799
+        width: 256
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9575bb4a15fc8fb0800000000000000
+      internalID: -4644067622437685861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_9
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 2981
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c145f2ab468add0800000000000000
+      internalID: -2474617244419351448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 2753
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1783f818b527030800000000000000
+      internalID: 3490953273177305572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_11
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 2783
+        width: 16
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d3f3d0dc00eea50800000000000000
+      internalID: 6552175388561194300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_12
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2783
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f64889d4972b4c0800000000000000
+      internalID: -4273219722242920630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_13
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2783
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323ef015b8902b2f0800000000000000
+      internalID: -958693276711394525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_14
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2687
+        width: 34
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501e943793d36cba0800000000000000
+      internalID: -6069096130878512891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 2783
+        width: 16
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a701e6f5b9432160800000000000000
+      internalID: 6999519291743733668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2687
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e6a4a9f84e421f0800000000000000
+      internalID: -1070479505987310044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_17
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2783
+        width: 15
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78b71ad87186ffc0800000000000000
+      internalID: -3461436907532601220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_18
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2689
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a6ae1a0fc35c6a0800000000000000
+      internalID: -6429665888795203033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_19
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 2751
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53fcf0c6623b4fd60800000000000000
+      internalID: 7923154622054649653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_20
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 2689
+        width: 26
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4502b895dd4c7080800000000000000
+      internalID: -9188383559957478066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2593
+        width: 129
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b325623b053c09cb0800000000000000
+      internalID: -4859169246562332101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_22
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2595
+        width: 34
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 736cd57766f5ff310800000000000000
+      internalID: 1440975299475785271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_23
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2595
+        width: 34
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 492580ee31d631dc0800000000000000
+      internalID: -3669469339011493228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2223
+        width: 256
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f256ce9073a2b27c0800000000000000
+      internalID: -4095133020285278929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2047
+        width: 256
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0513a8ea5d72450800000000000000
+      internalID: 6064050368897175712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1839
+        width: 256
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ada9af47e36b2b0800000000000000
+      internalID: -5569195217055458749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1263
+        width: 256
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1d6a79348649320800000000000000
+      internalID: 2563788727397044675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_28
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1247
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3a984ad7d89d1a0800000000000000
+      internalID: -6784235792886029335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1119
+        width: 256
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd1b3b5c06ec24e0800000000000000
+      internalID: -2004974793342116393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 959
+        width: 256
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0a2f4ca92055740800000000000000
+      internalID: 5140017413465743560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_31
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 929
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f8ce6e48db043c0800000000000000
+      internalID: -4377290459296526479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 767
+        width: 256
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a77e6afc5b08df30800000000000000
+      internalID: 4600439513325402023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 607
+        width: 225
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d22631ee2f0c8220800000000000000
+      internalID: 2489381388050375382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_34
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 607
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87043fab81c141410800000000000000
+      internalID: 1446812272834068600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 447
+        width: 256
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd37617d29bb0620800000000000000
+      internalID: 2741488403012337108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 303
+        width: 161
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9746666a5859bb0d0800000000000000
+      internalID: -3405964291920731015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kanto_Towns_1_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61f3c816c2c12b00800000000000000
+      internalID: 802136364723466606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Kanto_Towns_1_0: 5698210808283300578
+      Kanto_Towns_1_1: 22415593078885649
+      Kanto_Towns_1_10: 3490953273177305572
+      Kanto_Towns_1_11: 6552175388561194300
+      Kanto_Towns_1_12: -4273219722242920630
+      Kanto_Towns_1_13: -958693276711394525
+      Kanto_Towns_1_14: -6069096130878512891
+      Kanto_Towns_1_15: 6999519291743733668
+      Kanto_Towns_1_16: -1070479505987310044
+      Kanto_Towns_1_17: -3461436907532601220
+      Kanto_Towns_1_18: -6429665888795203033
+      Kanto_Towns_1_19: 7923154622054649653
+      Kanto_Towns_1_2: -5084918153321976011
+      Kanto_Towns_1_20: -9188383559957478066
+      Kanto_Towns_1_21: -4859169246562332101
+      Kanto_Towns_1_22: 1440975299475785271
+      Kanto_Towns_1_23: -3669469339011493228
+      Kanto_Towns_1_24: -4095133020285278929
+      Kanto_Towns_1_25: 6064050368897175712
+      Kanto_Towns_1_26: -5569195217055458749
+      Kanto_Towns_1_27: 2563788727397044675
+      Kanto_Towns_1_28: -6784235792886029335
+      Kanto_Towns_1_29: -2004974793342116393
+      Kanto_Towns_1_3: -9033794713697515323
+      Kanto_Towns_1_30: 5140017413465743560
+      Kanto_Towns_1_31: -4377290459296526479
+      Kanto_Towns_1_32: 4600439513325402023
+      Kanto_Towns_1_33: 2489381388050375382
+      Kanto_Towns_1_34: 1446812272834068600
+      Kanto_Towns_1_35: 2741488403012337108
+      Kanto_Towns_1_36: -3405964291920731015
+      Kanto_Towns_1_37: 802136364723466606
+      Kanto_Towns_1_4: 4695846841565424455
+      Kanto_Towns_1_5: 8704893767441959050
+      Kanto_Towns_1_6: 3351764677110646724
+      Kanto_Towns_1_7: -457135860669705645
+      Kanto_Towns_1_8: -4644067622437685861
+      Kanto_Towns_1_9: -2474617244419351448
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

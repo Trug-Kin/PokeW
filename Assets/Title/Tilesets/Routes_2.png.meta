@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: 85b0e89513b16cc4a8e834c866b93a0f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 715756897427334715
+    second: Routes_2_0
+  - first:
+      213: -3765353957637721012
+    second: Routes_2_1
+  - first:
+      213: 6958655387432478371
+    second: Routes_2_2
+  - first:
+      213: 4703155508106200136
+    second: Routes_2_3
+  - first:
+      213: -4878099869162271736
+    second: Routes_2_4
+  - first:
+      213: -4340385113747574840
+    second: Routes_2_5
+  - first:
+      213: 7253451385913639408
+    second: Routes_2_6
+  - first:
+      213: -4478720029551888461
+    second: Routes_2_7
+  - first:
+      213: -7280645478491939183
+    second: Routes_2_8
+  - first:
+      213: 300266108404974418
+    second: Routes_2_9
+  - first:
+      213: 9062848571190495071
+    second: Routes_2_10
+  - first:
+      213: 5620829735172258232
+    second: Routes_2_11
+  - first:
+      213: 5229515048618741739
+    second: Routes_2_12
+  - first:
+      213: -8253365818682712047
+    second: Routes_2_13
+  - first:
+      213: -254247784154668605
+    second: Routes_2_14
+  - first:
+      213: 2354923949429858622
+    second: Routes_2_15
+  - first:
+      213: -6140274832797143883
+    second: Routes_2_16
+  - first:
+      213: -3487653333285193331
+    second: Routes_2_17
+  - first:
+      213: -4177979868126074999
+    second: Routes_2_18
+  - first:
+      213: 3624851790160907317
+    second: Routes_2_19
+  - first:
+      213: -5655709553844902855
+    second: Routes_2_20
+  - first:
+      213: -461588123810668591
+    second: Routes_2_21
+  - first:
+      213: -6377206157002813705
+    second: Routes_2_22
+  - first:
+      213: -1229709349263320273
+    second: Routes_2_23
+  - first:
+      213: -3370987501309435756
+    second: Routes_2_24
+  - first:
+      213: -963255358429320179
+    second: Routes_2_25
+  - first:
+      213: -4910987676341217800
+    second: Routes_2_26
+  - first:
+      213: 5307599361346619726
+    second: Routes_2_27
+  - first:
+      213: 558418989876359601
+    second: Routes_2_28
+  - first:
+      213: 5278221045281370896
+    second: Routes_2_29
+  - first:
+      213: -85487939720837283
+    second: Routes_2_30
+  - first:
+      213: -6506434772934281788
+    second: Routes_2_31
+  - first:
+      213: -6424098397913271161
+    second: Routes_2_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Routes_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3679
+        width: 256
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3621b02b11eee900800000000000000
+      internalID: 715756897427334715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 3661
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4474657686cebbc0800000000000000
+      internalID: -3765353957637721012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3535
+        width: 256
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a66542d43c129060800000000000000
+      internalID: 6958655387432478371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3519
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84487182407f44140800000000000000
+      internalID: 4703155508106200136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 3487
+        width: 16
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c04b7a3028d4cb0800000000000000
+      internalID: -4878099869162271736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_5
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 3455
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfaea24cbad3c3c0800000000000000
+      internalID: -4340385113747574840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3455
+        width: 16
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f182f4ea9f69a460800000000000000
+      internalID: 7253451385913639408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_7
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3487
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b7f126ccd368d1c0800000000000000
+      internalID: -4478720029551888461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_8
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 3487
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e1fe60383f5fa90800000000000000
+      internalID: -7280645478491939183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_9
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 3455
+        width: 16
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25341994f62ca2400800000000000000
+      internalID: 300266108404974418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 3487
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5747fa22c4b5cd70800000000000000
+      internalID: 9062848571190495071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3487
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b935eb1dd2310e40800000000000000
+      internalID: 5620829735172258232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_12
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3487
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befca74ca38f29840800000000000000
+      internalID: 5229515048618741739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_13
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3455
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110e0102487267d80800000000000000
+      internalID: -8253365818682712047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3487
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1e784ccfab87cf0800000000000000
+      internalID: -254247784154668605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_15
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 3487
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31a3d6eade5ea020800000000000000
+      internalID: 2354923949429858622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_16
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 3455
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcead7729c59caa0800000000000000
+      internalID: -6140274832797143883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_17
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3455
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8934d195cd599fc0800000000000000
+      internalID: -3487653333285193331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_18
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 3455
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987ac912275d406c0800000000000000
+      internalID: -4177979868126074999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3455
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ccaf37f7f0e4230800000000000000
+      internalID: 3624851790160907317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_20
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3455
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934aa424022e281b0800000000000000
+      internalID: -5655709553844902855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_21
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 3359
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dfd9b70c0c1899f0800000000000000
+      internalID: -461588123810668591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2735
+        width: 256
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fec960c9cc9f77a0800000000000000
+      internalID: -6377206157002813705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2543
+        width: 113
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2bde24bcd13feee0800000000000000
+      internalID: -1229709349263320273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2319
+        width: 256
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4906b225ab8d731d0800000000000000
+      internalID: -3370987501309435756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_25
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 2559
+        width: 129
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c24d4ea54d1a2f0800000000000000
+      internalID: -963255358429320179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2127
+        width: 225
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f55c575abaa8dbb0800000000000000
+      internalID: -4910987676341217800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 256
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49c72f8f7168a940800000000000000
+      internalID: 5307599361346619726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1391
+        width: 255
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1b967dc17efb700800000000000000
+      internalID: 558418989876359601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1231
+        width: 256
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013bcf15312004940800000000000000
+      internalID: 5278221045281370896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 767
+        width: 256
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d570c58fb2940def0800000000000000
+      internalID: -85487939720837283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309
+        width: 256
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5b00deb0084b5a0800000000000000
+      internalID: -6506434772934281788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Routes_2_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784393e1b8409d6a0800000000000000
+      internalID: -6424098397913271161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Routes_2_0: 715756897427334715
+      Routes_2_1: -3765353957637721012
+      Routes_2_10: 9062848571190495071
+      Routes_2_11: 5620829735172258232
+      Routes_2_12: 5229515048618741739
+      Routes_2_13: -8253365818682712047
+      Routes_2_14: -254247784154668605
+      Routes_2_15: 2354923949429858622
+      Routes_2_16: -6140274832797143883
+      Routes_2_17: -3487653333285193331
+      Routes_2_18: -4177979868126074999
+      Routes_2_19: 3624851790160907317
+      Routes_2_2: 6958655387432478371
+      Routes_2_20: -5655709553844902855
+      Routes_2_21: -461588123810668591
+      Routes_2_22: -6377206157002813705
+      Routes_2_23: -1229709349263320273
+      Routes_2_24: -3370987501309435756
+      Routes_2_25: -963255358429320179
+      Routes_2_26: -4910987676341217800
+      Routes_2_27: 5307599361346619726
+      Routes_2_28: 558418989876359601
+      Routes_2_29: 5278221045281370896
+      Routes_2_3: 4703155508106200136
+      Routes_2_30: -85487939720837283
+      Routes_2_31: -6506434772934281788
+      Routes_2_32: -6424098397913271161
+      Routes_2_4: -4878099869162271736
+      Routes_2_5: -4340385113747574840
+      Routes_2_6: 7253451385913639408
+      Routes_2_7: -4478720029551888461
+      Routes_2_8: -7280645478491939183
+      Routes_2_9: 300266108404974418
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

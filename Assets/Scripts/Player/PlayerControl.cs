@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System;
 
@@ -68,8 +68,10 @@ public class PlayerControl : MonoBehaviour
     }
     private bool IsWalkable(Vector3 targetPos)
     {
-        // if there's any collider at target position on the solid layer, it's not walkable
-        Collider2D hit = Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectLayer);
+        // THAY THẾ: Dùng OverlapPoint thay vì OverlapCircle
+        
+        Collider2D hit = Physics2D.OverlapPoint(targetPos, solidObjectLayer);
+
         if (hit != null)
         {
             Debug.Log("Blocked by: " + hit.name + " at " + targetPos);
@@ -81,7 +83,7 @@ public class PlayerControl : MonoBehaviour
     private void CheckForEncounter()
     {
         // check if player is on grass tile
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.2f, GrassLayer);
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.1f, GrassLayer);
         if (hit != null)
         {
             Debug.Log("On grass: " + hit.name);

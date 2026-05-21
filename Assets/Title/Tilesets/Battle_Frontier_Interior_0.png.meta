@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: ba0e490501b00c84ba2efd7715bc61b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3058185506451881236
+    second: Battle_Frontier_Interior_0_0
+  - first:
+      213: 7454921401082415788
+    second: Battle_Frontier_Interior_0_1
+  - first:
+      213: 1288097084583355310
+    second: Battle_Frontier_Interior_0_2
+  - first:
+      213: 4698167777914555140
+    second: Battle_Frontier_Interior_0_3
+  - first:
+      213: -8366034316999023937
+    second: Battle_Frontier_Interior_0_4
+  - first:
+      213: 994555879110361084
+    second: Battle_Frontier_Interior_0_5
+  - first:
+      213: -463932242496062171
+    second: Battle_Frontier_Interior_0_6
+  - first:
+      213: -1121471974303946242
+    second: Battle_Frontier_Interior_0_7
+  - first:
+      213: -6622157952156939061
+    second: Battle_Frontier_Interior_0_8
+  - first:
+      213: -6843196884344776100
+    second: Battle_Frontier_Interior_0_9
+  - first:
+      213: -1352233320989982521
+    second: Battle_Frontier_Interior_0_10
+  - first:
+      213: -3138491188405549984
+    second: Battle_Frontier_Interior_0_11
+  - first:
+      213: -1247412075220927823
+    second: Battle_Frontier_Interior_0_12
+  - first:
+      213: -1469168028445321904
+    second: Battle_Frontier_Interior_0_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3775
+        width: 256
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce200be1c742f85d0800000000000000
+      internalID: -3058185506451881236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3487
+        width: 256
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa89f33483357760800000000000000
+      internalID: 7454921401082415788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3297
+        width: 256
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3aeca497d30e110800000000000000
+      internalID: 1288097084583355310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2911
+        width: 256
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b88c9b3be333140800000000000000
+      internalID: 4698167777914555140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2625
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2ab842d10e5eb80800000000000000
+      internalID: -8366034316999023937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2143
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff36ab7d4f5dcd00800000000000000
+      internalID: 994555879110361084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1535
+        width: 256
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52dfb2e5518cf89f0800000000000000
+      internalID: -463932242496062171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1487
+        width: 62
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9ae026e2bbf60f0800000000000000
+      internalID: -1121471974303946242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1471
+        width: 97
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc482f9d6e5914a0800000000000000
+      internalID: -6622157952156939061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_9
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1455
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ad194c0b41801a0800000000000000
+      internalID: -6843196884344776100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1119
+        width: 256
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c002f085f6eb3de0800000000000000
+      internalID: -1352233320989982521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1103
+        width: 54
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064c46084e6d174d0800000000000000
+      internalID: -3138491188405549984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 415
+        width: 256
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba7cef935d40bee0800000000000000
+      internalID: -1247412075220927823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battle_Frontier_Interior_0_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055d72d46777c9be0800000000000000
+      internalID: -1469168028445321904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Battle_Frontier_Interior_0_0: -3058185506451881236
+      Battle_Frontier_Interior_0_1: 7454921401082415788
+      Battle_Frontier_Interior_0_10: -1352233320989982521
+      Battle_Frontier_Interior_0_11: -3138491188405549984
+      Battle_Frontier_Interior_0_12: -1247412075220927823
+      Battle_Frontier_Interior_0_13: -1469168028445321904
+      Battle_Frontier_Interior_0_2: 1288097084583355310
+      Battle_Frontier_Interior_0_3: 4698167777914555140
+      Battle_Frontier_Interior_0_4: -8366034316999023937
+      Battle_Frontier_Interior_0_5: 994555879110361084
+      Battle_Frontier_Interior_0_6: -463932242496062171
+      Battle_Frontier_Interior_0_7: -1121471974303946242
+      Battle_Frontier_Interior_0_8: -6622157952156939061
+      Battle_Frontier_Interior_0_9: -6843196884344776100
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

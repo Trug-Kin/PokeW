@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 2bef7a9525283694e8c3c8d6bb0c2ffb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3668191399078935573
+    second: Hoenn_Towns_1_2_0
+  - first:
+      213: -689954125454735392
+    second: Hoenn_Towns_1_2_1
+  - first:
+      213: 5907336873314345854
+    second: Hoenn_Towns_1_2_2
+  - first:
+      213: 3072450579108423217
+    second: Hoenn_Towns_1_2_3
+  - first:
+      213: -6010950135738444073
+    second: Hoenn_Towns_1_2_4
+  - first:
+      213: -5185010499585442225
+    second: Hoenn_Towns_1_2_5
+  - first:
+      213: -7136899131413771360
+    second: Hoenn_Towns_1_2_6
+  - first:
+      213: 4100949638850527492
+    second: Hoenn_Towns_1_2_7
+  - first:
+      213: 8798011103221022816
+    second: Hoenn_Towns_1_2_8
+  - first:
+      213: 5344593396313425153
+    second: Hoenn_Towns_1_2_9
+  - first:
+      213: 7018122037585461337
+    second: Hoenn_Towns_1_2_10
+  - first:
+      213: 246248821806129407
+    second: Hoenn_Towns_1_2_11
+  - first:
+      213: -8741428541400263025
+    second: Hoenn_Towns_1_2_12
+  - first:
+      213: 1125954097690823829
+    second: Hoenn_Towns_1_2_13
+  - first:
+      213: -5248379667820582826
+    second: Hoenn_Towns_1_2_14
+  - first:
+      213: 3982839665847430439
+    second: Hoenn_Towns_1_2_15
+  - first:
+      213: -900654143633877992
+    second: Hoenn_Towns_1_2_16
+  - first:
+      213: -7703329487104454429
+    second: Hoenn_Towns_1_2_17
+  - first:
+      213: 3740426614688742482
+    second: Hoenn_Towns_1_2_18
+  - first:
+      213: -9057401795907012072
+    second: Hoenn_Towns_1_2_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3839
+        width: 256
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3c1c18b57f71dc0800000000000000
+      internalID: -3668191399078935573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3551
+        width: 256
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e784f0e06acc66f0800000000000000
+      internalID: -689954125454735392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3439
+        width: 193
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73e77e76931bf150800000000000000
+      internalID: 5907336873314345854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2911
+        width: 256
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13663bde58983aa20800000000000000
+      internalID: 3072450579108423217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_4
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 2817
+        width: 81
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d659bce2b0d49ca0800000000000000
+      internalID: -6010950135738444073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2721
+        width: 241
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ef9870c642b08b0800000000000000
+      internalID: -5185010499585442225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_6
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2655
+        width: 34
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abc94a8d04a4fc90800000000000000
+      internalID: -7136899131413771360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2541
+        width: 225
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401c37108ff79e830800000000000000
+      internalID: 4100949638850527492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2579
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0608e690c70d81a70800000000000000
+      internalID: 8798011103221022816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2431
+        width: 225
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1050928806fcb2a40800000000000000
+      internalID: 5344593396313425153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2499
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9504f904fc0656160800000000000000
+      internalID: 7018122037585461337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 2497
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0ec1eaff9da6300800000000000000
+      internalID: 246248821806129407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2255
+        width: 225
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8650604e0530b680800000000000000
+      internalID: -8741428541400263025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1839
+        width: 225
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cc14a494130af00800000000000000
+      internalID: 1125954097690823829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_14
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 2079
+        width: 95
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658eb2dcf720a27b0800000000000000
+      internalID: -5248379667820582826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_15
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2047
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72deb28f293e54730800000000000000
+      internalID: 3982839665847430439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1567
+        width: 161
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814183704db3083f0800000000000000
+      internalID: -900654143633877992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_17
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1663
+        width: 95
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0d85d35a6481590800000000000000
+      internalID: -7703329487104454429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 256
+        height: 1314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c70fc303aa8e330800000000000000
+      internalID: 3740426614688742482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoenn_Towns_1_2_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a3af60e05ad4280800000000000000
+      internalID: -9057401795907012072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hoenn_Towns_1_2_0: -3668191399078935573
+      Hoenn_Towns_1_2_1: -689954125454735392
+      Hoenn_Towns_1_2_10: 7018122037585461337
+      Hoenn_Towns_1_2_11: 246248821806129407
+      Hoenn_Towns_1_2_12: -8741428541400263025
+      Hoenn_Towns_1_2_13: 1125954097690823829
+      Hoenn_Towns_1_2_14: -5248379667820582826
+      Hoenn_Towns_1_2_15: 3982839665847430439
+      Hoenn_Towns_1_2_16: -900654143633877992
+      Hoenn_Towns_1_2_17: -7703329487104454429
+      Hoenn_Towns_1_2_18: 3740426614688742482
+      Hoenn_Towns_1_2_19: -9057401795907012072
+      Hoenn_Towns_1_2_2: 5907336873314345854
+      Hoenn_Towns_1_2_3: 3072450579108423217
+      Hoenn_Towns_1_2_4: -6010950135738444073
+      Hoenn_Towns_1_2_5: -5185010499585442225
+      Hoenn_Towns_1_2_6: -7136899131413771360
+      Hoenn_Towns_1_2_7: 4100949638850527492
+      Hoenn_Towns_1_2_8: 8798011103221022816
+      Hoenn_Towns_1_2_9: 5344593396313425153
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
