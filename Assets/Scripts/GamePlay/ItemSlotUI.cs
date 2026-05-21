@@ -1,45 +1,57 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Sử dụng thư viện TextMeshPro cho phần tử con ItemnameText của bạn
+using TMPro;
 
 public class ItemSlotUI : MonoBehaviour
 {
-    [Header("Linh kiện phần tử con (Gán từ Hierarchy)")]
-    [SerializeField] TextMeshProUGUI itemNameText; // Ô chữ ItemnameText của bạn
-    [SerializeField] Image icon;                  // Ô hình ảnh Icon con của vật phẩm
+    [SerializeField] TextMeshProUGUI itemNameText; 
+    [SerializeField] Image icon;                  
+    [SerializeField] Color highlightedColor = Color.blue; 
+    [SerializeField] Color normalColor = Color.black;       
 
-    [Header("Cấu hình màu sắc khi chọn")]
-    [SerializeField] Color highlightedColor = Color.blue; // Màu chữ khi ô được click chọn
-    [SerializeField] Color normalColor = Color.black;       // Màu chữ mặc định ban đầu
+    // 🔥 HÀM MỚI DÀNH RIÊNG CHO MENU 1: Hiện Tên Danh Mục + Hình Ảnh đại diện
+    public void SetCategoryData(string categoryName, Sprite categoryIcon)
+    {
+        if (itemNameText != null) itemNameText.text = categoryName;
 
-    // ĐÃ NÂNG CẤP: Nhận thêm cờ bool showCount để quyết định cách vẽ chữ
+        if (icon != null)
+        {
+            if (categoryIcon != null)
+            {
+                icon.sprite = categoryIcon;
+                icon.gameObject.SetActive(true);
+            }
+            else
+            {
+                icon.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    // Dành riêng cho Menu 2: Hiện Icon, Tên và Số lượng x
     public void SetData(ItemSlot itemSlot, bool showCount)
     {
         if (itemSlot == null || itemSlot.item == null) return;
 
         if (itemNameText != null)
         {
-            if (showCount)
-                itemNameText.text = $"{itemSlot.item.itemName} x{itemSlot.count}"; // MENU 2: Hiện đầy đủ Tên + Số lượng
-            else
-                itemNameText.text = itemSlot.item.itemName; // MENU 1: Chỉ hiện Tên vật phẩm đại diện
+            if (showCount) itemNameText.text = $"{itemSlot.item.itemName} x{itemSlot.count}"; 
+            else itemNameText.text = itemSlot.item.itemName; 
         }
 
-        if (icon != null && itemSlot.item.icon != null)
+        if (icon != null)
         {
-            icon.sprite = itemSlot.item.icon;
-            icon.gameObject.SetActive(true); // Đảm bảo icon con được bật sáng
+            if (itemSlot.item.icon != null)
+            {
+                icon.sprite = itemSlot.item.icon;
+                icon.gameObject.SetActive(true); 
+            }
+            else icon.gameObject.SetActive(false);
         }
     }
 
-    // Hàm đổi màu chữ TextMeshPro highlight
     public void SetSelected(bool selected)
     {
-        if (itemNameText == null) return;
-
-        if (selected)
-            itemNameText.color = highlightedColor; // Chuyển sang màu Xanh khi được chọn
-        else
-            itemNameText.color = normalColor;       // Trả về màu ban đầu (Đen/Trắng)
+        if (itemNameText != null) itemNameText.color = selected ? highlightedColor : normalColor;       
     }
 }

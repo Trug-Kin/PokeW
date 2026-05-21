@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74cfaa32795b8c4c86c0af6da550a5d, type: 3}
+  m_Name: Prysma
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonBase
+  name: Prysma
+  description: 
+  frontSprite: {fileID: -5093750204224278031, guid: b22ab191051f2e747bb51c2f4c963318, type: 3}
+  backSprite: {fileID: -229688535983249872, guid: d1f6d62d79cdbd64cb47a4ff9ec50956, type: 3}
+  type1: 0
+  type2: 0
+  maxHp: 910
+  attack: 394
+  defense: 85
+  spAttack: 125
+  spDefense: 125
+  speed: 144
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 140bd478eecb98b47a77738e8dbfd09e, type: 2}
+    level: 3
+  - moveBase: {fileID: 11400000, guid: 6fbc41f7d7951d044a11db74ed21d49a, type: 2}
+    level: 6
+  - moveBase: {fileID: 11400000, guid: a11675d48dbf4234d89d9c99aba3ab07, type: 2}
+    level: 9
+  - moveBase: {fileID: 11400000, guid: 3f6960d2845bc544ca2a049971c5535e, type: 2}
+    level: 12

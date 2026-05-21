@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 [System.Serializable]
 public class ItemSlot
@@ -11,106 +9,200 @@ public class ItemSlot
     public int count;
 }
 
+public enum BagState { Categories, Items }
+
 public class InventoryUI : MonoBehaviour
 {
-    [Header("Cấu hình danh sách ô vật phẩm (Kéo thả GameObject/Image thoải mái 100%)")]
-    [SerializeField] List<GameObject> slotUIList; // Chuyển sang GameObject để Inspector không bao giờ chặn kéo thả!
+    [Header("Code tự động quét UI, không cần kéo thả")]
+    [SerializeField] List<ItemSlotUI> slotUIList; 
 
-    List<ItemSlot> inventorySlots;
-    int selectedItem = -1; // Khởi tạo bằng -1 để chờ người chơi click chuột tương tác lần đầu
+    List<ItemSlot> allInventorySlots;
+    List<ItemSlot> filteredSlots;
+
+    BagState bagState = BagState.Categories;
+    int selectedItemIndex = -1;
+
+    List<ItemCategory> availableCategories = new List<ItemCategory>();
 
     Action cachedOnBack;
     Action<ItemBase> cachedOnUsed;
 
-    // ĐÃ NÂNG CẤP: Nhận thêm cờ showCount để truyền tiếp lệnh xuống nạp giao diện con
     public void SetData(List<ItemSlot> slots, bool showCount)
     {
-        inventorySlots = slots; 
-        selectedItem = -1; // Reset về -1 mỗi khi mở hoặc chuyển menu để bảo vệ dữ liệu click chuột
+        ItemSlotUI[] autoSlots = GetComponentsInChildren<ItemSlotUI>(true);
+        slotUIList = new List<ItemSlotUI>(autoSlots);
 
-        if (inventorySlots == null || slotUIList == null) return;
+        allInventorySlots = slots;
+        ShowCategoriesMenu();
+    }
+
+    string GetCategoryDisplayName(ItemCategory category)
+    {
+        switch (category)
+        {
+            case ItemCategory.DTH: return "Dưỡng Thú Hồ (DTH)";
+            case ItemCategory.Heal: return "Vật Phẩm Hồi Phục (HEAL)";
+            case ItemCategory.StatBoost: return "Thuốc Tăng Chỉ Số";
+            case ItemCategory.KeyItem: return "Vật Phẩm Quan Trọng";
+            default: return "Vật Phẩm Khác";
+        }
+    }
+
+    // 🔥 HÀM SĂN ICON THÔNG MINH (Đã chặn lỗi ảnh tàng hình)
+    Sprite GetCategoryIcon(ItemCategory category)
+    {
+        Sprite bestIcon = null;
+        int lowestSortOrder = int.MaxValue;
+
+        foreach (var slot in allInventorySlots)
+        {
+            // Chỉ xét đồ có thật, đúng danh mục và BẮT BUỘC PHẢI CÓ ICON
+            if (slot != null && slot.item != null && slot.count > 0 && slot.item.category == category)
+            {
+                if (slot.item.icon != null) 
+                {
+                    // Lấy Icon của món đồ Sơ Cấp nhất
+                    if (slot.item.sortOrder < lowestSortOrder || bestIcon == null)
+                    {
+                        lowestSortOrder = slot.item.sortOrder;
+                        bestIcon = slot.item.icon;
+                    }
+                }
+            }
+        }
+        return bestIcon;
+    }
+
+    void ShowCategoriesMenu()
+    {
+        bagState = BagState.Categories;
+        selectedItemIndex = -1;
+        availableCategories.Clear();
+
+        if (slotUIList == null || allInventorySlots == null) return;
+
+        foreach (var slot in allInventorySlots)
+        {
+            if (slot == null || slot.item == null || slot.count <= 0) continue;
+
+            if (!availableCategories.Contains(slot.item.category))
+            {
+                availableCategories.Add(slot.item.category);
+            }
+        }
+
+        availableCategories.Sort((a, b) => a.CompareTo(b));
 
         for (int i = 0; i < slotUIList.Count; i++)
         {
             if (slotUIList[i] == null) continue;
 
-            if (i < inventorySlots.Count)
+            if (i < availableCategories.Count)
             {
-                slotUIList[i].SetActive(true);
-
-                // Tìm script xử lý hiển thị gắn trên ô con
-                ItemSlotUI slotScript = slotUIList[i].GetComponent<ItemSlotUI>();
-                if (slotScript != null)
-                {
-                    slotScript.SetData(inventorySlots[i], showCount); // Truyền cờ hiển thị số lượng xuống ô con
-                }
-
-                // KHAI THÔNG TIA CHUỘT: Tắt thuộc tính Raycast Target của chữ và icon con để không cản trở ô cha nhận click
-                foreach (Text childText in slotUIList[i].GetComponentsInChildren<Text>(true)) childText.raycastTarget = false;
-                foreach (TextMeshProUGUI childTMP in slotUIList[i].GetComponentsInChildren<TextMeshProUGUI>(true)) childTMP.raycastTarget = false;
-                foreach (Image childImg in slotUIList[i].GetComponentsInChildren<Image>(true))
-                {
-                    if (childImg.gameObject != slotUIList[i]) childImg.raycastTarget = false;
-                }
-
-                Image mainImg = slotUIList[i].GetComponent<Image>();
-                if (mainImg != null) mainImg.raycastTarget = true;
-
-                // TỰ ĐỘNG CẮM DÂY: Nếu chưa có Button, tự động thêm bằng code luôn cho mượt
-                Button btn = slotUIList[i].GetComponent<Button>();
-                if (btn == null) btn = slotUIList[i].AddComponent<Button>();
-
-                if (btn != null)
-                {
-                    btn.onClick.RemoveAllListeners();
-                    int index = i;
-                    btn.onClick.AddListener(() => OnSlotClicked(index));
-                }
+                slotUIList[i].gameObject.SetActive(true);
+                
+                string catName = GetCategoryDisplayName(availableCategories[i]);
+                Sprite catIcon = GetCategoryIcon(availableCategories[i]); 
+                
+                // Gọi hàm xuất dữ liệu ra ItemSlotUI
+                slotUIList[i].SetCategoryData(catName, catIcon); 
             }
             else
             {
-                slotUIList[i].SetActive(false); // Ẩn các ô thừa đi
+                slotUIList[i].gameObject.SetActive(false);
             }
         }
-
-        UpdateItemSelection(-1, null);
+        UpdateSelectionVisuals(-1);
     }
 
-    void OnSlotClicked(int index)
+    void ShowSubItemsMenu(ItemCategory selectedCategory)
     {
-        if (inventorySlots == null || index >= inventorySlots.Count) return;
+        bagState = BagState.Items;
+        selectedItemIndex = -1;
+        filteredSlots = new List<ItemSlot>();
 
-        if (selectedItem != index)
+        if (allInventorySlots == null) return;
+
+        foreach (var slot in allInventorySlots)
         {
-            // BẤM PHÁT LẦN 1: Highlight chọn xem và đổi màu chữ TextMeshPro con
-            selectedItem = index;
-            UpdateItemSelection(selectedItem, inventorySlots[selectedItem].item);
-            Debug.Log($"[CLICK LẦN 1] Đã chọn vật phẩm: {inventorySlots[index].item.itemName}. Bấm tiếp phát nữa để kích hoạt!");
-        }
-        else
-        {
-            // BẤM PHÁT LẦN 2 VÀO CHÍNH Ô ĐÓ: Kích hoạt lệnh truyền về BattleSystem xử lý lồng menu
-            if (inventorySlots[selectedItem].item != null)
+            if (slot == null || slot.item == null || slot.count <= 0) continue;
+
+            if (slot.item.category == selectedCategory)
             {
-                cachedOnUsed?.Invoke(inventorySlots[selectedItem].item);
+                filteredSlots.Add(slot);
             }
         }
-    }
 
-    public void UpdateItemSelection(int selectedItem, ItemBase itemBase)
-    {
+        filteredSlots.Sort((a, b) => 
+        {
+            if (a == null || a.item == null || b == null || b.item == null) return 0;
+            return a.item.sortOrder.CompareTo(b.item.sortOrder);
+        });
+
         for (int i = 0; i < slotUIList.Count; i++)
         {
             if (slotUIList[i] == null) continue;
 
-            ItemSlotUI slotScript = slotUIList[i].GetComponent<ItemSlotUI>();
-            if (slotScript != null)
+            if (i < filteredSlots.Count)
             {
-                if (i == selectedItem)
-                    slotScript.SetSelected(true); 
-                else
-                    slotScript.SetSelected(false); 
+                slotUIList[i].gameObject.SetActive(true);
+                slotUIList[i].SetData(filteredSlots[i], true); 
             }
+            else
+            {
+                slotUIList[i].gameObject.SetActive(false);
+            }
+        }
+        UpdateSelectionVisuals(-1);
+    }
+
+    public void MouseSelectItem(int index)
+    {
+        if (bagState == BagState.Categories)
+        {
+            if (index < 0 || index >= availableCategories.Count) return;
+
+            if (selectedItemIndex != index)
+            {
+                selectedItemIndex = index;
+                UpdateSelectionVisuals(selectedItemIndex);
+            }
+            else
+            {
+                ShowSubItemsMenu(availableCategories[index]);
+            }
+        }
+        else
+        {
+            if (filteredSlots == null || index < 0 || index >= filteredSlots.Count) return;
+
+            if (selectedItemIndex != index)
+            {
+                selectedItemIndex = index;
+                UpdateSelectionVisuals(selectedItemIndex);
+            }
+            else
+            {
+                if (filteredSlots[selectedItemIndex].item != null)
+                {
+                    cachedOnUsed?.Invoke(filteredSlots[selectedItemIndex].item);
+                }
+            }
+        }
+    }
+
+    public void MouseClickBack()
+    {
+        if (bagState == BagState.Items) ShowCategoriesMenu(); 
+        else cachedOnBack?.Invoke(); 
+    }
+
+    public void UpdateSelectionVisuals(int index)
+    {
+        for (int i = 0; i < slotUIList.Count; i++)
+        {
+            if (slotUIList[i] == null) continue;
+            slotUIList[i].SetSelected(i == index);
         }
     }
 
@@ -118,27 +210,5 @@ public class InventoryUI : MonoBehaviour
     {
         cachedOnBack = onBack;
         cachedOnUsed = onUsed;
-
-        int prevSelection = selectedItem;
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-            ++selectedItem;
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-            --selectedItem;
-
-        if (inventorySlots != null && inventorySlots.Count > 0 && selectedItem >= 0)
-        {
-            selectedItem = Mathf.Clamp(selectedItem, 0, inventorySlots.Count - 1);
-
-            if (prevSelection != selectedItem)
-            {
-                UpdateItemSelection(selectedItem, inventorySlots[selectedItem].item);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                onUsed?.Invoke(inventorySlots[selectedItem].item);
-            }
-        }
     }
 }
