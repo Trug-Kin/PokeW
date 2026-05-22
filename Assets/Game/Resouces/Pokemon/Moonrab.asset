@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74cfaa32795b8c4c86c0af6da550a5d, type: 3}
+  m_Name: Moonrab
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonBase
+  name: Moonrab
+  description: 
+  frontSprite: {fileID: -3748651154032170024, guid: ede61b9414fb7984a8f8901b41297ed8, type: 3}
+  backSprite: {fileID: -6090899854114856183, guid: 0537ba6b9bbd66c44ace94cf1b1b58f9, type: 3}
+  type: 5
+  maxHp: 354
+  attack: 124
+  defense: 45
+  spAttack: 79
+  spDefense: 79
+  speed: 36
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: a11675d48dbf4234d89d9c99aba3ab07, type: 2}
+    level: 1

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74cfaa32795b8c4c86c0af6da550a5d, type: 3}
+  m_Name: Warth
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonBase
+  name: Warth
+  description: 
+  frontSprite: {fileID: 9040879190431018056, guid: 5f483501c1003944ea2e12c0ef434058, type: 3}
+  backSprite: {fileID: 5000927251509650613, guid: 6e8fda7cd9011c44aa98aab7799e40c3, type: 3}
+  type: 4
+  maxHp: 314
+  attack: 154
+  defense: 39
+  spAttack: 45
+  spDefense: 35
+  speed: 36
+  learnableMoves: []

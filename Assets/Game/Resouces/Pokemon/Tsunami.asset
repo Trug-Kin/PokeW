@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74cfaa32795b8c4c86c0af6da550a5d, type: 3}
+  m_Name: Tsunami
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonBase
+  name: Tsunami
+  description: "T\u01B0\u01A1ng truy\u1EC1n t\u1EEB ng\xE0n x\u01B0a c\xF3 m\u1ED9t
+    thu\u1EF7 th\u1EA7n h\xF9ng m\u1EA1nh \u0111\xE3 ng\xE3 xu\u1ED1ng trong cu\u1ED9c
+    chi\u1EBFn Th\u1EE7y - H\u1ECFa, ng\xE0i \u0111\u1EC3 l\u1EA1i th\u1EA7n t\xEDnh
+    c\xF9ng s\u1EE9c m\u1EA1nh ph\xE2n th\xE0nh nhi\u1EC1u m\u1EA3nh \u0111\u01B0\u1EE3c
+    c\xE1c tinh linh n\u1EAFm d\u1EEF v\xE0 m\u1ED9t  trong s\u1ED1 \u0111\xF3 s\u1EBD
+    c\xF3 m\xF4t Th\u1EE7y th\u1EA7n \u0111\u01B0\u1EE3c  sinh ra... "
+  frontSprite: {fileID: -8265100559591927704, guid: d084650a5dbe1b545a63ce51cc09e12b, type: 3}
+  backSprite: {fileID: 3437635619863730544, guid: 9a35677badc4b924ab96674806aa4273, type: 3}
+  type: 3
+  maxHp: 237
+  attack: 144
+  defense: 35
+  spAttack: 39
+  spDefense: 34
+  speed: 36
+  learnableMoves: []
