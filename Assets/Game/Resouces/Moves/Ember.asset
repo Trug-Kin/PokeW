@@ -12,22 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3210fe19ccd9bed419ed6c41d7197e6e, type: 3}
   m_Name: Ember
   m_EditorClassIdentifier: 
-  name: "Ch\xE2n H\u1ECFa"
-  description: "\u0110\xF2n t\u1EA5n c\xF4ng mang theo ch\xE2n h\u1ECFa, g\xE2y l\u01B0\u1EE3ng
-    l\u1EDBn s\xE1t th\u01B0\u01A1ng c\xF3 x\xE1c xu\u1EA5t g\u1EAFn hi\u1EC7u \u1EE9ng
-    \" Ch\xE2n H\u1ECFa\" thi\xEAu \u0111\u1ED1t v\xE0 gi\u1EA3m gi\xE1p"
-  type: 4
+  name: Ember
+  type: 1
   power: 40
   accuracy: 100
   pp: 25
-  isSpecial: 0
-  effects:
-    boosts:
-    - stat: 1
-      boost: -2
-      target: 0
-      chance: 98
-    statuses:
-    - id: 2
-      target: 0
-      chance: 100
+  typeIcon: {fileID: 21300000, guid: ed0dfccc53b1a4141abee39d7c3ce9c5, type: 3}
