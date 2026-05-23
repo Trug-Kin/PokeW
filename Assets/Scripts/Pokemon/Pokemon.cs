@@ -15,10 +15,13 @@ public class Pokemon
     public ConditionID Status;
     public void Init()
     {
+
         HP = MaxHp;
+
         Moves = new List<Move>();
        foreach (var move in _base.LearnableMoves)
         {
+            // ÁO GIÁP 1: Nếu chiêu thức bị lỗi hoặc trống, lập tức bỏ qua và xét chiêu tiếp theo!
             if (move.MoveBase == null) 
             {
                 Debug.LogWarning($"[Cảnh báo] Cấp {move.Level} của {Base.Name} có chiêu bị rỗng, đang bỏ qua!");
@@ -31,16 +34,33 @@ public class Pokemon
             if (Moves.Count >= 4)
                 break;
         }
-        Debug.Log($"[KIỂM TRA] {Base.Name} cấp {Level} đã nạp thành công {Moves.Count} chiêu!");
+        Debug.Log($"[KIỂM TRA] Ếch Kì Cục cấp {Level} đã nạp thành công {Moves.Count} chiêu!");
     }
 
-    public int Attack { get { return Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5; } }
-    public int Defense { get { return Mathf.FloorToInt((Base.Defense * Level) / 100f) + 5; } }
-    public int SpAttack { get { return Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5; } }
-    public int SpDefense { get { return Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5; } }
-    public int Speed { get { return Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5; } }
-    public int MaxHp { get { return Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 10 + Level; } }
-
+    public int Attack
+    {
+        get { return Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5; }
+    }
+    public int Defense
+    {
+        get { return Mathf.FloorToInt((Base.Defense * Level) / 100f) + 5; }
+    }
+    public int SpAttack
+    {
+        get { return Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5; }
+    }
+    public int SpDefense
+    {
+        get { return Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5; }
+    }
+    public int Speed
+    {
+        get { return Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5; }
+    }
+    public int MaxHp
+    {
+        get { return Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 10 + Level; }
+    }
     public DamageDetails TakeDamage(Move move, Pokemon attacker)
     {
         var damageDetails = new DamageDetails();
@@ -50,8 +70,9 @@ public class Pokemon
         if (Random.value <= 0.0625f)
             critical = 2f;
 
-        // --------- Type Effectiveness (Chỉ còn 1 hệ) ----------
-        float type = TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type);
+        // --------- Type Effectiveness ----------
+        float type = TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type1) *
+                      TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type2);
 
         damageDetails.TypeEffectiveness = type;
         damageDetails.Critical = critical;
@@ -93,25 +114,29 @@ public class Pokemon
     {
         HP += amount;
         if (HP > MaxHp) HP = MaxHp;
-        Debug.Log($"{Base.Name} được hồi máu! HP hiện tại: {HP}/{MaxHp}");
+        Debug.Log($"{Base.Name} ???c h?i m�u! HP hi?n t?i: {HP}/{MaxHp}");
     }
 
+    // H�m gi?i hi?u ?ng
     public void CureStatus()
     {
         Status = ConditionID.None;
-        Debug.Log($"{Base.Name} đã được giải trừ mọi trạng thái xấu!");
+        Debug.Log($"{Base.Name} ?� ???c gi?i tr? m?i tr?ng th�i x?u!");
     }
 
+    // H�m t?ng c?p
     public void LevelUp()
     {
         level++;
-        Debug.Log($"{Base.Name} đã tăng lên cấp {level}!");
+        Debug.Log($"{Base.Name} ?� t?ng l�n c?p {level}!");
     }
-}
 
+}
 public class DamageDetails
 {
     public bool Fainted { get; set; }
     public float Critical { get; set; }
     public float TypeEffectiveness { get; set; }
 }
+
+
