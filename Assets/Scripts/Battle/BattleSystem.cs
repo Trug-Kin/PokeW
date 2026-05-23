@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-// Trạng thái trận đấu đồng bộ của PokeW
 public enum BattleState { Start, ActionSelection, MoveSelection, PerformMove, Busy, PartyScreen, BagScreen, GourdBagScreen, BattleOver, SwitchPokemon, WildPokemonAppear }
 
 public class BattleSystem : MonoBehaviour
@@ -12,13 +11,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleUnit playerUnit;
     [SerializeField] BattleUnit enemyUnit;
     [SerializeField] BattleHud playerHud;
-
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
-
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] List<ItemSlot> testInventory;
-    [SerializeField] Animator catchEffectAnimator; // Kéo Object CatchEffect vào đây
+
     [Header("--- CÀI ĐẶT ÂM THANH BATTLE ---")]
     public AudioClip battleBGM;
     public AudioClip catchSound; 
@@ -32,7 +29,7 @@ public class BattleSystem : MonoBehaviour
     int currentMember;
     bool battleIsOver = false;
 
-    PokemonParrty playerParty; // Bảo lưu đúng chính tả Class gốc có 2 chữ r của bạn
+    PokemonParrty playerParty; 
     Pokemon wildPokemon;
 
     public void BattleStart(PokemonParrty playerParty, Pokemon wildPokemon)
@@ -134,7 +131,6 @@ public class BattleSystem : MonoBehaviour
    public void OpenBag()
     {
         state = BattleState.BagScreen;
-        
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableMoveSelector(false);
         
@@ -150,7 +146,6 @@ public class BattleSystem : MonoBehaviour
         };
 
         inventoryUI.HandleUpdate(onBack, onUsed);
-        
         inventoryUI.SetData(testInventory, true); 
         inventoryUI.gameObject.SetActive(true);
     }
@@ -158,7 +153,6 @@ public class BattleSystem : MonoBehaviour
     public void OpenPartyScreen()
     {
         state = BattleState.PartyScreen;
-        
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableMoveSelector(false);
 
@@ -172,97 +166,84 @@ public class BattleSystem : MonoBehaviour
         partyScreen.gameObject.SetActive(true);
     }
 
-    void HandleBagSelection()
-    {
-    }
-
-    IEnumerator UseItem(ItemBase item)
+   IEnumerator UseItem(ItemBase item)
     {
         state = BattleState.Busy;
         inventoryUI.gameObject.SetActive(false);
-
-        // 🔥 ĐÃ THÊM DÒNG NÀY ĐỂ BẬT LẠI KHUNG CHỮ TRƯỚC KHI THỰC HIỆN LỆNH
         dialogBox.EnableDialogText(true);
 
-        if (item is GourdballItem gourdball)
+        if (item is GourdballItem)
         {
-            yield return dialogBox.TypeDialog($"Bạn đã ném {gourdball.itemName}!");
-            yield return new WaitForSeconds(0.5f);
+            var itemSlot = testInventory.Find(slot => slot.item == item);
+            if (itemSlot != null) itemSlot.count--;
 
-            // Đặt vị trí của hiệu ứng dịch chuyển tới ngay vị trí của Pokemon địch
-            catchEffectAnimator.gameObject.transform.position = enemyUnit.transform.position;
-            catchEffectAnimator.gameObject.SetActive(true);
-
-            // Ẩn Pokemon địch đi (giống như bị hút vào trong hồ lô)
-            enemyUnit.gameObject.SetActive(false);
-
-            // Tính toán tỷ lệ bắt như cũ
-            float maxHP = enemyUnit.Pokemon.MaxHp;
-            float currentHP = enemyUnit.Pokemon.HP;
-            float catchChance = ((3 * maxHP - 2 * currentHP) / (3 * maxHP)) * gourdball.catchRateModifier;
-            bool isCaught = UnityEngine.Random.value <= catchChance;
-
-            // Đợi 1 giây xem hiệu ứng ném ban đầu quay quay
-            yield return new WaitForSeconds(1.0f);
-
-            if (isCaught)
+            yield return dialogBox.TypeDialog($"Bạn đã ném {item.itemName}!");
+           if (dthObject != null)
             {
-                // KÍCH HOẠT HIỆU ỨNG BẮT THÀNH CÔNG (image_3)
-                catchEffectAnimator.SetTrigger("success");
+                dthObject.transform.position = enemyUnit.transform.position; 
+                dthObject.SetActive(true);
+                Animator dthAnim = dthObject.GetComponent<Animator>();
+                dthAnim.SetBool("IsTrue", false);
+                dthAnim.SetBool("IsFailed", false);
 
-                // Đợi hiệu ứng màng bọc vàng chạy được một nửa thì tắt nhạc nền và hiện chữ
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(2.0f); 
 
-                if (SoundManager.Instance != null)
+                bool isCaught = UnityEngine.Random.value > 0.5f; 
+
+                if (isCaught)
                 {
-                    SoundManager.Instance.StopBattleMusic();
-                    if (catchSound != null) SoundManager.Instance.PlaySFX(catchSound);
+                    dthAnim.SetBool("IsTrue", true);
+                    if (SoundManager.Instance != null && catchSound != null) SoundManager.Instance.sfxSource.PlayOneShot(catchSound);
+                    
+                    yield return new WaitForSeconds(1.0f); 
+                    
+                    yield return dialogBox.TypeDialog($"Tuyệt vời! Bạn đã thu phục được {enemyUnit.Pokemon.Base.Name}!");
+                    playerParty.AddPokemon(enemyUnit.Pokemon);
+                    
+                    dthObject.SetActive(false); 
+                    BattleOver(true);
+                    yield break;
                 }
-
-                yield return dialogBox.TypeDialog($"Tuyệt vời! Bạn đã bắt được {enemyUnit.Pokemon.Base.Name}!");
-
-                // Đợi thêm cho hiệu ứng thu nhỏ biến mất hoàn toàn
-                yield return new WaitForSeconds(1.5f);
-                catchEffectAnimator.gameObject.SetActive(false);
-
-                playerParty.AddPokemon(enemyUnit.Pokemon);
-                BattleOver(true);
-                yield break;
+                else
+                {
+                    dthAnim.SetBool("IsFailed", true);
+                    yield return new WaitForSeconds(1.0f); 
+                    
+                    dthObject.SetActive(false); 
+                    yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} đã phá vỡ DTH và thoát ra ngoài!");
+                }
             }
             else
             {
-                // KÍCH HOẠT HIỆU ỨNG BẮT THẤT BẠI - NỔ TUNG (image_4)
-                catchEffectAnimator.SetTrigger("fail");
-
-                // Đợi hiệu ứng nổ tung nứt vỡ chạy xong
-                yield return new WaitForSeconds(1.5f);
-                catchEffectAnimator.gameObject.SetActive(false);
-
-                // Pokemon địch thoát ra ngoài -> Hiện lại hình ảnh Pokemon địch trên sân
-                enemyUnit.gameObject.SetActive(true);
+                Debug.LogWarning("Chưa gắn dthObject vào BattleSystem!");
                 yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} đã thoát ra được!");
             }
         }
-        else
+        else 
         {
-            // ... Đây là phần code dùng thuốc (Item thường) giữ nguyên của bạn ...
             bool isItemUsed = item.Use(playerUnit.Pokemon);
             if (isItemUsed)
             {
+                var itemSlot = testInventory.Find(slot => slot.item == item);
+                if (itemSlot != null) itemSlot.count--;
+
                 yield return dialogBox.TypeDialog($"Đã dùng {item.itemName} lên {playerUnit.Pokemon.Base.Name}!");
-                yield return playerHud.UpdateHP();
+                yield return playerHud.UpdateHP(); 
+                yield return new WaitForSeconds(0.5f);
             }
             else
             {
                 yield return dialogBox.TypeDialog($"Vật phẩm không có tác dụng lúc này!");
-                inventoryUI.gameObject.SetActive(true);
-                state = BattleState.BagScreen;
+                OpenBag(); 
                 yield break;
             }
         }
 
-        // Kết thúc lượt của mình, chuyển sang lượt địch đánh
-        StartCoroutine(EnemyMove());
+        // Đã bọc an toàn để không treo game
+        if (!battleIsOver)
+        {
+            yield return EnemyMove(); 
+        }
     }
 
     public void MouseSelectMove(int moveIndex)
@@ -327,8 +308,11 @@ public class BattleSystem : MonoBehaviour
             yield return dialogBox.TypeDialog("Bỏ chạy thất bại! Kẻ địch đã chặn đường thoát!");
             yield return new WaitForSeconds(0.6f);
             
-            // 🔥 ĐÃ SỬA LUỒNG
-            yield return EnemyMove(); 
+            // Đã bọc an toàn để không treo game
+            if (!battleIsOver)
+            {
+                yield return EnemyMove(); 
+            }
         }
     }
 
@@ -374,8 +358,10 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"Xuất trận chiến đấu, {playerUnit.Pokemon.Base.Name}!");
         yield return new WaitForSeconds(1.0f);
 
-        // 🔥 ĐÃ SỬA LUỒNG
-        yield return EnemyMove(); 
+        if (!battleIsOver)
+        {
+            yield return EnemyMove(); 
+        }
     }
 
     IEnumerator PlayerMove()
@@ -465,33 +451,23 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void HandleUpdate()
+    public void HandleUpdate() { }
+
+    // Dùng để kéo thả vào nút Bỏ Chạy (Run) trên Canvas
+    public void MOUSE_ClickRun()
     {
-        // Nếu trận đấu đã kết thúc thì không cập nhật gì nữa
-        if (battleIsOver) return;
-
-        // Nếu đang ở màn hình chọn Vật phẩm (Bag)
-        if (state == BattleState.BagScreen)
+        if (state == BattleState.ActionSelection)
         {
-            Action onBack = () =>
-            {
-                inventoryUI.gameObject.SetActive(false);
-                OpenParallelTurnMenu();
-            };
-
-            Action<ItemBase> onUsed = (ItemBase item) =>
-            {
-                StartCoroutine(UseItem(item));
-            };
-
-            // Gọi hàm cập nhật liên tục mỗi khung hình cho InventoryUI để nhận phím/chuột
-            inventoryUI.HandleUpdate(onBack, onUsed);
+            StartCoroutine(HandleRunAway());
         }
-        // Nếu đang ở màn hình chọn Pokemon (Party)
-        else if (state == BattleState.PartyScreen)
+    }
+
+    // Dùng để kéo thả vào nút Quay Lại khi đang chọn chiêu thức
+    public void MOUSE_CancelMoveSelection()
+    {
+        if (state == BattleState.MoveSelection || state == BattleState.ActionSelection)
         {
-            // Nếu PartyScreen của bạn cũng có hàm HandleUpdate() bằng bàn phím, hãy gọi nó ở đây:
-            // partyScreen.HandleUpdate(OnPartyMemberClicked, OnPartyBackButtonClicked);
+            OpenParallelTurnMenu(); 
         }
     }
 }

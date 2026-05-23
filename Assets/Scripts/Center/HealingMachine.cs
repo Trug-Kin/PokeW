@@ -46,12 +46,18 @@ public class HealingMachine : MonoBehaviour
             yield return new WaitForSeconds(2.0f); // Thời gian chờ mặc định
         }
 
-        // 3. Thực hiện hồi máu trong dữ liệu
+       // 3. Thực hiện hồi máu trong dữ liệu
         if (playerParty != null)
         {
             playerParty.HealAllPokemon();
+            
+            // 🔥 THÊM DÒNG NÀY: Báo ra Console với chữ màu Xanh Lá cực kỳ nổi bật
+            Debug.Log("<color=#00FF00><b>[TRUNG TÂM POKEMON] 💖 Tüm tích... Tèn tén ten! Tất cả Pokemon đã được hồi phục 100% HP và PP!</b></color>");
         }
-
+        else
+        {
+            Debug.LogWarning("PlayerParty chưa được gán trong HealingMachine! Vui lòng kéo thả đúng đối tượng vào Inspector.");
+        }
         // 4. Hiển thị thông báo thành công lên màn hình UI
         if (notificationPanel != null && notificationText != null)
         {

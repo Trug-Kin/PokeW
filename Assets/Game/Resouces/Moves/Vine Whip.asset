@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Vine Whip
   m_EditorClassIdentifier: 
   name: Vine Whips
-  type: 0
+  description: 
+  type: 2
   power: 45
   accuracy: 100
   pp: 25
-  typeIcon: {fileID: 21300000, guid: d1b36469399f8de489a2d866ad1949e0, type: 3}
+  isSpecial: 0
