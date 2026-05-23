@@ -1527,6 +1527,7 @@ MonoBehaviour:
   normalVolume: 1
   duckedVolume: 0.35
   clickSound: {fileID: 8300000, guid: cdb2dd2c833ee0a4c8d97088df74de5f, type: 3}
+  healSound: {fileID: 0}
 --- !u!82 &835958924
 AudioSource:
   m_ObjectHideFlags: 0

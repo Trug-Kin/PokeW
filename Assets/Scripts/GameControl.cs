@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections;
 
-// 1. Trạng thái PartyScreen để game biết lúc nào đang mở túi ngoài Map
 public enum GameState { FreeRoam, Battle, PartyScreen }
 
 public class GameControl : MonoBehaviour
@@ -10,8 +9,6 @@ public class GameControl : MonoBehaviour
     [SerializeField] PlayerControl playerControl;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
-
-    // 2. Cầu nối tới giao diện màn hình Pokemon
     [SerializeField] PartyScreen partyScreen;
 
     GameState state;
@@ -20,8 +17,6 @@ public class GameControl : MonoBehaviour
     {
         playerControl.OnEncountered += StartBattle;
         battleSystem.OnBattleOver += EndBattle;
-
-        // Quét gom đủ 6 ô giao diện ngay khi game vừa bật
         partyScreen.Init();
     }
 
@@ -31,7 +26,6 @@ public class GameControl : MonoBehaviour
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
-        // get player party and a wild pokemon from the map, then start battle
         var playerParty = playerControl.GetComponent<PokemonParrty>();
         var wildPokemon = FindObjectOfType<MapArena>().GetRandomWildPokemon();
 
@@ -40,9 +34,34 @@ public class GameControl : MonoBehaviour
 
     void EndBattle(bool won)
     {
-        state = GameState.FreeRoam;
-        battleSystem.gameObject.SetActive(false);
-        worldCamera.gameObject.SetActive(true);
+        if (won)
+        {
+            // Thắng trận: Quay lại map đi dạo bình thường
+            state = GameState.FreeRoam;
+            battleSystem.gameObject.SetActive(false);
+            worldCamera.gameObject.SetActive(true);
+        }
+        else
+        {
+            // Thua trận: Xử lý cơ chế Black Out
+            Debug.Log("Toàn bộ Pokemon đã gục ngã! Bạn hốt hoảng bỏ chạy khỏi chiến trường...");
+
+            // 1. Tự động hồi máu khẩn cấp (Tránh việc bạn bị kẹt cứng nếu lỡ dẫm vào cỏ lần nữa)
+            var playerParty = playerControl.GetComponent<PokemonParrty>();
+            if (playerParty != null)
+            {
+                playerParty.HealAllPokemon();
+                Debug.Log("Hệ thống đã tự động hồi phục đội hình để chống lỗi kẹt game.");
+            }
+
+            // 2. Thoát màn hình chiến đấu
+            state = GameState.FreeRoam;
+            battleSystem.gameObject.SetActive(false);
+            worldCamera.gameObject.SetActive(true);
+
+            // MẸO: Sau này bạn có thể dùng lệnh SceneManager.LoadScene() ở đây 
+            // để dịch chuyển nhân vật thẳng về Quầy Y Tá thay vì đứng yên tại chỗ!
+        }
     }
 
     private void Update()
@@ -51,18 +70,12 @@ public class GameControl : MonoBehaviour
         {
             playerControl.HandleUpdate();
 
-            // 3. Bấm phím Enter (Return) để mở túi Pokemon lúc đang đi bộ ngoài thế giới
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 state = GameState.PartyScreen;
                 var playerParty = playerControl.GetComponent<PokemonParrty>();
 
-                // ĐÃ SỬA: Thêm "false" vì đang đi bộ ngoài Map, Pokémon hiện tại không bị hạ gục (Fainted)
                 partyScreen.SetPartyData(playerParty.Pokemons, false); 
-                
-                // ĐÃ SỬA: Xóa hoàn toàn dòng UpdateMemberSelection(0) cũ vì hệ thống hiện tại đã chạy bằng chuột!
-
-                // Bật hiển thị màn hình lên
                 partyScreen.gameObject.SetActive(true);
             }
         }
@@ -72,15 +85,12 @@ public class GameControl : MonoBehaviour
         }
         else if (state == GameState.PartyScreen)
         {
-            // 4. Xử lý hành động khi túi Pokemon đang mở ngoài Map
             HandlePartyScreen();
         }
     }
 
-    // 5. Hàm xử lý đóng màn hình Party khi đang ở ngoài thế giới
     void HandlePartyScreen()
     {
-        // Bấm phím X để đóng túi và quay lại đi dạo tiếp tục
         if (Input.GetKeyDown(KeyCode.X))
         {
             partyScreen.gameObject.SetActive(false);
