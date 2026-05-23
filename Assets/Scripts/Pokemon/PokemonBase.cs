@@ -55,10 +55,10 @@ public enum PokemonType
 {
     None,
     Kim,
-    Moc,
-    Thuy,
-    Hoa,
-    Tho
+    Mộc,
+    Thủy,
+    Hỏa,
+    Thổ
 }
 
 public class TypeChart

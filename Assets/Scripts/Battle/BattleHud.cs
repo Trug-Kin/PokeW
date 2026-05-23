@@ -9,8 +9,9 @@ public class BattleHud : MonoBehaviour
     [SerializeField] HPbar hpBar;
 
     [Header("--- HỆ NGŨ HÀNH ---")]
-    [SerializeField] Image typeIcon; // Chỉ còn 1 Icon hệ
+    [SerializeField] Image typeIcon; 
     [SerializeField] TypeColorConfig typeConfig; 
+    [SerializeField] BuffDebuffUI statusUI; 
 
     Pokemon _pokemon;
     
@@ -21,14 +22,25 @@ public class BattleHud : MonoBehaviour
         levelText.text = "Lvl " + pokemon.Level;
         hpBar.SetHP((float)pokemon.HP / pokemon.MaxHp);
 
-        // Cập nhật Icon hệ duy nhất
         if (typeConfig != null && typeIcon != null)
         {
             typeIcon.sprite = typeConfig.GetIconForType(pokemon.Base.Type);
             typeIcon.gameObject.SetActive(true);
         }
+        
+        // Cập nhật UI trạng thái ngay khi load HUD
+        UpdateStatusIcons();
     }
     
+    // MỚI: Hàm chuyên dụng để gọi cập nhật UI Trạng thái
+    public void UpdateStatusIcons()
+    {
+        if (statusUI != null && _pokemon != null)
+        {
+            statusUI.UpdateStatusUI(_pokemon);
+        }
+    }
+
     public IEnumerator UpdateHP()
     {
         yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHp);

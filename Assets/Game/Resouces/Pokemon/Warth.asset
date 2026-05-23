@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonBase
   name: Warth
   description: 
-  frontSprite: {fileID: 9040879190431018056, guid: 5f483501c1003944ea2e12c0ef434058, type: 3}
-  backSprite: {fileID: 5000927251509650613, guid: 6e8fda7cd9011c44aa98aab7799e40c3, type: 3}
+  frontSprite: {fileID: -7120721552976610823, guid: 50cf36db4ab9f7a488b8d011649ee3be, type: 3}
+  backSprite: {fileID: -8108603603669838321, guid: 17f6e921ba85d8c44bcd030fe851afc7, type: 3}
   type: 4
   maxHp: 314
   attack: 154
@@ -23,4 +23,6 @@ MonoBehaviour:
   spAttack: 45
   spDefense: 35
   speed: 36
-  learnableMoves: []
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: bb1beeafa4d1fec42aaac0ceec1f47f9, type: 2}
+    level: 1

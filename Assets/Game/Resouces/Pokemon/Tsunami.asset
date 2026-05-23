@@ -19,8 +19,8 @@ MonoBehaviour:
     c\xF9ng s\u1EE9c m\u1EA1nh ph\xE2n th\xE0nh nhi\u1EC1u m\u1EA3nh \u0111\u01B0\u1EE3c
     c\xE1c tinh linh n\u1EAFm d\u1EEF v\xE0 m\u1ED9t  trong s\u1ED1 \u0111\xF3 s\u1EBD
     c\xF3 m\xF4t Th\u1EE7y th\u1EA7n \u0111\u01B0\u1EE3c  sinh ra... "
-  frontSprite: {fileID: -8265100559591927704, guid: d084650a5dbe1b545a63ce51cc09e12b, type: 3}
-  backSprite: {fileID: 3437635619863730544, guid: 9a35677badc4b924ab96674806aa4273, type: 3}
+  frontSprite: {fileID: 21300000, guid: d084650a5dbe1b545a63ce51cc09e12b, type: 3}
+  backSprite: {fileID: 21300000, guid: 906fe4d8e42374342b56e4038c31683c, type: 3}
   type: 3
   maxHp: 237
   attack: 144
@@ -28,4 +28,8 @@ MonoBehaviour:
   spAttack: 39
   spDefense: 34
   speed: 36
-  learnableMoves: []
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 3f6960d2845bc544ca2a049971c5535e, type: 2}
+    level: 2
+  - moveBase: {fileID: 11400000, guid: 6fbc41f7d7951d044a11db74ed21d49a, type: 2}
+    level: 3

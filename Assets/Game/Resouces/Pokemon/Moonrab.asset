@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Moonrab
   description: 
   frontSprite: {fileID: -3748651154032170024, guid: ede61b9414fb7984a8f8901b41297ed8, type: 3}
-  backSprite: {fileID: -6090899854114856183, guid: 0537ba6b9bbd66c44ace94cf1b1b58f9, type: 3}
+  backSprite: {fileID: 8000451037765663984, guid: 660244f1ef76f3c40b48d3897ae62532, type: 3}
   type: 5
   maxHp: 354
   attack: 124

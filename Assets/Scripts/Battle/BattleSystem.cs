@@ -239,7 +239,6 @@ public class BattleSystem : MonoBehaviour
             }
         }
 
-        // Đã bọc an toàn để không treo game
         if (!battleIsOver)
         {
             yield return EnemyMove(); 
@@ -308,7 +307,6 @@ public class BattleSystem : MonoBehaviour
             yield return dialogBox.TypeDialog("Bỏ chạy thất bại! Kẻ địch đã chặn đường thoát!");
             yield return new WaitForSeconds(0.6f);
             
-            // Đã bọc an toàn để không treo game
             if (!battleIsOver)
             {
                 yield return EnemyMove(); 
@@ -424,6 +422,64 @@ public class BattleSystem : MonoBehaviour
             CheckForBattleOver(targetUnit);
             if (battleIsOver) yield break;
         }
+        else 
+        {
+            if (move.Base.Effects != null)
+            {
+                // NÂNG CẤP: Truyền nguyên BattleUnit vào để gọi được HUD
+                yield return RunMoveEffects(move.Base.Effects, sourceUnit, targetUnit);
+            }
+        }
+    }
+
+    // NÂNG CẤP: Nhận vào BattleUnit để giao tiếp được với giao diện HUD
+    IEnumerator RunMoveEffects(MoveEffects effects, BattleUnit source, BattleUnit target)
+    {
+        if (effects.boosts != null && effects.boosts.Count > 0)
+        {
+            foreach (var statBoost in effects.boosts)
+            {
+                int rnd = UnityEngine.Random.Range(1, 101);
+                
+                if (rnd <= statBoost.chance)
+                {
+                    BattleUnit targetUnit = (statBoost.target == MoveTarget.Self) ? source : target;
+
+                    targetUnit.Pokemon.ApplyBoosts(new List<StatBoost>() { statBoost });
+
+                    // Báo cho HUD cập nhật Icon ngay
+                    targetUnit.Hud.UpdateStatusIcons();
+
+                    string actionStr = (statBoost.boost > 0) ? "tăng lên" : "giảm xuống";
+                    yield return dialogBox.TypeDialog($"Chỉ số {statBoost.stat} của {targetUnit.Pokemon.Base.Name} đã bị {actionStr}!");
+                    yield return new WaitForSeconds(0.8f);
+                }
+            }
+        }
+
+        if (effects.statuses != null && effects.statuses.Count > 0)
+        {
+            foreach (var statusEffect in effects.statuses)
+            {
+                int rnd = UnityEngine.Random.Range(1, 101);
+                
+                if (rnd <= statusEffect.chance)
+                {
+                    BattleUnit targetUnit = (statusEffect.target == MoveTarget.Self) ? source : target;
+
+                    if (targetUnit.Pokemon.Status == ConditionID.None)
+                    {
+                        targetUnit.Pokemon.Status = statusEffect.id;
+
+                        // Báo cho HUD cập nhật Icon ngay
+                        targetUnit.Hud.UpdateStatusIcons();
+
+                        yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} đã bị dính trạng thái {statusEffect.id}!");
+                        yield return new WaitForSeconds(0.8f);
+                    }
+                }
+            }
+        }
     }
 
     void CheckForBattleOver(BattleUnit faintedUnit)
@@ -453,7 +509,6 @@ public class BattleSystem : MonoBehaviour
 
     public void HandleUpdate() { }
 
-    // Dùng để kéo thả vào nút Bỏ Chạy (Run) trên Canvas
     public void MOUSE_ClickRun()
     {
         if (state == BattleState.ActionSelection)
@@ -462,7 +517,6 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    // Dùng để kéo thả vào nút Quay Lại khi đang chọn chiêu thức
     public void MOUSE_CancelMoveSelection()
     {
         if (state == BattleState.MoveSelection || state == BattleState.ActionSelection)
