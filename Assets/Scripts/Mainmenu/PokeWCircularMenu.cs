@@ -85,13 +85,12 @@ public class PokeWCircularMenu : MonoBehaviour
         }
     }
 
-   void ConfirmSelection()
+    void ConfirmSelection()
     {
         switch (currentIndex)
         {
             case 0:
-                // 🔥 SỬA Ở ĐÂY: Đổi tên scene đích thành màn hình chọn Starter
-                SceneManager.LoadScene("Start"); 
+                SceneManager.LoadScene("SampleScene");
                 break;
             case 1:
                 Debug.Log("Tính năng tải file lưu đang phát triển!");

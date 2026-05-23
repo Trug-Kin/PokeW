@@ -38,11 +38,11 @@ public class SceneTransition : MonoBehaviour
         {
             float distance = Vector2.Distance(transform.position, playerTransform.position);
 
-            // 🔥 ĐÃ SỬA CHỖ NÀY:
-            // Chỉ khi Player đứng trong phạm vi (maxDistance = 1.8f) thì cửa mới bắt đầu "nghe" phím E
-            if (distance <= maxDistance)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                Debug.Log($"[HỆ THỐNG] Bạn bấm E! Khoảng cách tới cửa: {distance}");
+
+                if (distance <= maxDistance)
                 {
                     PrepareAndChangeScene();
                 }

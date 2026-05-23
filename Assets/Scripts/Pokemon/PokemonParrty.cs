@@ -18,48 +18,31 @@ public class PokemonParrty : MonoBehaviour
         }
     }
 
-   public void Start()
+    public void Start()
     {
-        // 1. KIỂM TRA XEM CÓ QUÀ TỪ MÀN HÌNH CHỌN (StarterScene) GỬI SANG KHÔNG?
-        if (StarterSelection.chosenStarter != null)
+        // HỆ THỐNG TỰ ĐỘNG KHÔI PHỤC DỮ LIỆU KHI ĐỔI SCENE
+        if (globalPokemonsHold != null)
         {
-            // Tránh lỗi NullReferenceException nếu list chưa được tạo trên Inspector
-            if (pokemons == null) pokemons = new List<Pokemon>();
-
-            // Tạo Pokemon mới cấp 1
-            Pokemon newStarter = new Pokemon(StarterSelection.chosenStarter, 1);
-            
-            pokemons.Clear(); 
-            pokemons.Add(newStarter);
-
-            // Bơm đầy máu ngay lập tức để không bị đột quỵ khi vào trận
-            HealAllPokemon();
-
-            // Cập nhật lại bộ nhớ dùng chung (globalPokemonsHold)
-            globalPokemonsHold = pokemons;
-
-            Debug.Log($"[HỆ THỐNG] Đã nhận {newStarter.Base.Name} (Lv.1) từ màn hình chọn!");
-
-            // Xóa dữ liệu tạm ở trạm trung chuyển
-            StarterSelection.chosenStarter = null;
-        }
-        // 2. NẾU KHÔNG CÓ QUÀ (Tức là chuyển đổi qua lại giữa các map bình thường sau này)
-        else if (globalPokemonsHold != null)
-        {
+            // Nếu đã có dữ liệu lưu từ trước (máu thấp, trạng thái xấu...), bê nguyên vẹn vào Scene mới
             pokemons = globalPokemonsHold;
-            Debug.Log($"[DỮ LIỆU] Đã khôi phục đội hình từ bộ nhớ. Giữ nguyên trạng thái máu!");
+            Debug.Log($"[DỮ LIỆU] Đã khôi phục đội hình. Máu của Pokemon được giữ nguyên trạng thái cũ!");
+
+            // 🔥 KHÔNG gọi pokemon.Init() ở đây nữa để tránh bị reset lại đầy máu!
         }
-        // 3. TRƯỜNG HỢP TEST GAME TRỰC TIẾP TỪ SAMPLE SCENE (Không đi qua màn hình chọn)
         else
         {
+            // Trường hợp này chỉ chạy ĐÚNG 1 LẦN DUY NHẤT khi bạn mới bấm nút Play game
             globalPokemonsHold = pokemons;
+
+            // CHỈ KHỞI TẠO CHỈ SỐ LẦN ĐẦU TIÊN
             foreach (var pokemon in pokemons)
             {
                 if (pokemon != null)
                     pokemon.Init();
             }
         }
-    }    public void HealAllPokemon()
+    }
+    public void HealAllPokemon()
     {
         foreach (var pokemon in pokemons)
         {

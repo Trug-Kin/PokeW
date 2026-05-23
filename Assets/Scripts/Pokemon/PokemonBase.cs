@@ -9,9 +9,8 @@ public class PokemonBase : ScriptableObject
     [SerializeField] string description;
     [SerializeField] Sprite frontSprite;
     [SerializeField] Sprite backSprite;
-    
-    // Đã gộp thành 1 hệ duy nhất
-    [SerializeField] PokemonType type;
+    [SerializeField] PokemonType type1;
+    [SerializeField] PokemonType type2;
 
     // Base stats
     [SerializeField] int maxHp;
@@ -23,55 +22,136 @@ public class PokemonBase : ScriptableObject
 
     [SerializeField] List<LearnableMove> learnableMoves;
 
-    public string Name { get { return name; } }
-    public string Description { get { return description; } }
-    public Sprite FrontSprite { get { return frontSprite; } }
-    public Sprite BackSprite { get { return backSprite; } }
-    
-    // Thuộc tính gọi hệ duy nhất
-    public PokemonType Type { get { return type; } }
-    
-    public int MaxHp { get { return maxHp; } }
-    public int Attack { get { return attack; } }
-    public int Defense { get { return defense; } }
-    public int SpAttack { get { return spAttack; } }
-    public int SpDefense { get { return spDefense; } }
-    public int Speed { get { return speed; } }
-    public List<LearnableMove> LearnableMoves { get { return learnableMoves; } }
+    public string Name
+        {
+            get { return name; }
+    }
+    public string Description
+        {
+        get { return description; }
+    }
+    public Sprite FrontSprite
+        {
+        get { return frontSprite; }
+    }
+    public Sprite BackSprite
+        {
+        get { return backSprite; }
+    }
+    public PokemonType Type1
+        {
+        get { return type1; }
+    }
+    public PokemonType Type2
+        {
+        get { return type2; }
+    }
+    public int MaxHp
+        {
+        get { return maxHp; }
+    }
+    public int Attack
+        {
+        get { return attack; }
+    }
+    public int Defense
+        {
+        get { return defense; }
+    }
+    public int SpAttack
+        {
+        get { return spAttack; }
+    }
+    public int SpDefense
+        {
+        get { return spDefense; }
+    }
+    public int Speed
+        {
+        get { return speed; }
+    }
+    public List<LearnableMove> LearnableMoves
+        {
+        get { return learnableMoves; }
+    }
+
 }
     
+
 [System.Serializable]
-public class LearnableMove
-{
-    [SerializeField] MoveBase moveBase;
-    [SerializeField] int level;
-    
-    public MoveBase MoveBase { get { return moveBase; } }
-    public int Level { get { return level; } }
+    public class LearnableMove
+    {
+        [SerializeField] MoveBase moveBase;
+        [SerializeField] int level;
+        public MoveBase MoveBase
+        {
+            get { return moveBase; }
+        }
+        public int Level
+        {
+            get { return level; }
+        }
 }
 
-// Danh sách hệ đã được chuyển sang Ngũ Hành
+
 public enum PokemonType
 {
     None,
-    Kim,
-    Mộc,
-    Thủy,
-    Hỏa,
-    Thổ
-}
+    Fire,
+    Water,
+    Grass,
+    Electric,
+    Ice,
+    Fighting,
+    Poison,
+    Ground,
+    Flying,
+    Psychic,
+    Bug,
+    Rock,
+    Ghost,
+    Dragon,
+    Dark,
 
+}
 public class TypeChart
 {
-    static float[][] chart = new float[][]
+    // The enum (excluding None) currently has 16 types. Provide a 16x16 matrix
+    // initialized to 1f so indexing is safe. Fill with correct values later.
+    static float[][] chart = new float[16][]
     {
-                     // BÊN BỊ ĐÁNH:
-                     // Kim   Mộc   Thủy  Hỏa   Thổ
-        /* ĐÁNH: Kim  */ new float[] {0.5f, 2.0f, 0.5f, 0.5f, 1.0f},
-        /* ĐÁNH: Mộc  */ new float[] {0.5f, 0.5f, 1.0f, 0.5f, 2.0f},
-        /* ĐÁNH: Thủy */ new float[] {1.0f, 0.5f, 0.5f, 2.0f, 0.5f},
-        /* ĐÁNH: Hỏa  */ new float[] {2.0f, 1.0f, 0.5f, 0.5f, 0.5f},
-        /* ĐÁNH: Thổ  */ new float[] {0.5f, 0.5f, 2.0f, 1.0f, 0.5f}
+        // Fire
+        new float[16] {0.5f,0.5f,2f,1f,2f,1f,1f,1f,1f,1f,2f,0.5f,1f,0.5f,1f,1f},
+        // Water
+        new float[16] {2f,0.5f,0.5f,1f,1f,1f,1f,2f,1f,1f,1f,2f,1f,0.5f,1f,1f},
+        // Grass
+        new float[16] {0.5f,2f,0.5f,1f,1f,1f,0.5f,2f,0.5f,1f,0.5f,2f,1f,0.5f,1f,1f},
+        // Electric
+        new float[16] {1f,2f,0.5f,0.5f,1f,1f,1f,0f,2f,1f,1f,1f,1f,0.5f,1f,1f},
+        // Ice
+        new float[16] {0.5f,0.5f,2f,1f,0.5f,1f,1f,2f,2f,1f,1f,1f,1f,2f,1f,1f},
+        // Fighting
+        new float[16] {1f,1f,1f,1f,2f,1f,0.5f,1f,0.5f,0.5f,0.5f,2f,0f,1f,2f,1f},
+        // Poison
+        new float[16] {1f,1f,2f,1f,1f,1f,0.5f,0.5f,1f,1f,1f,0.5f,0.5f,1f,1f,1f},
+        // Ground
+        new float[16] {2f,1f,0.5f,2f,1f,1f,2f,1f,0f,1f,0.5f,2f,1f,1f,1f,1f},
+        // Flying
+        new float[16] {1f,1f,2f,0.5f,1f,2f,1f,1f,1f,1f,2f,0.5f,1f,1f,1f,1f},
+        // Psychic
+        new float[16] {1f,1f,1f,1f,1f,2f,2f,1f,1f,0.5f,1f,1f,1f,1f,0f,1f},
+        // Bug
+        new float[16] {0.5f,1f,2f,1f,1f,0.5f,0.5f,1f,0.5f,2f,1f,1f,0.5f,1f,2f,1f},
+        // Rock
+        new float[16] {2f,1f,1f,1f,2f,0.5f,1f,0.5f,2f,1f,2f,1f,1f,1f,1f,1f},
+        // Ghost
+        new float[16] {1f,1f,1f,1f,1f,0f,1f,1f,1f,2f,1f,1f,2f,1f,0.5f,1f},
+        // Dragon
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,2f,1f,1f},
+        // Dark
+        new float[16] {1f,1f,1f,1f,1f,0.5f,1f,1f,1f,2f,1f,1f,2f,1f,0.5f,1f},
+        // Extra neutral row (fallback)
+        new float[16] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
     };
 
     public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)
@@ -79,7 +159,6 @@ public class TypeChart
         if (attackType == PokemonType.None || defenseType == PokemonType.None)
             return 1f;
 
-        // Trừ 1 vì hệ None có index là 0, Kim bắt đầu từ 1
         int row = (int)attackType - 1;
         int col = (int)defenseType - 1;
 
