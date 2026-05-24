@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypeColorConfig
   typeUIList:
   - type: 4
-    typeIcon: {fileID: 21300000, guid: ed0dfccc53b1a4141abee39d7c3ce9c5, type: 3}
+    typeIcon: {fileID: 21300000, guid: 75885a225730d8e4482c84a81fc0eb76, type: 3}
     typeColor: {r: 1, g: 1, b: 1, a: 0}
   - type: 1
-    typeIcon: {fileID: 21300000, guid: cd918fd4eeccb214e871b17cade54fbc, type: 3}
+    typeIcon: {fileID: 21300000, guid: 79d4d5fa32aebef4f9844e6f2794f19a, type: 3}
     typeColor: {r: 0.9622642, g: 0.9205056, b: 0.9205056, a: 0}
   - type: 2
-    typeIcon: {fileID: 21300000, guid: d1b36469399f8de489a2d866ad1949e0, type: 3}
+    typeIcon: {fileID: 21300000, guid: 5682c5a6a90dc3f44af4bfb5c76bab5b, type: 3}
     typeColor: {r: 0.94716984, g: 0.90606624, b: 0.90606624, a: 0}
   - type: 3
-    typeIcon: {fileID: 21300000, guid: 6f25a7b13e46ce44faff8b9a176f3a41, type: 3}
+    typeIcon: {fileID: 21300000, guid: 7deff32619120a64588e451e578b20ba, type: 3}
     typeColor: {r: 0.9547169, g: 0.9132858, b: 0.9132858, a: 0}
   - type: 5
-    typeIcon: {fileID: 21300000, guid: 74270e0fa1b909449820aaad35e9660a, type: 3}
+    typeIcon: {fileID: 21300000, guid: 52bbc7c6caeb73c4c83e2b4ef4d1dbcc, type: 3}
     typeColor: {r: 0.96981126, g: 0.9130865, b: 0.9130865, a: 0}

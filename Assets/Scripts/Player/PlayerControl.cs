@@ -10,9 +10,10 @@ public class PlayerControl : MonoBehaviour
     private Vector2 lastMove = Vector2.down;
     private Animator animator;
     public LayerMask solidObjectLayer;
-    public LayerMask GrassLayer;
+    public LayerMask GrassLayer; // Đảm bảo bạn đã tick đúng layer Grass trên Unity Editor!
 
     public event Action OnEncountered;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -20,13 +21,8 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.LogWarning("Animator component not found on Player. Animations will not play.");
         }
-        else
-        {
-            string names = "";
-            foreach (var p in animator.parameters) names += p.name + ", ";
-            Debug.Log("Animator parameters: " + names);
-        }
     }
+
      public void HandleUpdate()
     {
         if (!isMoving)
@@ -41,7 +37,6 @@ public class PlayerControl : MonoBehaviour
                 {
                     animator.SetFloat("MoveX", input.x);
                     animator.SetFloat("MoveY", input.y);
-
                 }
 
                 var targetPos = transform.position;
@@ -53,9 +48,9 @@ public class PlayerControl : MonoBehaviour
         }
         animator.SetBool("isMoving", isMoving);
     }
+
     IEnumerator Move(Vector3 targetPos)
     {
-        // guard against zero/negative speed which would cause an infinite loop
         isMoving = true;
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
@@ -66,33 +61,42 @@ public class PlayerControl : MonoBehaviour
         isMoving = false;
         CheckForEncounter();
     }
+
     private bool IsWalkable(Vector3 targetPos)
     {
-        // THAY THẾ: Dùng OverlapPoint thay vì OverlapCircle
-        
         Collider2D hit = Physics2D.OverlapPoint(targetPos, solidObjectLayer);
 
         if (hit != null)
         {
-            Debug.Log("Blocked by: " + hit.name + " at " + targetPos);
             return false;
         }
 
         return true;
     }
+
     private void CheckForEncounter()
     {
-        // check if player is on grass tile
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.1f, GrassLayer);
-        if (hit != null)
+        // 1. Kiểm tra xem điểm nhân vật vừa bước vào có thuộc Layer Bụi Cỏ không
+        if (Physics2D.OverlapPoint(transform.position, GrassLayer) != null)
         {
-            Debug.Log("On grass: " + hit.name);
-            // 10% chance to encounter
-            if (UnityEngine.Random.Range(1, 101) <= 10)
+            // 2. Tung xúc xắc tỷ lệ 10% gặp quái
+            if (UnityEngine.Random.Range(1, 101) <= 10) 
             {
-                animator.SetBool("isMoving", false);
-                OnEncountered();
-              
+                var party = GetComponent<PokemonParrty>(); 
+                
+                // 3. LỚP ÁO GIÁP: Chỉ bắt đầu trận đấu NẾU trong đội hình còn ít nhất 1 Pokemon khỏe mạnh
+                if (party != null && party.GetHealthyPokemon() != null)
+                {
+                    animator.SetBool("isMoving", false);
+                    isMoving = false;
+                    
+                    // Phát tín hiệu cho GameControl mở màn hình Battle
+                    OnEncountered?.Invoke(); 
+                }
+                else
+                {
+                    Debug.Log("Cả đội đã kiệt sức! Tránh giao tranh và lẩn trốn an toàn qua bụi cỏ...");
+                }
             }
         }
     }

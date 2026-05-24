@@ -17,10 +17,18 @@ public class HealZone : MonoBehaviour
     }
 
     // Click chuột vào vùng kích hoạt này
+    // Click chuột vào vùng kích hoạt này
     void OnMouseDown()
     {
-        // Nếu bạn muốn PHẢI ĐỨNG GẦN mới click được thì thêm: if (isNear)
-        healingMachine.StartHealingProcess();
+        // Bắt buộc phải đứng trong vùng Collider (isNear = true) thì click mới có tác dụng
+        if (isNear)
+        {
+            healingMachine.StartHealingProcess();
+        }
+        else
+        {
+            Debug.Log("Bạn đứng quá xa, không thể dùng máy!");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

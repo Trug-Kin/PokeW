@@ -16,7 +16,7 @@ public class StarterSelection : MonoBehaviour
     public GameObject inforPanel;         // Object "Infor" tổng
     public Image pokeArt;                 // Ảnh to trong Infor
     public Image elementIcon;             // Icon hệ
-    public TextMeshProUGUI elementText;   // Chữ hệ
+    public TextMeshProUGUI elementText;   // Chữ hiển thị hệ
     public TextMeshProUGUI nameText;      // Tên Pokemon
     public TextMeshProUGUI statText;      // Bảng 6 chỉ số
     public TextMeshProUGUI desText;       // Dòng tiểu sử
@@ -56,9 +56,12 @@ public class StarterSelection : MonoBehaviour
 
         // Cập nhật mọi thông tin từ Data lên UI
         pokeArt.sprite = selectedBase.FrontSprite;
+
+        // 🔥 ĐÃ SỬA: Hiển thị tên của 1 hệ duy nhất (Ngũ Hành)
         elementText.text = selectedBase.Type.ToString();
 
-        if (typeConfig != null)
+        // 🔥 ĐÃ SỬA: Lấy Icon hệ dựa trên thuộc tính Type duy nhất
+        if (typeConfig != null && elementIcon != null)
         {
             Sprite icon = typeConfig.GetIconForType(selectedBase.Type);
             if (icon != null)
@@ -66,7 +69,10 @@ public class StarterSelection : MonoBehaviour
                 elementIcon.gameObject.SetActive(true);
                 elementIcon.sprite = icon;
             }
-            else elementIcon.gameObject.SetActive(false); 
+            else 
+            {
+                elementIcon.gameObject.SetActive(false); 
+            }
         }
 
         nameText.text = selectedBase.Name;

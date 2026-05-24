@@ -90,7 +90,7 @@ public class PokeWCircularMenu : MonoBehaviour
         switch (currentIndex)
         {
             case 0:
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("Start");
                 break;
             case 1:
                 Debug.Log("Tính năng tải file lưu đang phát triển!");

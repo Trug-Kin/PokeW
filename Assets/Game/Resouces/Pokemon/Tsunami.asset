@@ -21,7 +21,7 @@ MonoBehaviour:
     c\xF3 m\xF4t Th\u1EE7y th\u1EA7n \u0111\u01B0\u1EE3c  sinh ra... "
   frontSprite: {fileID: 21300000, guid: d084650a5dbe1b545a63ce51cc09e12b, type: 3}
   backSprite: {fileID: 21300000, guid: 906fe4d8e42374342b56e4038c31683c, type: 3}
-  type: 3
+  type: 2
   maxHp: 237
   attack: 144
   defense: 35

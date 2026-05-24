@@ -24,18 +24,30 @@ public class HealingMachine : MonoBehaviour
         }
     }
 
-    private IEnumerator HealSequence()
+   private IEnumerator HealSequence()
     {
         isHealing = true;
         Debug.Log("Máy bắt đầu hoạt động...");
 
-        // 1. Phát âm thanh hồi máu từ SoundManager
+        // 1. Tự động tìm Player nếu lỡ quên kéo thả trên Unity
+        if (playerParty == null)
+        {
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            if (playerObj == null) playerObj = GameObject.Find("Player"); // Dự phòng
+            
+            if (playerObj != null)
+            {
+                playerParty = playerObj.GetComponent<PokemonParrty>();
+            }
+        }
+
+        // 2. Phát âm thanh hồi máu từ SoundManager
         if (SoundManager.Instance != null)
         {
             SoundManager.Instance.PlayHealSound();
         }
 
-        // 2. Chạy đèn hiệu ứng hoặc đợi nhạc chạy xong
+        // 3. Chạy đèn hiệu ứng hoặc đợi nhạc chạy xong
         if (machineAnimator != null)
         {
             machineAnimator.SetTrigger("Heal");
@@ -43,16 +55,20 @@ public class HealingMachine : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(2.0f); // Thời gian chờ mặc định
+            yield return new WaitForSeconds(2.0f); 
         }
 
-        // 3. Thực hiện hồi máu trong dữ liệu
+        // 4. Thực hiện hồi máu trong dữ liệu
         if (playerParty != null)
         {
             playerParty.HealAllPokemon();
         }
+        else
+        {
+            Debug.LogError("Máy hồi máu không tìm thấy PlayerParty để hồi!");
+        }
 
-        // 4. Hiển thị thông báo thành công lên màn hình UI
+        // 5. Hiển thị thông báo thành công lên màn hình UI
         if (notificationPanel != null && notificationText != null)
         {
             notificationText.text = "Tất cả Pokémon đã được hồi phục thành công!";
