@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 621b85c4c6d40f845971c7f21bc826e1
+  - enabled: 1
+    path: Assets/Scenes/GymScene.unity
+    guid: 6796ed88b4283544d868a6a81eafb4e4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

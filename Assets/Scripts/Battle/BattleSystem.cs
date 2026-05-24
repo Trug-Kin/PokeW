@@ -21,7 +21,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] Animator catchEffectAnimator; // Kéo Object CatchEffect vào đây
     [Header("--- CÀI ĐẶT ÂM THANH BATTLE ---")]
     public AudioClip battleBGM;
-    public AudioClip catchSound; 
+    public AudioClip catchSound;
     [SerializeField] GameObject dthObject;
 
     public event Action<bool> OnBattleOver;
@@ -32,16 +32,15 @@ public class BattleSystem : MonoBehaviour
     int currentMember;
     bool battleIsOver = false;
 
-    PokemonParrty playerParty; 
+    PokemonParrty playerParty; // Bảo lưu đúng chính tả Class gốc có 2 chữ r của bạn
     Pokemon wildPokemon;
-
-    // 🔥 THÊM BIẾN NÀY ĐỂ ĐẢM BẢO CHỈ ÉP STARTER 1 LẦN DUY NHẤT TRONG TOÀN BỘ GAME
-    private static bool isStarterInitialized = false;
 
     public void BattleStart(PokemonParrty playerParty, Pokemon wildPokemon)
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
+        this.isTrainerBattle = false; // Mặc định là trận hoang dã
+        this.trainerTeam = null;
         battleIsOver = false;
 
         // 🔥 TÍCH HỢP POKEMON TỪ START SCENE VÀO PARTY 🔥
@@ -51,18 +50,29 @@ public class BattleSystem : MonoBehaviour
             {
                 // Thay thế Pokemon slot 1 bằng Starter đã chọn
                 this.playerParty.Pokemons[0].Base = StarterSelection.chosenStarter;
-                
+
                 // Khởi tạo lại HP, chỉ số và chiêu thức cho đúng với con mới này
-                this.playerParty.Pokemons[0].Init(); 
+                this.playerParty.Pokemons[0].Init();
             }
             else
             {
                 Debug.LogWarning("Party đang trống! Vui lòng nhét sẵn 1 Pokemon (VD: level 5) vào danh sách Party của Player ở thanh Inspector để hệ thống đè Starter lên slot đó.");
             }
-            
+
             isStarterInitialized = true; // Đánh dấu là đã thêm để không thay đổi nữa ở các trận đấu sau
         }
 
+        StartCoroutine(SetupBattle());
+    }
+
+    // 🌟 HÀM MỚI: DÙNG ĐỂ KÍCH HOẠT TRẬN ĐẤU VỚI NPC TRAINER 🌟
+    public void StartTrainerBattle(PokemonParrty playerParty, List<Pokemon> trainerTeam)
+    {
+        this.playerParty = playerParty;
+        this.trainerTeam = trainerTeam;
+        this.isTrainerBattle = true;
+        this.wildPokemon = null;
+        battleIsOver = false;
         StartCoroutine(SetupBattle());
     }
 
@@ -71,7 +81,7 @@ public class BattleSystem : MonoBehaviour
         BattleStart(playerParty, wildPokemon);
     }
 
-   public IEnumerator SetupBattle()
+    public IEnumerator SetupBattle()
     {
         if (SoundManager.Instance != null && battleBGM != null)
         {
@@ -89,33 +99,45 @@ public class BattleSystem : MonoBehaviour
         playerUnit.Setup(firstPokemon);
         playerHud.SetData(playerUnit.Pokemon);
 
-        if (wildPokemon != null && enemyUnit != null)
+        // 🌟 LẤY POKEMON ĐỊCH PHÙ HỢP THEO LOẠI TRẬN ĐẤU 🌟
+        Pokemon activeEnemy = isTrainerBattle ? GetHealthyTrainerPokemon() : wildPokemon;
+
+        if (activeEnemy != null && enemyUnit != null)
         {
-            wildPokemon.Init();
-            enemyUnit.Setup(wildPokemon);
+            activeEnemy.Init();
+            enemyUnit.Setup(activeEnemy);
         }
 
         partyScreen.Init();
-        inventoryUI.SetData(testInventory, true); 
+        inventoryUI.SetData(testInventory, true);
 
         if (dialogBox != null && playerUnit.Pokemon != null)
         {
             dialogBox.SetMoveSlotsData(playerUnit.Pokemon.Moves, 
                 (move) => dialogBox.UpdateMoveDetailsPanel(move),   
-                (moveIndex) => MouseSelectMove(moveIndex)            
+                (moveIndex) => MouseSelectMove(moveIndex)           
             );
         }
 
-        dialogBox.EnableDialogText(true); 
+        dialogBox.EnableDialogText(true);
 
-        var appearingName = enemyUnit != null && enemyUnit.Pokemon != null ? enemyUnit.Pokemon.Base.Name : (wildPokemon != null ? wildPokemon.Base.Name : "");
-        
-        yield return StartCoroutine(dialogBox.TypeDialog($"Pokemon hoang dã {appearingName} xuất hiện!"));
+        var appearingName = enemyUnit != null && enemyUnit.Pokemon != null ? enemyUnit.Pokemon.Base.Name : "";
+
+        // 🌟 THAY ĐỔI CÂU THOẠI CHÀO SÂN NẾU ĐỐI ĐẦU TRAINER 🌟
+        if (isTrainerBattle)
+        {
+            yield return StartCoroutine(dialogBox.TypeDialog($"Trainer thách đấu! Họ cử {appearingName} ra trận!"));
+        }
+        else
+        {
+            yield return StartCoroutine(dialogBox.TypeDialog($"Pokemon hoang dã {appearingName} xuất hiện!"));
+        }
+
         yield return new WaitForSeconds(1f);
 
         OpenParallelTurnMenu();
     }
-    
+
     void BattleOver(bool won)
     {
         state = BattleState.BattleOver;
@@ -132,39 +154,39 @@ public class BattleSystem : MonoBehaviour
 
     public void OpenParallelTurnMenu()
     {
-        state = BattleState.ActionSelection; 
-        
+        state = BattleState.ActionSelection;
+
         if (dialogBox != null && playerUnit.Pokemon != null)
         {
             dialogBox.SetMoveSlotsData(playerUnit.Pokemon.Moves, 
                 (move) => dialogBox.UpdateMoveDetailsPanel(move), 
-                (moveIndex) => MouseSelectMove(moveIndex)            
+                (moveIndex) => MouseSelectMove(moveIndex)           
             );
         }
 
-        dialogBox.EnableActionSelector(true); 
-        dialogBox.EnableMoveSelector(true);   
-        dialogBox.EnableDialogText(false); 
-        dialogBox.SetDialog(""); 
+        dialogBox.EnableActionSelector(true);
+        dialogBox.EnableMoveSelector(true);
+        dialogBox.EnableDialogText(false);
+        dialogBox.SetDialog("");
 
         dialogBox.UpdateActionSelection(-1);
-        dialogBox.UpdateMoveDetailsPanel(null); 
+        dialogBox.UpdateMoveDetailsPanel(null);
     }
 
     void ActionSelection() => OpenParallelTurnMenu();
     void MoveSelection() => OpenParallelTurnMenu();
 
-   public void OpenBag()
+    public void OpenBag()
     {
         state = BattleState.BagScreen;
-        
+
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableMoveSelector(false);
-        
+
         Action onBack = () =>
         {
             inventoryUI.gameObject.SetActive(false);
-            OpenParallelTurnMenu(); 
+            OpenParallelTurnMenu();
         };
 
         Action<ItemBase> onUsed = (ItemBase item) =>
@@ -173,23 +195,23 @@ public class BattleSystem : MonoBehaviour
         };
 
         inventoryUI.HandleUpdate(onBack, onUsed);
-        
-        inventoryUI.SetData(testInventory, true); 
+
+        inventoryUI.SetData(testInventory, true);
         inventoryUI.gameObject.SetActive(true);
     }
 
     public void OpenPartyScreen()
     {
         state = BattleState.PartyScreen;
-        
+
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableMoveSelector(false);
 
         partyScreen.SetPartyData(
-            playerParty.Pokemons, 
-            playerUnit.Pokemon.HP <= 0, 
-            OnPartyMemberClicked, 
-            OnPartyBackButtonClicked, 
+            playerParty.Pokemons,
+            playerUnit.Pokemon.HP <= 0,
+            OnPartyMemberClicked,
+            OnPartyBackButtonClicked,
             OnPartyOutButtonClicked
         );
         partyScreen.gameObject.SetActive(true);
@@ -208,6 +230,16 @@ public class BattleSystem : MonoBehaviour
 
         if (item is GourdballItem gourdball)
         {
+            // 🌟 KHÓA TÍNH NĂNG BẮT POKEMON CỦA TRAINER KHÁC 🌟
+            if (isTrainerBattle)
+            {
+                yield return dialogBox.TypeDialog($"Bạn không thể bắt trái phép Pokemon của Trainer khác!");
+                yield return new WaitForSeconds(1.0f);
+                inventoryUI.gameObject.SetActive(true);
+                state = BattleState.BagScreen;
+                yield break;
+            }
+
             yield return dialogBox.TypeDialog($"Bạn đã ném {gourdball.itemName}!");
             yield return new WaitForSeconds(0.5f);
 
@@ -284,7 +316,7 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableMoveSelector(false);
         dialogBox.EnableDialogText(true);
-        
+
         StartCoroutine(PlayerMove());
     }
 
@@ -303,9 +335,9 @@ public class BattleSystem : MonoBehaviour
     {
         if (state != BattleState.ActionSelection) return;
 
-        if (actionIndex == 0) OpenBag();          
-        else if (actionIndex == 1) OpenPartyScreen(); 
-        else if (actionIndex == 2) StartCoroutine(HandleRunAway()); 
+        if (actionIndex == 0) OpenBag();
+        else if (actionIndex == 1) OpenPartyScreen();
+        else if (actionIndex == 2) StartCoroutine(HandleRunAway());
     }
 
     public void MouseHoverAction(int actionIndex)
@@ -327,6 +359,15 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableMoveSelector(false);
         dialogBox.EnableDialogText(true);
 
+        // 🌟 KHÓA TÍNH NĂNG CHẠY TRỐN KHI ĐANG ĐẤU VỚI TRAINER 🌟
+        if (isTrainerBattle)
+        {
+            yield return dialogBox.TypeDialog("Bạn không thể bỏ chạy khỏi một trận đấu nghiêm túc với Trainer!");
+            yield return new WaitForSeconds(1.0f);
+            OpenParallelTurnMenu();
+            yield break;
+        }
+
         yield return dialogBox.TypeDialog("Bạn đang tìm sơ hở để bỏ chạy khỏi chiến trường...");
         yield return new WaitForSeconds(0.6f);
 
@@ -341,6 +382,7 @@ public class BattleSystem : MonoBehaviour
             yield return dialogBox.TypeDialog("Bỏ chạy thất bại! Kẻ địch đã chặn đường thoát!");
             yield return new WaitForSeconds(0.6f);
             
+            // 🔥 ĐÃ SỬA LUỒNG
             yield return EnemyMove(); 
         }
     }
@@ -349,12 +391,12 @@ public class BattleSystem : MonoBehaviour
     {
         var selectedMember = playerParty.Pokemons[selectedIndex];
         if (selectedMember.HP <= 0 || selectedMember == playerUnit.Pokemon) return;
-        
+
         partyScreen.gameObject.SetActive(false);
         state = BattleState.Busy;
         dialogBox.EnableDialogText(true);
-        
-        StartCoroutine(SwitchPokemon(selectedMember)); 
+
+        StartCoroutine(SwitchPokemon(selectedMember));
     }
 
     void OnPartyBackButtonClicked()
@@ -377,8 +419,8 @@ public class BattleSystem : MonoBehaviour
 
         if (dialogBox != null && newPokemon != null)
         {
-            dialogBox.SetMoveSlotsData(newPokemon.Moves, 
-                (move) => dialogBox.UpdateMoveDetailsPanel(move), 
+            dialogBox.SetMoveSlotsData(newPokemon.Moves,
+                (move) => dialogBox.UpdateMoveDetailsPanel(move),
                 (moveIndex) => MouseSelectMove(moveIndex)
             );
         }
@@ -387,6 +429,7 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"Xuất trận chiến đấu, {playerUnit.Pokemon.Base.Name}!");
         yield return new WaitForSeconds(1.0f);
 
+        // 🔥 ĐÃ SỬA LUỒNG
         yield return EnemyMove(); 
     }
 
@@ -394,7 +437,10 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.Busy;
         var playerMove = playerUnit.Pokemon.Moves[currentMove];
-        var enemyMove = enemyUnit.Pokemon.GetRanDomMove();
+
+        // 🌟 LƯU LẠI THÔNG TIN POKEMON ĐỊCH BAN ĐẦU LƯỢT ĐỂ TRÁNH LỖI ĐỔI CON MỚI 🌟
+        Pokemon originalEnemy = enemyUnit.Pokemon;
+        var enemyMove = originalEnemy.GetRanDomMove();
 
         bool playerFirst = playerUnit.Pokemon.Speed >= enemyUnit.Pokemon.Speed;
 
@@ -402,7 +448,10 @@ public class BattleSystem : MonoBehaviour
         {
             yield return RunMove(playerUnit, enemyUnit, playerMove);
             if (state == BattleState.BattleOver) yield break;
-            if (enemyUnit.Pokemon.HP > 0) yield return RunMove(enemyUnit, playerUnit, enemyMove);
+
+            // 🌟 CHỈ CHO PHÉP ENEMY ĐÁNH NẾU CON CŨ CHƯA BỊ ĐÁNH BẠI ĐỔI CON KHÁC 🌟
+            if (enemyUnit.Pokemon == originalEnemy && enemyUnit.Pokemon.HP > 0)
+                yield return RunMove(enemyUnit, playerUnit, enemyMove);
         }
         else
         {
@@ -419,7 +468,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.Busy;
         var move = enemyUnit.Pokemon.GetRanDomMove();
         yield return RunMove(enemyUnit, playerUnit, move);
-        
+
         if (state != BattleState.BattleOver) OpenParallelTurnMenu();
     }
 
@@ -447,60 +496,10 @@ public class BattleSystem : MonoBehaviour
             yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} đã bị đánh bại, kiệt sức gục ngã!");
             targetUnit.PlayFaintAnimation();
             yield return new WaitForSeconds(1.5f);
-            CheckForBattleOver(targetUnit);
+
+            // 🌟 THAY ĐỔI: SỬ DỤNG YIELD RETURN ĐỂ ĐỢI CHUYỂN POKEMON 🌟
+            yield return StartCoroutine(CheckForBattleOver(targetUnit));
             if (battleIsOver) yield break;
-        }
-        else 
-        {
-            if (move.Base.Effects != null)
-            {
-                yield return RunMoveEffects(move.Base.Effects, sourceUnit, targetUnit);
-            }
-        }
-    }
-
-    IEnumerator RunMoveEffects(MoveEffects effects, BattleUnit source, BattleUnit target)
-    {
-        if (effects.boosts != null && effects.boosts.Count > 0)
-        {
-            foreach (var statBoost in effects.boosts)
-            {
-                int rnd = UnityEngine.Random.Range(1, 101);
-                
-                if (rnd <= statBoost.chance)
-                {
-                    BattleUnit targetUnit = (statBoost.target == MoveTarget.Self) ? source : target;
-
-                    targetUnit.Pokemon.ApplyBoosts(new List<StatBoost>() { statBoost });
-                    targetUnit.Hud.UpdateStatusIcons();
-
-                    string actionStr = (statBoost.boost > 0) ? "tăng lên" : "giảm xuống";
-                    yield return dialogBox.TypeDialog($"Chỉ số {statBoost.stat} của {targetUnit.Pokemon.Base.Name} đã bị {actionStr}!");
-                    yield return new WaitForSeconds(0.8f);
-                }
-            }
-        }
-
-        if (effects.statuses != null && effects.statuses.Count > 0)
-        {
-            foreach (var statusEffect in effects.statuses)
-            {
-                int rnd = UnityEngine.Random.Range(1, 101);
-                
-                if (rnd <= statusEffect.chance)
-                {
-                    BattleUnit targetUnit = (statusEffect.target == MoveTarget.Self) ? source : target;
-
-                    if (targetUnit.Pokemon.Status == ConditionID.None)
-                    {
-                        targetUnit.Pokemon.Status = statusEffect.id;
-                        targetUnit.Hud.UpdateStatusIcons();
-
-                        yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} đã bị dính trạng thái {statusEffect.id}!");
-                        yield return new WaitForSeconds(0.8f);
-                    }
-                }
-            }
         }
     }
 
@@ -515,7 +514,7 @@ public class BattleSystem : MonoBehaviour
                 dialogBox.EnableActionSelector(false);
                 dialogBox.EnableMoveSelector(false);
                 partyScreen.gameObject.SetActive(true);
-                
+
                 partyScreen.SetPartyData(playerParty.Pokemons, true, OnPartyMemberClicked, null, OnPartyOutButtonClicked);
             }
             else
@@ -525,8 +524,52 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            BattleOver(true);
+            // Nếu kẻ địch bị gục ngã
+            if (isTrainerBattle)
+            {
+                var nextEnemyPokemon = GetHealthyTrainerPokemon();
+                if (nextEnemyPokemon != null)
+                {
+                    // 🌟 NẾU TRAINER VẪN CÒN POKEMON KHỎE MẠNH -> TỰ ĐỘNG THAY THẾ 🌟
+                    yield return StartCoroutine(HandleEnemySwitch(nextEnemyPokemon));
+                }
+                else
+                {
+                    // Hết sạch Pokemon thì người chơi thắng
+                    BattleOver(true);
+                }
+            }
+            else
+            {
+                // Nếu là pokemon hoang dã thì kết thúc trận đấu luôn
+                BattleOver(true);
+            }
         }
+    }
+
+    // 🌟 HÀM MỚI: XỬ LÝ ĐƯA POKEMON TIẾP THEO CỦA NPC RA SÂN 🌟
+    IEnumerator HandleEnemySwitch(Pokemon nextPokemon)
+    {
+        state = BattleState.Busy;
+        yield return dialogBox.TypeDialog($"Đối thủ chuẩn bị tung {nextPokemon.Base.Name} tiếp theo ra trận!");
+        yield return new WaitForSeconds(1.0f);
+
+        nextPokemon.Init();
+        enemyUnit.Setup(nextPokemon);
+
+        yield return dialogBox.TypeDialog($"Xuất chiêu đi chiến đấu, {nextPokemon.Base.Name}!");
+        yield return new WaitForSeconds(1.0f);
+    }
+
+    // 🌟 HÀM TRỢ GIÚP: QUÉT DANH SÁCH TÌM POKEMON CÒN MÁU CỦA TRAINER 🌟
+    Pokemon GetHealthyTrainerPokemon()
+    {
+        if (trainerTeam == null) return null;
+        foreach (var pokemon in trainerTeam)
+        {
+            if (pokemon.HP > 0) return pokemon;
+        }
+        return null;
     }
 
     public void HandleUpdate()

@@ -21,7 +21,13 @@ public class Pokemon
     public int Level { get { return level; } }
     public List<Move> Moves { get; set; }
     public ConditionID Status;
-    
+    public Pokemon(PokemonBase pBase, int pLevel)
+    {
+        _base = pBase;
+        level = pLevel;
+
+        Init();
+    }
     public void Init()
     {
         HP = MaxHp;

@@ -477,7 +477,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -321793863
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -821,11 +821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1710103014758868709, guid: dd0e012055e2c9240a0c807e7adab013, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.50345
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1710103014758868709, guid: dd0e012055e2c9240a0c807e7adab013, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.75792
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 1710103014758868709, guid: dd0e012055e2c9240a0c807e7adab013, type: 3}
       propertyPath: m_LocalPosition.z
@@ -859,6 +859,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4350053127580888886, guid: dd0e012055e2c9240a0c807e7adab013, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dbb81e7b9056805429892bdc2d2c3675, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -955,7 +959,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -321793863
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -1391,7 +1395,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1173150719
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -3744,7 +3748,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57012326, y: -6.05151, z: -10}
+  m_LocalPosition: {x: 0.5002387, y: -6.05151, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4045,7 +4049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3358cae06b14a4f9448aff8a6f10a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealStation
-  interactDistance: 3
 --- !u!1 &700359702
 GameObject:
   m_ObjectHideFlags: 0
@@ -16286,6 +16289,11 @@ Transform:
   - {fileID: 386933567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1133719040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1710103014758868709, guid: dd0e012055e2c9240a0c807e7adab013, type: 3}
+  m_PrefabInstance: {fileID: 352513889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1236353243
 GameObject:
   m_ObjectHideFlags: 0
@@ -16493,7 +16501,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 1133719040}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -16525,7 +16533,7 @@ Transform:
   m_GameObject: {fileID: 1671361278}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: -7.9, z: -10}
+  m_LocalPosition: {x: 0.5, y: -9.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
