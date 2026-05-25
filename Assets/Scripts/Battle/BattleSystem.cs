@@ -17,7 +17,7 @@ public class BattleSystem : MonoBehaviour
 
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] List<ItemSlot> testInventory;
-    [SerializeField] Animator catchEffectAnimator; 
+    [SerializeField] Animator catchEffectAnimator;
     [Header("--- CÀI ĐẶT ÂM THANH BATTLE ---")]
     public AudioClip battleBGM;
     public AudioClip catchSound;
@@ -31,7 +31,7 @@ public class BattleSystem : MonoBehaviour
     int currentMember;
     bool battleIsOver = false;
 
-    PokemonParrty playerParty; 
+    PokemonParrty playerParty;
     Pokemon wildPokemon;
 
     [SerializeField] bool isTrainerBattle = false;
@@ -42,7 +42,7 @@ public class BattleSystem : MonoBehaviour
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
-        this.isTrainerBattle = false; 
+        this.isTrainerBattle = false;
         this.trainerTeam = null;
         battleIsOver = false;
 
@@ -58,7 +58,7 @@ public class BattleSystem : MonoBehaviour
                 Debug.LogWarning("Party đang trống! Vui lòng nhét sẵn 1 Pokemon vào danh sách Party.");
             }
 
-            isStarterInitialized = true; 
+            isStarterInitialized = true;
         }
 
         StartCoroutine(SetupBattle());
@@ -85,7 +85,7 @@ public class BattleSystem : MonoBehaviour
                 Debug.LogWarning("Party đang trống! Vui lòng nhét sẵn 1 Pokemon vào danh sách Party.");
             }
 
-            isStarterInitialized = true; 
+            isStarterInitialized = true;
         }
 
         StartCoroutine(SetupBattle());
@@ -123,9 +123,9 @@ public class BattleSystem : MonoBehaviour
 
         if (dialogBox != null && playerUnit.Pokemon != null)
         {
-            dialogBox.SetMoveSlotsData(playerUnit.Pokemon.Moves, 
-                (move) => dialogBox.UpdateMoveDetailsPanel(move),   
-                (moveIndex) => MouseSelectMove(moveIndex)           
+            dialogBox.SetMoveSlotsData(playerUnit.Pokemon.Moves,
+                (move) => dialogBox.UpdateMoveDetailsPanel(move),
+                (moveIndex) => MouseSelectMove(moveIndex)
             );
         }
 
@@ -160,9 +160,9 @@ public class BattleSystem : MonoBehaviour
 
         if (dialogBox != null && playerUnit.Pokemon != null)
         {
-            dialogBox.SetMoveSlotsData(playerUnit.Pokemon.Moves, 
-                (move) => dialogBox.UpdateMoveDetailsPanel(move), 
-                (moveIndex) => MouseSelectMove(moveIndex)           
+            dialogBox.SetMoveSlotsData(playerUnit.Pokemon.Moves,
+                (move) => dialogBox.UpdateMoveDetailsPanel(move),
+                (moveIndex) => MouseSelectMove(moveIndex)
             );
         }
 
@@ -374,8 +374,8 @@ public class BattleSystem : MonoBehaviour
         {
             yield return dialogBox.TypeDialog("Bỏ chạy thất bại! Kẻ địch đã chặn đường thoát!");
             yield return new WaitForSeconds(0.6f);
-            
-            yield return EnemyMove(); 
+
+            yield return EnemyMove();
         }
     }
 
@@ -421,7 +421,7 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"Xuất trận chiến đấu, {playerUnit.Pokemon.Base.Name}!");
         yield return new WaitForSeconds(1.0f);
 
-        yield return EnemyMove(); 
+        yield return EnemyMove();
     }
 
     IEnumerator PlayerMove()
@@ -466,7 +466,7 @@ public class BattleSystem : MonoBehaviour
         string beforeMoveMsg;
         bool canMove = sourceUnit.Pokemon.OnBeforeMove(out beforeMoveMsg);
 
-        // 🔥 THÊM MỚI: Cập nhật UI ngay lập tức (Để lỡ rã đông thì icon băng cũng biến mất)
+        // 🔥 Cập nhật UI ngay lập tức
         sourceUnit.Hud.UpdateStatusIcons();
 
         if (!string.IsNullOrEmpty(beforeMoveMsg))
@@ -507,7 +507,6 @@ public class BattleSystem : MonoBehaviour
                             var effectTarget = (boost.target == MoveTarget.Foe) ? targetUnit : sourceUnit;
                             effectTarget.Pokemon.ApplyBoosts(new List<StatBoost>() { boost });
 
-                            // 🔥 THÊM MỚI: Bật UI Icon Mũi tên Tăng/Giảm chỉ số
                             effectTarget.Hud.UpdateStatusIcons();
 
                             string statName = boost.stat == Stat.Attack ? "Tấn Công" : (boost.stat == Stat.Defense ? "Phòng Thủ" : (boost.stat == Stat.SpAttack ? "Tấn Công Đ.Biệt" : (boost.stat == Stat.SpDefense ? "Phòng Thủ Đ.Biệt" : "Tốc Độ")));
@@ -525,11 +524,10 @@ public class BattleSystem : MonoBehaviour
                         if (UnityEngine.Random.Range(1, 101) <= statusEffect.chance)
                         {
                             var effectTarget = (statusEffect.target == MoveTarget.Foe) ? targetUnit : sourceUnit;
-                            if (effectTarget.Pokemon.Status == ConditionID.None) 
+                            if (effectTarget.Pokemon.Status == ConditionID.None)
                             {
                                 effectTarget.Pokemon.SetStatus(statusEffect.id);
 
-                                // 🔥 THÊM MỚI: Bật UI Icon Dị Thường (Lửa, Băng, Điện)
                                 effectTarget.Hud.UpdateStatusIcons();
 
                                 string conditionName = statusEffect.id == ConditionID.brn ? "bị thiêu đốt" : (statusEffect.id == ConditionID.frz ? "bị đóng băng" : "bị choáng");
@@ -540,12 +538,12 @@ public class BattleSystem : MonoBehaviour
                     }
                 }
             }
-        } 
+        }
 
         int afterTurnDamage;
         string afterTurnMsg;
         sourceUnit.Pokemon.OnAfterTurn(out afterTurnMsg, out afterTurnDamage);
-        
+
         if (afterTurnDamage > 0)
         {
             yield return dialogBox.TypeDialog(afterTurnMsg);
@@ -571,8 +569,25 @@ public class BattleSystem : MonoBehaviour
         faintedUnit.PlayFaintAnimation();
         yield return new WaitForSeconds(1.5f);
 
-        if (!faintedUnit.IsPlayerUnit && killerUnit.IsPlayerUnit) 
+        // KIỂM TRA: NẾU ĐỊCH CHẾT VÀ BẠN LÀ NGƯỜI HẠ
+        if (!faintedUnit.IsPlayerUnit && killerUnit.IsPlayerUnit)
         {
+            // ========================================================
+            // 🔥 THÊM MỚI TẠI ĐÂY: GỬI BÁO CÁO NHIỆM VỤ ĐÁNH POKEMON
+            // ========================================================
+            //  ĐOẠN MỚI (Đã tối ưu cho Unity đời mới)
+            PlayerInventory playerInventory = FindAnyObjectByType<PlayerInventory>();
+            if (playerInventory != null)
+            {
+                string tenPokemonBiHa = faintedUnit.Pokemon.Base.Name;
+
+                playerInventory.AddItem(tenPokemonBiHa, 1); // Nhiệm vụ loại 1 (tên loài)
+                playerInventory.AddItem("AnyPokemon", 1);   // Nhiệm vụ loại 2 (bất kỳ)
+
+                Debug.Log($"[Quest System] Đã hạ gục {tenPokemonBiHa}. Ghi nhận tiến độ nhiệm vụ thành công!");
+            }
+            // ========================================================
+
             int expYield = faintedUnit.Pokemon.Base.ExpYield;
             int enemyLevel = faintedUnit.Pokemon.Level;
             float expMultiplier = isTrainerBattle ? 1.5f : 1f;
@@ -581,7 +596,7 @@ public class BattleSystem : MonoBehaviour
 
             killerUnit.Pokemon.Exp += expGained;
             yield return dialogBox.TypeDialog($"{killerUnit.Pokemon.Base.Name} nhận được {expGained} điểm kinh nghiệm!");
-            
+
             yield return killerUnit.Hud.SetExpSmooth();
             yield return new WaitForSeconds(0.8f);
 
@@ -589,14 +604,14 @@ public class BattleSystem : MonoBehaviour
             while (killerUnit.Pokemon.Exp >= expNeeded)
             {
                 killerUnit.Pokemon.LevelUp();
-                killerUnit.Hud.UpdateLevelText(); 
-                
-                yield return killerUnit.Hud.SetExpSmooth(true); 
+                killerUnit.Hud.UpdateLevelText();
+
+                yield return killerUnit.Hud.SetExpSmooth(true);
                 expNeeded = killerUnit.Pokemon.Base.GetExpForLevel(killerUnit.Pokemon.Level + 1);
-                
+
                 yield return dialogBox.TypeDialog($"Tuyệt quá! {killerUnit.Pokemon.Base.Name} đã tăng lên Cấp {killerUnit.Pokemon.Level}!");
                 yield return new WaitForSeconds(1.0f);
-                yield return killerUnit.Hud.UpdateHP(); 
+                yield return killerUnit.Hud.UpdateHP();
             }
         }
 
