@@ -26,6 +26,6 @@ MonoBehaviour:
       target: 0
       chance: 100
     statuses:
-    - id: 2
+    - id: 1
       target: 0
       chance: 100

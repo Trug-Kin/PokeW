@@ -30,10 +30,6 @@ public class MoveBase : ScriptableObject
     public MoveEffects Effects { get { return effects; } }
 }
 
-// ==========================================
-// CÁC ENUM VÀ CLASS PHỤ TRỢ ĐỂ DƯỚI CÙNG
-// ==========================================
-
 public enum MoveTarget 
 { 
     Foe,    
@@ -81,3 +77,5 @@ public class MoveEffects
     [Header("Trạng Thái Dị Thường")]
     public List<StatusEffect> statuses; 
 }
+
+// 🔥 THÊM MỚI: Danh sách các Dị Thường

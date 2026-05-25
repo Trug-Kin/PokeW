@@ -11,6 +11,9 @@ public class GameControl : MonoBehaviour
     [SerializeField] Camera worldCamera;
     [SerializeField] PartyScreen partyScreen;
 
+    [Header("Kho Pokemon Hoang Dã")]
+    public List<PokemonBase> wildPokemonDatabase;
+
     GameState state;
 
     public void Start()
@@ -22,13 +25,61 @@ public class GameControl : MonoBehaviour
 
     void StartBattle()
     {
+        var playerParty = playerControl.GetComponent<PokemonParrty>();
+        var activePokemon = playerParty.GetHealthyPokemon();
+
+        // Kiểm tra xem đội hình có Pokemon nào còn sống không
+        if (activePokemon == null)
+        {
+            Debug.LogWarning("Không có Pokemon khỏe mạnh để ra trận!");
+            return;
+        }
+
+        // Đóng băng map, mở màn hình Battle
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
-        var playerParty = playerControl.GetComponent<PokemonParrty>();
-        var wildPokemon = FindObjectOfType<MapArena>().GetRandomWildPokemon();
+        // --- BẮT ĐẦU LOGIC SINH QUÁI HOANG DÃ ---
 
+        // 1. Tìm Pokemon có CẤP ĐỘ CAO NHẤT trong túi đồ của người chơi
+        int highestLevel = 1;
+        foreach (var p in playerParty.Pokemons)
+        {
+            if (p.Level > highestLevel)
+            {
+                highestLevel = p.Level;
+            }
+        }
+
+        // 2. Bốc ngẫu nhiên 1 Pokemon từ Kho dữ liệu
+        if (wildPokemonDatabase == null || wildPokemonDatabase.Count == 0)
+        {
+            Debug.LogError("Kho Pokemon hoang dã trống! Vui lòng kéo thả file PokemonBase vào list Wild Pokemon Database ở GameControl.");
+            
+            // Xử lý thoát game/trận nếu lỗi để không kẹt màn hình
+            state = GameState.FreeRoam;
+            battleSystem.gameObject.SetActive(false);
+            worldCamera.gameObject.SetActive(true);
+            return;
+        }
+
+        int randomIndex = UnityEngine.Random.Range(0, wildPokemonDatabase.Count);
+        PokemonBase randomBase = wildPokemonDatabase[randomIndex];
+
+        // 3. Tính toán Cấp độ ngẫu nhiên dựa trên con MẠNH NHẤT
+        // Min level: Cấp cao nhất - 2 (Nhưng thấp nhất phải là 1)
+        // Max level: Cấp cao nhất + 5
+        int minLevel = Mathf.Max(1, highestLevel - 2); 
+        int maxLevel = highestLevel + 5;
+        int randomLevel = UnityEngine.Random.Range(minLevel, maxLevel + 1); 
+
+        // 4. Khởi tạo con Pokemon hoang dã
+        // 4. Khởi tạo con Pokemon hoang dã (Truyền thẳng dữ liệu vào Constructor)
+        Pokemon wildPokemon = new Pokemon(randomBase, randomLevel);
+        wildPokemon.Init();
+
+        // 5. Mở trận đánh và ném nó vào
         battleSystem.StartBattle(playerParty, wildPokemon);
     }
 

@@ -4142,7 +4142,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9962583, y: -10.43281, z: -10}
+  m_LocalPosition: {x: -3.0005438, y: -10.432799, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4372,6 +4372,8 @@ MonoBehaviour:
   pokemonPool:
   - {fileID: 11400000, guid: 5a765e9c1f5b59144b2dfa832b18587e, type: 2}
   - {fileID: 11400000, guid: d1668aca45082814e9ff1bec40667ce6, type: 2}
+  - {fileID: 11400000, guid: a086f36fea5c17c42987c551d698fa89, type: 2}
+  - {fileID: 11400000, guid: 9ab7a4efbe56192499fa120fcf9d4871, type: 2}
   pokemonLevel: 10
 --- !u!61 &626659943
 BoxCollider2D:
@@ -6143,7 +6145,7 @@ Transform:
   m_GameObject: {fileID: 980349026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.26, y: 0.94, z: 0}
+  m_LocalPosition: {x: -5.94, y: 0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26605,6 +26607,7 @@ MonoBehaviour:
   battleSystem: {fileID: 1630513282}
   worldCamera: {fileID: 519420031}
   partyScreen: {fileID: 1630513281}
+  wildPokemonDatabase: []
 --- !u!1 &1081170996
 GameObject:
   m_ObjectHideFlags: 0
@@ -27540,6 +27543,10 @@ PrefabInstance:
       propertyPath: catchEffectAnimator
       value: 
       objectReference: {fileID: 1947803658}
+    - target: {fileID: 7573566780095731855, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
+      propertyPath: trainerTeam.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8204594544484610243, guid: 03034fff33b888e4a9c81467df9b3e09, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 104.30499

@@ -12,6 +12,8 @@ public class Pokemon
 
     public int HP { get; set; }
     
+    public int Exp { get; set; }
+
     public PokemonBase Base 
     { 
         get { return _base; } 
@@ -20,7 +22,10 @@ public class Pokemon
     
     public int Level { get { return level; } }
     public List<Move> Moves { get; set; }
+    
+    // 🔥 Biến lưu trữ trạng thái dị thường của Pokemon
     public ConditionID Status;
+    
     public Pokemon(PokemonBase pBase, int pLevel)
     {
         _base = pBase;
@@ -28,10 +33,13 @@ public class Pokemon
 
         Init();
     }
+    
     public void Init()
     {
         HP = MaxHp;
         Moves = new List<Move>();
+
+        Exp = Base.GetExpForLevel(level);
 
         StatBoosts = new Dictionary<Stat, int>()
         {
@@ -89,7 +97,6 @@ public class Pokemon
         if (Random.value <= 0.0625f)
             critical = 2f;
 
-        // 🔥 ĐÃ SỬA: Công thức sát thương nay chỉ gọi 1 hệ duy nhất
         float type = TypeChart.GetEffectiveness(move.Base.Type, this.Base.Type);
 
         damageDetails.TypeEffectiveness = type;
@@ -146,6 +153,59 @@ public class Pokemon
     public void LevelUp()
     {
         level++;
+    }
+
+    // ==========================================
+    // 🔥 HỆ THỐNG TRẠNG THÁI DỊ THƯỜNG 🔥
+    // ==========================================
+    public void SetStatus(ConditionID conditionId)
+    {
+        if (Status != ConditionID.None) return; 
+        Status = conditionId;
+    }
+
+    public bool OnBeforeMove(out string message)
+    {
+        message = "";
+        
+        if (Status == ConditionID.par)
+        {
+            if (Random.Range(1, 101) <= 25)
+            {
+                message = $"{Base.Name} đang bị choáng và không thể cử động!";
+                return false; 
+            }
+        }
+        else if (Status == ConditionID.frz)
+        {
+            if (Random.Range(1, 101) <= 20)
+            {
+                CureStatus();
+                message = $"{Base.Name} đã phá vỡ lớp băng và rã đông!";
+                return true; 
+            }
+            message = $"{Base.Name} đang bị đóng băng cứng ngắc!";
+            return false; 
+        }
+
+        return true; 
+    }
+
+    public void OnAfterTurn(out string message, out int damage)
+    {
+        message = "";
+        damage = 0;
+        
+        if (Status == ConditionID.brn)
+        {
+            damage = Mathf.CeilToInt(MaxHp * 0.03f);
+            if (damage <= 0) damage = 1; 
+            
+            HP -= damage;
+            if (HP < 0) HP = 0;
+            
+            message = $"{Base.Name} bị mất máu do vết thương thiêu đốt!";
+        }
     }
 }
 

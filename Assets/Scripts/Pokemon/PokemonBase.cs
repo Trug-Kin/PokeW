@@ -21,6 +21,10 @@ public class PokemonBase : ScriptableObject
     [SerializeField] int spDefense;
     [SerializeField] int speed;
 
+    // 🔥 THÊM MỚI: EXP gốc quái rớt ra khi bị hạ
+    [Header("--- Kinh nghiệm (EXP) ---")]
+    [SerializeField] int expYield; 
+
     [SerializeField] List<LearnableMove> learnableMoves;
 
     public string Name { get { return name; } }
@@ -38,6 +42,15 @@ public class PokemonBase : ScriptableObject
     public int SpDefense { get { return spDefense; } }
     public int Speed { get { return speed; } }
     public List<LearnableMove> LearnableMoves { get { return learnableMoves; } }
+    
+    // 🔥 THÊM MỚI: Getter cho ExpYield
+    public int ExpYield { get { return expYield; } } 
+
+    // 🔥 THÊM MỚI: Hàm tính tổng EXP cần cho một cấp độ (Công thức: Level^3)
+    public int GetExpForLevel(int level)
+    {
+        return level * level * level;
+    }
 }
     
 [System.Serializable]
@@ -67,11 +80,11 @@ public class TypeChart
     {
         // CỘT: Hệ phòng thủ (Bị đánh)
         // Kim, Thủy, Mộc, Hỏa, Thổ
-        /* HÀNG: Kim tấn công  */ new float[5] { 1f,   0.5f, 2f,   1f,   1f }, // Kim sinh Thủy (0.5), Kim khắc Mộc (2)
-        /* HÀNG: Thủy tấn công */ new float[5] { 1f,   1f,   0.5f, 2f,   1f }, // Thủy sinh Mộc (0.5), Thủy khắc Hỏa (2)
-        /* HÀNG: Mộc tấn công  */ new float[5] { 1f,   1f,   1f,   0.5f, 2f }, // Mộc sinh Hỏa (0.5), Mộc khắc Thổ (2)
-        /* HÀNG: Hỏa tấn công  */ new float[5] { 2f,   1f,   1f,   1f,   0.5f},// Hỏa khắc Kim (2), Hỏa sinh Thổ (0.5)
-        /* HÀNG: Thổ tấn công  */ new float[5] { 0.5f, 2f,   1f,   1f,   1f }  // Thổ sinh Kim (0.5), Thổ khắc Thủy (2)
+        /* HÀNG: Kim tấn công  */ new float[5] { 1f,   0.5f, 2f,   1f,   1f }, 
+        /* HÀNG: Thủy tấn công */ new float[5] { 1f,   1f,   0.5f, 2f,   1f }, 
+        /* HÀNG: Mộc tấn công  */ new float[5] { 1f,   1f,   1f,   0.5f, 2f }, 
+        /* HÀNG: Hỏa tấn công  */ new float[5] { 2f,   1f,   1f,   1f,   0.5f},
+        /* HÀNG: Thổ tấn công  */ new float[5] { 0.5f, 2f,   1f,   1f,   1f }  
     };
 
     public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)

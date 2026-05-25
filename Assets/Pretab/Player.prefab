@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonParrty
   pokemons:
   - _base: {fileID: 11400000, guid: a6244a838ce3db24babc4d8c1913369d, type: 2}
-    level: 0
+    level: 1
     Status: 0
 --- !u!114 &6073898563420334000
 MonoBehaviour:

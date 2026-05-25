@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: StatusIconConfig
   m_EditorClassIdentifier: Assembly-CSharp::StatusIconConfig
   conditionUIList:
-  - conditionID: 2
+  - conditionID: 1
     icon: {fileID: -3008402488653029694, guid: fa7e92b6bf32a2c46a9ac4e53b8692d7, type: 3}
     color: {r: 1, g: 1, b: 1, a: 0}
-  - conditionID: 5
+  - conditionID: 2
     icon: {fileID: -7555881684348139271, guid: f8a7c6085cb241e4e9322e48e1441e65, type: 3}
     color: {r: 1, g: 1, b: 1, a: 0}
   - conditionID: 3
-    icon: {fileID: 6593100082370562089, guid: 4c060d40621d98144929c8e12aca2c31, type: 3}
+    icon: {fileID: 21300000, guid: fb3e8900627b2194da4f2b1b1e9cf6f5, type: 3}
     color: {r: 1, g: 1, b: 1, a: 0}
   statBoostUIList:
   - stat: 0
-    buffIcon: {fileID: 0}
+    buffIcon: {fileID: 21300000, guid: b705ef3955a6c1148bb90ced278bbb55, type: 3}
     debuffIcon: {fileID: 3810846501142125681, guid: f658c19071a874649aed67bf98047321, type: 3}
   - stat: 1
-    buffIcon: {fileID: 0}
+    buffIcon: {fileID: 21300000, guid: bc89857631aee8b4fac1f52c0f723781, type: 3}
     debuffIcon: {fileID: 1143416629183753377, guid: 1dda8c0701e7b0f4bafe114a2ca484e6, type: 3}
