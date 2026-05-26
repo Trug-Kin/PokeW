@@ -20,24 +20,25 @@ public class PokemonParrty : MonoBehaviour
 
     public void Start()
     {
-        // HỆ THỐNG TỰ ĐỘNG KHÔI PHỤC DỮ LIỆU KHI ĐỔI SCENE
         if (globalPokemonsHold != null)
         {
-            // Nếu đã có dữ liệu lưu từ trước (máu thấp, trạng thái xấu...), bê nguyên vẹn vào Scene mới
             pokemons = globalPokemonsHold;
-            Debug.Log($"[DỮ LIỆU] Đã khôi phục đội hình. Máu của Pokemon được giữ nguyên trạng thái cũ!");
-
-            // 🔥 KHÔNG gọi pokemon.Init() ở đây nữa để tránh bị reset lại đầy máu!
+            Debug.Log($"[DỮ LIỆU] Đã khôi phục đội hình.");
         }
         else
         {
-            // Trường hợp này chỉ chạy ĐÚNG 1 LẦN DUY NHẤT khi bạn mới bấm nút Play game
             globalPokemonsHold = pokemons;
 
-            // CHỈ KHỞI TẠO CHỈ SỐ LẦN ĐẦU TIÊN
+            // 🔥 LOGIC MỚI: Tự động gán Starter vào vị trí đầu tiên ngay khi vào game
+            // Bỏ dòng chữ "StarterSelection" nếu file của cậu tên khác nhé!
+            if (StarterSelection.chosenStarter != null && pokemons.Count > 0)
+            {
+                pokemons[0].Base = StarterSelection.chosenStarter;
+            }
+
             foreach (var pokemon in pokemons)
             {
-                if (pokemon != null)
+                if (pokemon != null && pokemon.Base != null)
                     pokemon.Init();
             }
         }
