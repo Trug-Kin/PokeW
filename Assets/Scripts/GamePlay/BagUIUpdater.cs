@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(InventoryUI))] // Yêu cầu Unity tự động gắn kèm InventoryUI
+[RequireComponent(typeof(InventoryUI))]
 public class BagUIUpdater : MonoBehaviour
 {
     private PlayerInventory playerInventory;
@@ -9,7 +9,12 @@ public class BagUIUpdater : MonoBehaviour
 
     private void Awake()
     {
-        // 1. Tự động tìm nhân vật để lấy túi đồ
+        inventoryUI = GetComponent<InventoryUI>();
+    }
+
+    private void OnEnable()
+    {
+        // 🔥 QUAN TRỌNG: Quét lại Player mỗi khi bật UI để đề phòng lỗi chuyển Scene
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
@@ -17,15 +22,16 @@ public class BagUIUpdater : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("BagUIUpdater: Không tìm thấy nhân vật có tag 'Player'!");
+            // Dự phòng: Thử tìm bằng Type nếu lỡ quên gắn Tag
+            playerInventory = FindAnyObjectByType<PlayerInventory>();
         }
 
-        // 2. Liên kết với hệ thống InventoryUI có sẵn trên cùng GameObject
-        inventoryUI = GetComponent<InventoryUI>();
-    }
+        if (playerInventory == null)
+        {
+            Debug.LogError("[LỖI BagUIUpdater] Không tìm thấy túi đồ của Player! Hãy kiểm tra lại Tag.");
+            return;
+        }
 
-    private void OnEnable()
-    {
         UpdateBagUI();
     }
 
@@ -33,8 +39,7 @@ public class BagUIUpdater : MonoBehaviour
     {
         if (playerInventory == null || inventoryUI == null) return;
 
-        // Bàn giao toàn bộ túi đồ thực tế của Player cho InventoryUI lo liệu.
-        // Biến "true" để ra lệnh cho InventoryUI hiển thị thêm số lượng (Ví dụ: x10).
+        // Bàn giao toàn bộ túi đồ THẬT cho UI vẽ lên màn hình
         inventoryUI.SetData(playerInventory.inventory, true); 
     }
 }

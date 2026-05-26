@@ -119,7 +119,11 @@ public class BattleSystem : MonoBehaviour
         }
 
         partyScreen.Init();
-        inventoryUI.SetData(testInventory, true);
+        PlayerInventory realInventory = playerParty.GetComponent<PlayerInventory>();
+            if (realInventory != null)
+            {
+                inventoryUI.SetData(realInventory.inventory, true);
+            }
 
         if (dialogBox != null && playerUnit.Pokemon != null)
         {
@@ -195,7 +199,11 @@ public class BattleSystem : MonoBehaviour
 
         inventoryUI.HandleUpdate(onBack, onUsed);
 
-        inventoryUI.SetData(testInventory, true);
+       PlayerInventory realInventoryBag = playerParty.GetComponent<PlayerInventory>();
+if (realInventoryBag != null)
+{
+    inventoryUI.SetData(realInventoryBag.inventory, true);
+}
         inventoryUI.gameObject.SetActive(true);
     }
 

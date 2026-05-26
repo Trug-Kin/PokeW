@@ -1,44 +1,67 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-// Chứa thông tin vật phẩm (Đỡ phải tạo hệ thống phức tạp sau này)
 [System.Serializable]
-public class ItemData
+public class QuestProgressData
 {
-    public string itemName;
+    public string objectiveName;
     public int amount;
 }
 
 public class PlayerInventory : MonoBehaviour
 {
-    // Túi đồ cơ bản lưu trữ vật phẩm
-    public List<ItemData> items = new List<ItemData>();
+    [Header("Túi đồ vật phẩm (Thực)")]
+    public List<ItemSlot> inventory = new List<ItemSlot>(); 
 
-    // Hàm thêm vật phẩm vào túi
-    public void AddItem(string name, int amount)
+    [Header("Tiến trình nhiệm vụ (Ảo)")]
+    public List<QuestProgressData> questProgress = new List<QuestProgressData>();
+
+    // --- 1. DÀNH CHO VẬT PHẨM THẬT (Giao diện UI & Trận đấu) ---
+    public void AddItem(ItemBase item, int amount)
     {
-        // Kiểm tra xem đã có item này trong túi chưa
-        foreach (var item in items)
+        if (item == null) return;
+        foreach (var slot in inventory)
         {
-            if (item.itemName == name)
+            if (slot.item == item)
             {
-                item.amount += amount;
-                Debug.Log($"Đã thêm {amount} {name}. Tổng: {item.amount}");
+                slot.count += amount;
                 return;
             }
         }
-
-        // Nếu chưa có thì tạo mới
-        items.Add(new ItemData { itemName = name, amount = amount });
-        Debug.Log($"Nhận được vật phẩm mới: {name} (x{amount})");
+        inventory.Add(new ItemSlot { item = item, count = amount });
     }
 
-    // Hàm kiểm tra xem người chơi có đủ vật phẩm nhiệm vụ không
-    public bool HasItem(string name, int requiredAmount)
+    public bool HasItem(ItemBase item, int amount)
     {
-        foreach (var item in items)
+        if (item == null) return false;
+        foreach (var slot in inventory)
         {
-            if (item.itemName == name && item.amount >= requiredAmount)
+            if (slot.item == item && slot.count >= amount)
+                return true;
+        }
+        return false;
+    }
+
+    // --- 2. DÀNH CHO TIẾN TRÌNH NHIỆM VỤ (Đánh quái, đếm số lượng...) ---
+    // Hàm này sẽ tự động dập tắt lỗi ở dòng 584 trong BattleSystem của cậu
+    public void AddItem(string itemName, int amount)
+    {
+        foreach (var q in questProgress)
+        {
+            if (q.objectiveName == itemName)
+            {
+                q.amount += amount;
+                return;
+            }
+        }
+        questProgress.Add(new QuestProgressData { objectiveName = itemName, amount = amount });
+    }
+
+    public bool HasItem(string itemName, int amount)
+    {
+        foreach (var q in questProgress)
+        {
+            if (q.objectiveName == itemName && q.amount >= amount)
                 return true;
         }
         return false;
