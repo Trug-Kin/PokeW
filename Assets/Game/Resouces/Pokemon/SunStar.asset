@@ -26,4 +26,10 @@ MonoBehaviour:
   expYield: 120
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 140bd478eecb98b47a77738e8dbfd09e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: bb1beeafa4d1fec42aaac0ceec1f47f9, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 6fbc41f7d7951d044a11db74ed21d49a, type: 2}
     level: 3
+  - moveBase: {fileID: 11400000, guid: a11675d48dbf4234d89d9c99aba3ab07, type: 2}
+    level: 6

@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3210fe19ccd9bed419ed6c41d7197e6e, type: 3}
   m_Name: Vine Whip
   m_EditorClassIdentifier: 
-  name: Vine Whips
-  type: 0
+  name: "M\u1ED9c Tr\u1EA3m"
+  description: 
+  type: 3
   power: 45
   accuracy: 100
   pp: 25
-  typeIcon: {fileID: 21300000, guid: d1b36469399f8de489a2d866ad1949e0, type: 3}
+  isSpecial: 0
+  effects:
+    boosts: []
+    statuses:
+    - id: 3
+      target: 0
+      chance: 100

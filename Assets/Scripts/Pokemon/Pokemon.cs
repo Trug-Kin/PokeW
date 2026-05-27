@@ -20,7 +20,13 @@ public class Pokemon
         set { _base = value; } 
     }
     
-    public int Level { get { return level; } }
+    // 🔥 ĐÃ FIX: Thêm "set" để cho phép thay đổi Level từ bên ngoài (dùng cho Demo)
+    public int Level 
+    { 
+        get { return level; } 
+        set { level = value; } 
+    }
+    
     public List<Move> Moves { get; set; }
     
     // 🔥 Biến lưu trữ trạng thái dị thường của Pokemon
@@ -170,7 +176,8 @@ public class Pokemon
         
         if (Status == ConditionID.par)
         {
-            if (Random.Range(1, 101) <= 25)
+            // 🔥 ĐÃ SỬA: Thay số 25 thành 100 để chắc chắn 100% mất lượt khi bị choáng
+            if (Random.Range(1, 101) <= 100) 
             {
                 message = $"{Base.Name} đang bị choáng và không thể cử động!";
                 return false; 
@@ -207,6 +214,16 @@ public class Pokemon
             message = $"{Base.Name} bị mất máu do vết thương thiêu đốt!";
         }
     }
+
+    // 🔥 THÊM MỚI: Hàm quét sạch hiệu ứng khi hết trận
+    public void OnBattleOver()
+    {
+        StatBoosts = new Dictionary<Stat, int>()
+        {
+            {Stat.Attack, 0}, {Stat.Defense, 0}, {Stat.SpAttack, 0}, {Stat.SpDefense, 0}, {Stat.Speed, 0}
+        };
+        CureStatus(); // Xóa sạch Choáng, Cháy, Độc...
+    }
 }
 
 public class DamageDetails
@@ -215,3 +232,4 @@ public class DamageDetails
     public float Critical { get; set; }
     public float TypeEffectiveness { get; set; }
 }
+
