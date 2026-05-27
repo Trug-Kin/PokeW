@@ -19,4 +19,4 @@ MonoBehaviour:
   price: 0
   category: 0
   sortOrder: 1
-  catchRateModifier: 1
+  catchRateModifier: 100

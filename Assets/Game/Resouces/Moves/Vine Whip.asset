@@ -20,8 +20,9 @@ MonoBehaviour:
   pp: 25
   isSpecial: 0
   effects:
-    boosts: []
-    statuses:
-    - id: 3
+    boosts:
+    - stat: 0
+      boost: -1
       target: 0
       chance: 100
+    statuses: []
