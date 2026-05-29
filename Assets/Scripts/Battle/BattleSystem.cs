@@ -73,26 +73,27 @@ public class BattleSystem : MonoBehaviour
             SoundManager.Instance.StartBattleMusic(battleBGM);
         }
 
+       
         var firstPokemon = playerParty.GetHealthyPokemon();
         if (firstPokemon == null) yield break;
-
-        firstPokemon.Init();
+    
         playerUnit.Setup(firstPokemon);
         playerHud.SetData(playerUnit.Pokemon);
 
         Pokemon activeEnemy = isTrainerBattle ? GetHealthyTrainerPokemon() : wildPokemon;
 
         // 🔥 LOGIC DEMO MỚI: Ép Level cho 2 trận đầu tiên
-        if (activeEnemy != null)
-        {
-            if (battleCountForDemo < 2)
+       if (activeEnemy != null)
+{
+    // 🔥 CHỈ ép cấp độ nếu ĐÓ LÀ QUÁI HOANG DÃ (!isTrainerBattle)
+            if (battleCountForDemo < 2 && !isTrainerBattle)
             {
                 // Ép cấp độ địch bằng cấp độ của Pokemon người chơi đang ra trận
                 activeEnemy.Level = firstPokemon.Level;
-                Debug.Log($"[DEMO MODE] Đã ép cấp độ địch xuống {firstPokemon.Level} trong trận {battleCountForDemo + 1}");
+                Debug.Log($"[DEMO MODE] Đã ép cấp độ quái hoang dã xuống {firstPokemon.Level} trong trận {battleCountForDemo + 1}");
             }
             
-            activeEnemy.Init(); // Gọi lại Init để các chỉ số máu, sát thương được tính lại theo Level mới
+            activeEnemy.Init(); // Gọi lại Init để các chỉ số máu, sát thương được tính lại theo Level
             
             if (enemyUnit != null)
             {

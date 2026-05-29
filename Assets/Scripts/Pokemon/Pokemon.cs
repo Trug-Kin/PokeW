@@ -177,7 +177,7 @@ public class Pokemon
         if (Status == ConditionID.par)
         {
             // 🔥 ĐÃ SỬA: Thay số 25 thành 100 để chắc chắn 100% mất lượt khi bị choáng
-            if (Random.Range(1, 101) <= 100) 
+            if (Random.Range(1, 101) <= 25) 
             {
                 message = $"{Base.Name} đang bị choáng và không thể cử động!";
                 return false; 

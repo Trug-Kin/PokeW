@@ -20,30 +20,29 @@ public class PlayerInventory : MonoBehaviour
     private static List<ItemSlot> globalInventoryHold = null;
     private static List<QuestProgressData> globalQuestProgressHold = null;
 
-    public void Start()
+    public void Awake() // Đổi Start thành Awake
+{
+    // 1. ĐỒNG BỘ TÚI ĐỒ VẬT PHẨM
+    if (globalInventoryHold != null)
     {
-        // 1. ĐỒNG BỘ TÚI ĐỒ VẬT PHẨM
-        if (globalInventoryHold != null)
-        {
-            // Nếu đã có dữ liệu từ trước, bê nguyên vẹn vào Scene mới
-            inventory = globalInventoryHold;
-        }
-        else
-        {
-            // Chỉ chạy 1 lần duy nhất khi mới mở game để nạp hành trang khởi điểm
-            globalInventoryHold = inventory;
-        }
-
-        // 2. ĐỒNG BỘ TIẾN TRÌNH NHIỆM VỤ
-        if (globalQuestProgressHold != null)
-        {
-            questProgress = globalQuestProgressHold;
-        }
-        else
-        {
-            globalQuestProgressHold = questProgress;
-        }
+        // Gán lại tham chiếu
+        inventory = globalInventoryHold;
     }
+    else
+    {
+        globalInventoryHold = inventory;
+    }
+
+    // 2. ĐỒNG BỘ TIẾN TRÌNH NHIỆM VỤ
+    if (globalQuestProgressHold != null)
+    {
+        questProgress = globalQuestProgressHold;
+    }
+    else
+    {
+        globalQuestProgressHold = questProgress;
+    }
+}
 
     // --- 1. DÀNH CHO VẬT PHẨM THẬT (Giao diện UI & Trận đấu) ---
     public void AddItem(ItemBase item, int amount)
