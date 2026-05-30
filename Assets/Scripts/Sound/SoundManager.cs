@@ -14,11 +14,14 @@ public class SoundManager : MonoBehaviour
     
     [Header("--- CÀI ĐẶT ÂM LƯỢNG ---")]
     [Range(0f, 1f)] public float normalVolume = 1f;
-    [Range(0f, 1f)] public float duckedVolume = 0.2f; // Volume nhạc nền khi vào cỏ cao
+    [Range(0f, 1f)] public float duckedVolume = 0; // Volume nhạc nền khi vào cỏ cao
 
     [Header("--- ÂM THANH MENU ---")]
     public AudioClip clickSound; // Âm thanh khi click UI
     public AudioClip healSound; // Âm thanh khi hồi máu
+
+    [Header("--- THÊM ÂM THANH LÊN CẤP ---")]
+    [SerializeField] private AudioClip levelUpSound;
 
     // Biến quản lý Playlist nhạc nền
     private List<AudioClip> playlist = new List<AudioClip>();
@@ -156,9 +159,59 @@ public class SoundManager : MonoBehaviour
     }
     public void PlayHealSound()
     {
+        // Dòng chữ này sẽ in ra tab Console để báo cho bạn biết hàm có chạy hay không
+        Debug.Log("🔊 Hàm PlayHealSound đã được gọi thành công!");
+
         if (healSound != null && sfxSource != null)
         {
             sfxSource.PlayOneShot(healSound);
+            Debug.Log("🎵 Đang phát file âm thanh: " + healSound.name);
         }
+        else
+        {
+            if (healSound == null) Debug.LogError("⚠️ Cảnh báo: Ô Heal Sound đang bị trống (None)!");
+            if (sfxSource == null) Debug.LogError("⚠️ Cảnh báo: Ô Sfx Source đang bị trống (None)!");
+        }
+    }
+
+    // ==============================================
+    // 5. TẠM DỪNG / TIẾP TỤC NHẠC MAP KHI HỒI MÁU
+    // ==============================================
+    public void PauseMapAudio()
+    {
+        isPlaylistActive = false; // Chặn hàm Update tự động chuyển bài
+
+        if (bgmSource != null) bgmSource.Pause();       // Tạm dừng nhạc nền
+        if (ambientSource != null) ambientSource.Pause(); // Tạm dừng tiếng bụi cỏ (nếu có)
+    }
+
+    public void ResumeMapAudio()
+    {
+        isPlaylistActive = true; // Kích hoạt lại Playlist nhạc nền
+
+        if (bgmSource != null) bgmSource.UnPause();       // Phát tiếp nhạc nền
+        if (ambientSource != null) ambientSource.UnPause(); // Phát tiếp tiếng bụi cỏ
+    }
+
+    public void PlayLevelUpSound()
+    {
+        if (sfxSource != null && levelUpSound != null)
+        {
+            sfxSource.PlayOneShot(levelUpSound);
+            Debug.Log("🔊 Pokémon lên cấp! Chúc mừng nhà huấn luyện!");
+        }
+    }
+    // Tạm dừng nhạc nền Battle
+    public void PauseMusic()
+    {
+        // ⚠️ LƯU Ý: Tên biến loa nhạc nền của bạn có thể là 'bgmSource', 'musicSource' hoặc 'audioSource'.
+        // Hãy xem trong hàm StopBattleMusic() của bạn đang dùng tên biến nào thì đổi chữ 'bgmSource' ở dưới thành chữ đó nhé.
+        if (bgmSource != null) bgmSource.Pause();
+    }
+
+    // Tiếp tục phát lại nhạc nền Battle
+    public void ResumeMusic()
+    {
+        if (bgmSource != null) bgmSource.UnPause();
     }
 }

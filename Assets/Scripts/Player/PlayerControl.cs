@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
     private Animator animator;
     public LayerMask solidObjectLayer;
     public LayerMask GrassLayer; // Đảm bảo bạn đã tick đúng layer Grass trên Unity Editor!
-
+    public bool canMove = true;
     public event Action OnEncountered;
 
     private void Awake()
@@ -25,8 +25,10 @@ public class PlayerControl : MonoBehaviour
 
      public void HandleUpdate()
     {
+        if (!canMove) return;
         if (!isMoving)
         {
+
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 

@@ -21,7 +21,7 @@ public class BattleSystem : MonoBehaviour
     public AudioClip battleBGM;
     public AudioClip catchSound;
     [SerializeField] GameObject dthObject;
-
+    public AudioClip levelUpSound;
     public event Action<bool> OnBattleOver;
 
     BattleState state;
@@ -589,15 +589,39 @@ void BattleOver(bool won)
             while (killerUnit.Pokemon.Exp >= expNeeded)
             {
                 killerUnit.Pokemon.LevelUp();
-                killerUnit.Hud.UpdateLevelText(); 
-                
-                yield return killerUnit.Hud.SetExpSmooth(true); 
+                killerUnit.Hud.UpdateLevelText();
+                if (SoundManager.Instance != null && levelUpSound != null)
+                {
+                    // Dùng luôn hàm PlaySFX có sẵn của bạn
+                    SoundManager.Instance.PlaySFX(levelUpSound);
+                }
+                // ==========================================
+                // 1. TẠM DỪNG NHẠC BATTLE & PHÁT NHẠC LÊN CẤP
+                if (SoundManager.Instance != null)
+                {
+                    SoundManager.Instance.PauseMusic(); // Tắt tạm BGM
+                    SoundManager.Instance.PlayLevelUpSound(); // Phát nhạc SFX lên cấp
+                }
+                // ==========================================
+
+                yield return killerUnit.Hud.SetExpSmooth(true);
                 expNeeded = killerUnit.Pokemon.Base.GetExpForLevel(killerUnit.Pokemon.Level + 1);
-                
+
                 yield return dialogBox.TypeDialog($"Tuyệt quá! {killerUnit.Pokemon.Base.Name} đã tăng lên Cấp {killerUnit.Pokemon.Level}!");
-                yield return new WaitForSeconds(1.0f);
-                yield return killerUnit.Hud.UpdateHP(); 
-            }
+
+                // 2. CHỜ NHẠC LÊN CẤP CHẠY XONG (Khoảng 2.0 giây - Tùy chỉnh độ dài theo file âm thanh của bạn)
+                yield return new WaitForSeconds(2.0f);
+
+                yield return killerUnit.Hud.UpdateHP();
+
+                // ==========================================
+                // 3. BẬT LẠI NHẠC BATTLE (Nếu trận chưa kết thúc)
+                if (SoundManager.Instance != null)
+                {
+                    SoundManager.Instance.ResumeMusic(); // Bật lại BGM
+                }
+                // ==========================================
+            }   
         }
 
         yield return StartCoroutine(CheckForBattleOver(faintedUnit));
